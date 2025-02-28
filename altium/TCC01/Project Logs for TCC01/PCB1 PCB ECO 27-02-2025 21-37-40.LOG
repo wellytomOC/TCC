@@ -1,0 +1,49 @@
+Added Component: Designator=C13(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "6.8pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=FB1(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00336"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "FERRITE BEAD 600 OHM 0805/HZ0805E601R-10/Laird"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "FER BEAD 600R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Y1(XTAL SMD 16MHZ)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/xt9m20ana16m/vishay?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/5/XT9M20ANA16M.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "73-XT49M1600-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/XT9M20ANA16M?qs=NVJATC80C4%252B3oEpMmPFr7g%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC13_1 Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=+3.3 Pin=FB1-1
+Added Pin To Net: NetName=NetFB1_2 Pin=FB1-2
+Added Pin To Net: NetName=NetC13_1 Pin=Y1-2
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=U1-11
+Added Pin To Net: NetName=NetC?_1 Pin=Y1-1
+Added Net: Name=NetC?_1
+Added Member To Class: ClassName=ad5941 Member=Component C13 CAP SMD CER 6.8PF 25V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component FB1 FERRITE BEAD SMD 600R 0805
+Added Member To Class: ClassName=ad5941 Member=Component Y1 XTAL SMD 16MHZ

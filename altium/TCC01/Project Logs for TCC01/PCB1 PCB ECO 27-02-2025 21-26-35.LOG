@@ -1,0 +1,256 @@
+Removed Member From Class: ClassName=alimentacao Member=C?
+Removed Member From Class: ClassName=Microcontrolador Member=C?
+Removed Member From Class: ClassName=ad5941 Member=D?
+Removed Member From Class: ClassName=ad5941 Member=R?
+Removed Member From Class: ClassName=alimentacao Member=R?
+Removed Member From Class: ClassName=alimentacao Member=U?
+Removed Member From Class: ClassName=Microcontrolador Member=U?
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=C? NewDesignator=C6
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=C? NewDesignator=C8
+Change Component Designator: OldDesignator=C? NewDesignator=C9
+Change Component Designator: OldDesignator=C? NewDesignator=C10
+Change Component Designator: OldDesignator=C? NewDesignator=C11
+Change Component Designator: OldDesignator=C? NewDesignator=C12
+Change Component Designator: OldDesignator=C? NewDesignator=C15
+Change Component Designator: OldDesignator=C? NewDesignator=C16
+Change Component Designator: OldDesignator=C? NewDesignator=C17
+Change Component Designator: OldDesignator=C? NewDesignator=C18
+Change Component Designator: OldDesignator=C? NewDesignator=C19
+Change Component Designator: OldDesignator=C? NewDesignator=C20
+Change Component Designator: OldDesignator=C? NewDesignator=C21
+Change Component Designator: OldDesignator=C? NewDesignator=C22
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=C? NewDesignator=C24
+Change Component Designator: OldDesignator=C? NewDesignator=C25
+Change Component Designator: OldDesignator=CN? NewDesignator=CN1
+Change Component Designator: OldDesignator=D? NewDesignator=D1
+Change Component Designator: OldDesignator=D? NewDesignator=D2
+Change Component Designator: OldDesignator=D? NewDesignator=D3
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=LCD? NewDesignator=LCD1
+Change Component Designator: OldDesignator=LD? NewDesignator=LD1
+Change Component Designator: OldDesignator=LD? NewDesignator=LD2
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R7
+Change Component Designator: OldDesignator=R? NewDesignator=R8
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=R? NewDesignator=R11
+Change Component Designator: OldDesignator=R? NewDesignator=R12
+Change Component Designator: OldDesignator=R? NewDesignator=R13
+Change Component Designator: OldDesignator=R? NewDesignator=R14
+Change Component Designator: OldDesignator=R? NewDesignator=R15
+Change Component Designator: OldDesignator=TP? NewDesignator=TP1
+Change Component Designator: OldDesignator=TP? NewDesignator=TP2
+Change Component Designator: OldDesignator=TP? NewDesignator=TP3
+Change Component Designator: OldDesignator=TP? NewDesignator=TP4
+Change Component Designator: OldDesignator=TP? NewDesignator=TP5
+Change Component Designator: OldDesignator=TP? NewDesignator=TP6
+Change Component Designator: OldDesignator=TP? NewDesignator=TP7
+Change Component Designator: OldDesignator=TP? NewDesignator=TP8
+Change Component Designator: OldDesignator=TP? NewDesignator=TP9
+Change Component Designator: OldDesignator=TP? NewDesignator=TP10
+Change Component Designator: OldDesignator=TP? NewDesignator=TP11
+Change Component Designator: OldDesignator=TP? NewDesignator=TP12
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Add Component: Footprint Not Found R38
+Add Pin To Net: Unknown Pin: Pin FB1-1
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC16_1
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC4_2
+Change Net Name : Old Net Name=NetCN?_3 New Net Name=NetCN1_3
+Change Net Name : Old Net Name=NetCN?_4 New Net Name=NetCN1_4
+Change Net Name : Old Net Name=NetCN?_5 New Net Name=NetCN1_5
+Change Net Name : Old Net Name=NetCN?_6 New Net Name=NetCN1_6
+Change Net Name : Old Net Name=NetD?_2 New Net Name=NetD2_2
+Change Net Name : Old Net Name=NetLCD?_3 New Net Name=NetLCD1_3
+Change Net Name : Old Net Name=NetLCD?_4 New Net Name=NetLCD1_4
+Change Net Name : Old Net Name=NetLCD?_5 New Net Name=NetLCD1_5
+Change Net Name : Old Net Name=NetLCD?_6 New Net Name=NetLCD1_6
+Change Net Name : Old Net Name=NetLCD?_7 New Net Name=NetLCD1_7
+Change Net Name : Old Net Name=NetLCD?_9 New Net Name=NetLCD1_9
+Change Net Name : Old Net Name=NetLCD?_11 New Net Name=NetLCD1_11
+Change Net Name : Old Net Name=NetLCD?_14 New Net Name=NetLCD1_14
+Change Net Name : Old Net Name=NetLCD?_18 New Net Name=NetLCD1_18
+Change Net Name : Old Net Name=NetLD?_1 New Net Name=NetLD1_1
+Change Net Name : Old Net Name=NetR?_1 New Net Name=NetR1_1
+Change Net Name : Old Net Name=NetR?_2 New Net Name=NetR2_2
+Change Net Name : Old Net Name=NetTP?_0 New Net Name=NetTP5_0
+Change Net Name : Old Net Name=NetU?_15 New Net Name=NetU1_15
+Change Net Name : Old Net Name=NetU?_16 New Net Name=NetU1_16
+Change Net Name : Old Net Name=NetU?_17 New Net Name=NetU1_17
+Change Net Name : Old Net Name=NetU?_18 New Net Name=NetU1_18
+Change Net Name : Old Net Name=NetU?_19 New Net Name=NetU1_19
+Change Net Name : Old Net Name=NetU?_20 New Net Name=NetU1_20
+Change Net Name : Old Net Name=NetU?_21 New Net Name=NetU1_21
+Change Net Name : Old Net Name=NetU?_22 New Net Name=NetU1_22
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=R1-2
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=D1-1
+Added Pin To Net: NetName=NetC1_2 Pin=TP1-0
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=U1-14
+Added Net: Name=NetC2_2
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_1 Pin=R3-2
+Added Net: Name=NetC3_1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC3_2 Pin=D1-3
+Added Pin To Net: NetName=NetC3_2 Pin=TP2-0
+Added Net: Name=NetC3_2
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=R4-2
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=D1-4
+Added Pin To Net: NetName=NetC5_2 Pin=TP3-0
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=U1-43
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=R5-2
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=D1-6
+Added Pin To Net: NetName=NetC7_2 Pin=TP4-0
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC8_2 Pin=U1-31
+Added Net: Name=NetC8_2
+Added Pin To Net: NetName=NetC9_2 Pin=C9-2
+Added Pin To Net: NetName=NetC9_2 Pin=U1-5
+Added Net: Name=NetC9_2
+Added Pin To Net: NetName=NetC10_1 Pin=C10-1
+Added Pin To Net: NetName=NetC10_1 Pin=U1-36
+Added Net: Name=NetC10_1
+Added Pin To Net: NetName=NetC11_2 Pin=C11-2
+Added Pin To Net: NetName=NetC11_2 Pin=U1-9
+Added Net: Name=NetC11_2
+Added Pin To Net: NetName=NetC12_1 Pin=C12-1
+Added Pin To Net: NetName=NetC12_1 Pin=U1-8
+Added Net: Name=NetC12_1
+Added Pin To Net: NetName=NetC13_1 Pin=U1-12
+Added Net: Name=NetC13_1
+Added Pin To Net: NetName=NetC14_1 Pin=U1-11
+Added Net: Name=NetC14_1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=J1-3
+Added Pin To Net: NetName=NetD3_2 Pin=R15-1
+Added Net: Name=NetD3_2
+Added Pin To Net: NetName=NetFB1_2 Pin=R9-1
+Added Net: Name=NetFB1_2
+Added Pin To Net: NetName=NetLD2_1 Pin=LD2-1
+Added Pin To Net: NetName=NetLD2_1 Pin=R8-1
+Added Net: Name=NetLD2_1
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_1 Pin=U1-33
+Added Net: Name=NetR2_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U1-38
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetR4_1 Pin=U1-47
+Added Net: Name=NetR4_1
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetR5_1 Pin=U1-46
+Added Net: Name=NetR5_1
+Added Pin To Net: NetName=NetR14_2 Pin=R14-2
+Added Pin To Net: NetName=NetR14_2 Pin=U3-14
+Added Net: Name=NetR14_2
+Added Pin To Net: NetName=NetR15_2 Pin=R15-2
+Added Pin To Net: NetName=NetR15_2 Pin=U3-23
+Added Net: Name=NetR15_2
+Added Pin To Net: NetName=NetTP6_0 Pin=TP6-0
+Added Pin To Net: NetName=NetTP6_0 Pin=U1-45
+Added Net: Name=NetTP6_0
+Added Pin To Net: NetName=NetTP7_0 Pin=TP7-0
+Added Pin To Net: NetName=NetTP7_0 Pin=U1-37
+Added Net: Name=NetTP7_0
+Added Pin To Net: NetName=NetTP8_0 Pin=TP8-0
+Added Pin To Net: NetName=NetTP8_0 Pin=U1-40
+Added Net: Name=NetTP8_0
+Added Pin To Net: NetName=NetTP9_0 Pin=TP9-0
+Added Pin To Net: NetName=NetTP9_0 Pin=U1-34
+Added Net: Name=NetTP9_0
+Added Pin To Net: NetName=NetTP10_0 Pin=TP10-0
+Added Pin To Net: NetName=NetTP10_0 Pin=U1-35
+Added Net: Name=NetTP10_0
+Added Pin To Net: NetName=NetTP11_0 Pin=TP11-0
+Added Pin To Net: NetName=NetTP11_0 Pin=U1-27
+Added Net: Name=NetTP11_0
+Added Pin To Net: NetName=NetTP12_0 Pin=TP12-0
+Added Pin To Net: NetName=NetTP12_0 Pin=U1-28
+Added Net: Name=NetTP12_0
+Added Member To Class: ClassName=ad5941 Member=Component C2 CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C3 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C4 CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C5 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C6 CAP SMD CER 4.7UF 50V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C7 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C8 CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C9 CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C10 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C11 CAP SMD CER 1UF 10V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C12 CAP SMD CER 100NF 25V 0805
+Add Class Member: Failed to add class member : Component C13 CAP SMD CER 6.8PF 100V 0805
+Add Class Member: Failed to add class member : Component C14 CAP SMD CER 6.8PF 100V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C15 CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C16 CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C17 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C18 CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C19 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C20 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C21 CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C22 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C23 CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C24 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component C25 CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component CN1 CN MAC 6 VIAS 180º 2.54MM
+Added Member To Class: ClassName=ad5941 Member=Component D1 SP3004-04XTG
+Added Member To Class: ClassName=Microcontrolador Member=Component D3 SD05C-7
+Add Class Member: Failed to add class member : Component FB1 FERRITE BEAD SMD 600R 0805
+Added Member To Class: ClassName=alimentacao Member=Component LD2 PLCC-2
+Added Member To Class: ClassName=ad5941 Member=Component R1 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R2 RES SMD 1K 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R3 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R4 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R5 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R6 RES SMD 0R 5% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R7 RES SMD 1K 1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R8 RES SMD 1K 1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R9 RES SMD 0R 5% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R10 RES SMD 0R 5% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R11 RES SMD 0R 5% 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component R12
+Added Member To Class: ClassName=Microcontrolador Member=Component R13 RES SMD 4K7 1% 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component R14 RES SMD 100K 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component TP1 U+
+Added Member To Class: ClassName=ad5941 Member=Component TP2 U-
+Added Member To Class: ClassName=ad5941 Member=Component TP3 I+
+Added Member To Class: ClassName=ad5941 Member=Component TP4 I-
+Added Member To Class: ClassName=ad5941 Member=Component TP6 SE0
+Added Member To Class: ClassName=ad5941 Member=Component TP7 AIN2
+Added Member To Class: ClassName=ad5941 Member=Component TP8 AIN4
+Added Member To Class: ClassName=ad5941 Member=Component TP9 AFE1
+Added Member To Class: ClassName=ad5941 Member=Component TP10 AFE2
+Added Member To Class: ClassName=ad5941 Member=Component TP11 AFE3
+Added Member To Class: ClassName=ad5941 Member=Component TP12 AFE4
+Added Member To Class: ClassName=alimentacao Member=Component U2 LM1117
+Added Member To Class: ClassName=Microcontrolador Member=Component U3 IC SMD ESP32-S3-WROOM-1-N4R2
+Add Class Member: Failed to add class member : Component Y1 XTAL SMD 16MHZ

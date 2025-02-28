@@ -1,0 +1,221 @@
+Removed Pin From Net: NetName=NetC?_1 Pin=C?-1
+Removed Pin From Net: NetName=+5 Pin=CN?-1
+Removed Pin From Net: NetName=GND Pin=CN?-4
+Removed Pin From Net: NetName=GND Pin=D?-1
+Removed Pin From Net: NetName=NetR?_2 Pin=R?-2
+Removed Pin From Net: NetName=NetC?_1 Pin=U?-12
+Removed Pin From Net: NetName=NetR?_2 Pin=U?-23
+Change Component Footprint: Designator=D? Old Footprint=SOD-323 New Footprint=SOD2513X120N
+Change Component Footprint: Designator=D? Old Footprint=SOD-323 New Footprint=SOTFL50P160X60-6N
+Change Component Comment : Designator=D? Old Comment=DIODO SMD TVS New Comment=SD05C-7
+Change Component Comment : Designator=D? Old Comment=DIODO SMD TVS New Comment=SP3004-04XTG
+Change Component Comment : Designator=R? Old Comment=RES SMD 10K 1% 0805 New Comment=RES SMD 100K 1% 0805
+Change Component Comment : Designator=R? Old Comment=RES SMD 10K 1% 0805 New Comment=RES SMD 100K 1% 0805
+Change component parameters: Designator = "D?" ("D?"); Footprint = "SOD-323"; UniqueID = "\IIXHTHLN" ("\IIXHTHLN")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sd05c-7/diodes-incorporated?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/SD05C.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "1.2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "621-SD05C-7"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SD05C-7?qs=lQAVKuKFhkJ%252Bbajm903DcQ%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D?" ("D?"); Footprint = "SOD-323"; UniqueID = "\CTLIODUY" ("\CTLIODUY")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sp3004-04xtg/littelfuse?region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sp3004_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "576-SP3004-04XTG"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/SP3004-04XTG?qs=trbuaetfxXQ7JjseAkJ3Ww%3D%3D"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R?" ("R?"); Footprint = "res0805ok"; UniqueID = "\NLHEVXMT" ("\NLHEVXMT")
+Change component parameters (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "R?" ("R?"); Footprint = "res0805ok"; UniqueID = "\WTRTGRMZ" ("\WTRTGRMZ")
+Change component parameters (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100K"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=D?(SOD2513X120N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sd05c-7/diodes-incorporated?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/SD05C.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "621-SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SD05C-7?qs=lQAVKuKFhkJ%252Bbajm903DcQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=J?(microUSB)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "10118192-0002LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/10118192-0002lf/amphenol-fci?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.08mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Amphenol Communications Solutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "10118192-0002LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found R38
+Added Pin To Net: NetName=GND Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=NetC?_1 Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=C?-2
+Added Pin To Net: NetName=GND Pin=D?-1
+Added Pin To Net: NetName=GND Pin=D?-2
+Added Pin To Net: NetName=AVDD_AD Pin=D?-5
+Add Pin To Net: Unknown Pin: Pin FB?-1
+Add Pin To Net: Unknown Pin: Pin FB?-2
+Added Pin To Net: NetName=+5 Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-5
+Added Pin To Net: NetName=GND Pin=J?-MP1
+Added Pin To Net: NetName=GND Pin=J?-MP2
+Added Pin To Net: NetName=GND Pin=J?-MP3
+Added Pin To Net: NetName=GND Pin=J?-MP4
+Added Pin To Net: NetName=GND Pin=J?-MP5
+Added Pin To Net: NetName=GND Pin=J?-MP6
+Added Pin To Net: NetName=DVDD Pin=LCD?-1
+Added Pin To Net: NetName=GND Pin=LCD?-2
+Added Pin To Net: NetName=DVDD Pin=LCD?-8
+Added Pin To Net: NetName=NetC?_1 Pin=R?-1
+Added Pin To Net: NetName=NetR?_2 Pin=R?-2
+Added Pin To Net: NetName=DVDD Pin=U?-2
+Added Pin To Net: NetName=NetC?_1 Pin=U?-2
+Added Pin To Net: NetName=NetCN?_5 Pin=U?-27
+Added Pin To Net: NetName=NetR?_2 Pin=U?-32
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetC?_2" already exists
+Added Pin To Net: NetName=NetD?_2 Pin=D?-2
+Added Pin To Net: NetName=NetD?_2 Pin=J?-2
+Added Pin To Net: NetName=NetD?_2 Pin=R?-1
+Added Net: Name=NetD?_2
+Add Net: Net with name "NetD?_2" already exists
+Added Pin To Net: NetName=NetLCD?_3 Pin=LCD?-3
+Added Pin To Net: NetName=NetLCD?_3 Pin=U?-39
+Added Net: Name=NetLCD?_3
+Added Pin To Net: NetName=NetLCD?_4 Pin=LCD?-4
+Added Pin To Net: NetName=NetLCD?_4 Pin=U?-38
+Added Net: Name=NetLCD?_4
+Added Pin To Net: NetName=NetLCD?_5 Pin=LCD?-5
+Added Pin To Net: NetName=NetLCD?_5 Pin=U?-15
+Added Net: Name=NetLCD?_5
+Added Pin To Net: NetName=NetLCD?_6 Pin=LCD?-6
+Added Pin To Net: NetName=NetLCD?_6 Pin=LCD?-12
+Added Pin To Net: NetName=NetLCD?_6 Pin=LCD?-17
+Added Pin To Net: NetName=NetLCD?_6 Pin=U?-4
+Added Net: Name=NetLCD?_6
+Added Pin To Net: NetName=NetLCD?_7 Pin=LCD?-7
+Added Pin To Net: NetName=NetLCD?_7 Pin=LCD?-10
+Added Pin To Net: NetName=NetLCD?_7 Pin=LCD?-15
+Added Pin To Net: NetName=NetLCD?_7 Pin=U?-5
+Added Net: Name=NetLCD?_7
+Added Pin To Net: NetName=NetLCD?_9 Pin=LCD?-9
+Added Pin To Net: NetName=NetLCD?_9 Pin=LCD?-13
+Added Pin To Net: NetName=NetLCD?_9 Pin=LCD?-16
+Added Pin To Net: NetName=NetLCD?_9 Pin=U?-6
+Added Net: Name=NetLCD?_9
+Added Pin To Net: NetName=NetLCD?_11 Pin=LCD?-11
+Added Pin To Net: NetName=NetLCD?_11 Pin=U?-7
+Added Net: Name=NetLCD?_11
+Added Pin To Net: NetName=NetLCD?_14 Pin=LCD?-14
+Added Pin To Net: NetName=NetLCD?_14 Pin=U?-12
+Added Net: Name=NetLCD?_14
+Added Pin To Net: NetName=NetLCD?_18 Pin=LCD?-18
+Added Pin To Net: NetName=NetLCD?_18 Pin=U?-17
+Added Net: Name=NetLCD?_18
+Add Net: Net with name "NetLD?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_1" already exists
+Add Net: Net with name "NetR?_2" already exists
+Add Net: Net with name "NetR?_2" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Add Net: Net with name "NetTP?_0" already exists
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 1UF 10V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 6.8PF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 4.7UF 50V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=ad5941 Member=Component C? CAP SMD CER 470NF 100V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=alimentacao Member=Component C? CAP SMD TAN 10UF 25V 2312
+Added Member To Class: ClassName=Microcontrolador Member=Component C? CAP SMD CER 100NF 25V 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component D? SD05C-7
+Add Class Member: Failed to add class member : Component FB? FERRITE BEAD SMD 600R 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component J? microUSB
+Added Member To Class: ClassName=alimentacao Member=Component LD? PLCC-2
+Added Member To Class: ClassName=ad5941 Member=Component R? RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R? RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R? RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R? RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R? RES SMD 1K 1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R? RES SMD 1K 1% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R? RES SMD 0R 5% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R? RES SMD 0R 5% 0805
+Added Member To Class: ClassName=alimentacao Member=Component R? RES SMD 0R 5% 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component R? RES SMD 4K7 1% 0805
+Added Member To Class: ClassName=Microcontrolador Member=Component R?
+Added Member To Class: ClassName=Microcontrolador Member=Component R? RES SMD 100K 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component TP? I-
+Added Member To Class: ClassName=ad5941 Member=Component TP? AFE3
+Added Member To Class: ClassName=ad5941 Member=Component TP? AIN2
+Added Member To Class: ClassName=ad5941 Member=Component TP? AFE2
+Added Member To Class: ClassName=ad5941 Member=Component TP? AFE4
+Added Member To Class: ClassName=ad5941 Member=Component TP? I+
+Added Member To Class: ClassName=ad5941 Member=Component TP? AFE1
+Added Member To Class: ClassName=ad5941 Member=Component TP? AIN4
+Added Member To Class: ClassName=ad5941 Member=Component TP? U-
+Added Member To Class: ClassName=ad5941 Member=Component TP? U+
+Added Member To Class: ClassName=ad5941 Member=Component TP? SE0
+Add Class Member: Failed to add class member : Component Y? XTAL SMD 16MHZ
