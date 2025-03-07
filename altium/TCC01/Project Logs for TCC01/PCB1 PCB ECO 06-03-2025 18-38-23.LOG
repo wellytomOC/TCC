@@ -1,0 +1,24 @@
+Added Component: Designator=Y?(XT9M20ANA16M)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/xt9m20ana16m/vishay?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/5/XT9M20ANA16M.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "73-XT49M1600-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/XT9M20ANA16M?qs=NVJATC80C4%252B3oEpMmPFr7g%3D%3D"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=ad5941 Member=Component C1 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C3 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C5 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C7 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component D1 SP3004-04XTG
+Added Member To Class: ClassName=ad5941 Member=Component R1 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R3 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R4 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R5 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component TP1 U+
+Added Member To Class: ClassName=ad5941 Member=Component TP2 U-
+Added Member To Class: ClassName=ad5941 Member=Component TP3 I+
+Added Member To Class: ClassName=ad5941 Member=Component TP4 I-
+Added Member To Class: ClassName=ad5941 Member=Component U1 AD5941BCPZ
+Added Member To Class: ClassName=ad5941 Member=Component Y? XT9M20ANA16M

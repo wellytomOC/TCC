@@ -1,0 +1,15 @@
+Added Component: Designator=CN1(PHMC4-06)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00436"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "Barra de pinos Macho 180° / BPSC-03 / metaltex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "METALTEX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "PHMC4-06"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DVDD Pin=CN1-1
+Added Pin To Net: NetName=GND Pin=CN1-2
+Added Pin To Net: NetName=NetCN1_3 Pin=CN1-3
+Added Pin To Net: NetName=NetCN1_4 Pin=CN1-4
+Added Pin To Net: NetName=NetCN1_5 Pin=CN1-5
+Added Pin To Net: NetName=NetCN1_6 Pin=CN1-6
+Added Member To Class: ClassName=Microcontrolador Member=Component CN1 CN MAC 6 VIAS 180º 2.54MM
