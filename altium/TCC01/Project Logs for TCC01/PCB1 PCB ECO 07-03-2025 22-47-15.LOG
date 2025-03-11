@@ -1,0 +1,6 @@
+Removed Member From Class: ClassName=AD5941 Member=AVDD_AD
+Removed Member From Class: ClassName=AD5941 Member=AVDD_REG
+Removed Member From Class: ClassName=AD5941 Member=DVDD_AD
+Removed Member From Class: ClassName=AD5941 Member=DVDD_REG1V8
+Removed Member From Class: ClassName=AD5941 Member=DVDD
+Removed Member From Class: ClassName=AD5941 Member=GND
