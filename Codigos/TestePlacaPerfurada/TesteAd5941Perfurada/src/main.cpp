@@ -1,10 +1,27 @@
 #include <Arduino.h>
 #include "main.h"
 
+//Tasks
+TaskHandle_t BlinkLedHandler;
+void BlinkLED(void *parameter){
+
+  const uint8_t INTERNAL_LED = 2;
+  pinMode(INTERNAL_LED, OUTPUT);
+
+  while (true)
+  {
+    delay(125);
+    digitalWrite(INTERNAL_LED,HIGH);
+    delay(125);
+    digitalWrite(INTERNAL_LED,LOW);
+  }
+  
+}
+
 //funcoes
 void DEMO_Test_SPI(void)
 {
-  unsigned long temp, i;
+  unsigned long temp, i = 10000, SuccessCount = 0, FailCount = 0;;
   /**
    * Hardware reset can always put AD5940 to default state. 
    * We recommend to use hardware reset rather than software reset
@@ -25,18 +42,19 @@ void DEMO_Test_SPI(void)
   */
   temp = AD5940_ReadReg(REG_AFECON_ADIID);
   printf("Read ADIID register, got: 0x%04lx\n", temp);
-  if(temp != AD5940_ADIID)
-    printf("Read register test failed.\n" );
+  if(temp != AD5940_ADIID){
+    printf("Read register test failed. Ending test.\n" );
+    return;
+  }
   else
-    printf("Read register test pass\n");
+    printf("Read register test pass. Proceeding to write test...\n");
   /**
    * Write register test.
    * */
   srand(0x1234);
-  i =500;
   while(i--)
   {
-    delay(10);
+    //delay(1);
     static unsigned long count;
     static unsigned long data;
     /* Generate a 32bit random data */
@@ -51,12 +69,14 @@ void DEMO_Test_SPI(void)
     AD5940_WriteReg(REG_AFE_CALDATLOCK, data);
     temp = AD5940_ReadReg(REG_AFE_CALDATLOCK);
     if(temp != data)
-      printf("Write register test failed @0x%08lx\n", data);
-    if(!(count%1000))
-      printf("Read/Write has been done %ld times, latest data is 0x%08lx\n", count, data);
-    printf("Times remaining: %ld\n", i);
+      FailCount++;
+    else
+      SuccessCount++;
+    printf("Writes remaining: %ld\n", i);
   }
-  printf("SPI read/write test completed");
+
+  Serial.println("SPI read/write test completed");
+  printf("Success count: %ld.    Fail count: %ld.\n", SuccessCount, FailCount);
 }
 
 
@@ -64,6 +84,8 @@ void setup() {
 
   //UART initialization
   Serial.begin(115200);
+
+  xTaskCreate(BlinkLED, "Debug", 5000, NULL, 5, &BlinkLedHandler);
 
   
   // Imprime uma mensagem de boas-vindas
@@ -77,7 +99,7 @@ void setup() {
 
 void loop() {
   Serial.println("Hello World");
-  delay(1000);
+  delay(5000);
   Serial.println("Hello World2");
-  delay(1000);
+  delay(5000);
 }
