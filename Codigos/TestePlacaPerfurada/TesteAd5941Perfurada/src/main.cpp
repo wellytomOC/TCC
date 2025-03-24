@@ -21,7 +21,9 @@ void BlinkLED(void *parameter){
 //funcoes
 void DEMO_Test_SPI(void)
 {
-  unsigned long temp, i = 10000, SuccessCount = 0, FailCount = 0;;
+  const int TOTAL_TRIALS = 1000;
+  unsigned long temp, i = TOTAL_TRIALS, SuccessCount = 0, FailCount = 0;
+  char *ToBePrinted;
   /**
    * Hardware reset can always put AD5940 to default state. 
    * We recommend to use hardware reset rather than software reset
@@ -68,11 +70,14 @@ void DEMO_Test_SPI(void)
     */
     AD5940_WriteReg(REG_AFE_CALDATLOCK, data);
     temp = AD5940_ReadReg(REG_AFE_CALDATLOCK);
-    if(temp != data)
+    if(temp != data){
       FailCount++;
-    else
+      printf("[%ld/%d]Write register failed. Written: @0x%08lx.   Return: @0x%08lx.   Millis: %ld.\n", count, TOTAL_TRIALS, data, temp, millis());
+    }
+    else{
       SuccessCount++;
-    printf("Writes remaining: %ld\n", i);
+      printf("[%ld/%d]Write success. Written: @0x%08lx.   Return: @0x%08lx.   Millis: %ld.\n", count, TOTAL_TRIALS, data, temp, millis());
+    }
   }
 
   Serial.println("SPI read/write test completed");

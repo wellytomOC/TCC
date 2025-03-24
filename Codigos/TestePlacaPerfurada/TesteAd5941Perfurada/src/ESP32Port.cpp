@@ -2,8 +2,10 @@
 #include "Arduino.h"
 #include "ESP32Port.h"
 
-volatile static uint8_t ucInterrupted = 0; // Flag to indicate interrupt occurred
+#include "driver/spi_master.h"
 
+volatile static uint8_t ucInterrupted = 0; // Flag to indicate interrupt occurred
+spi_device_handle_t spi_handle;
 
 
 //prototypes
@@ -14,9 +16,13 @@ void AD5940_InterruptHandler();
  * @brief Using SPI to transmit N bytes and return the received bytes.
  */
 void AD5940_ReadWriteNBytes(unsigned char *pSendBuffer, unsigned char *pRecvBuff, unsigned long length) {
+
+  SPI.beginTransaction(SPISettings(AD5940_SPI_SPEED, AD5940_SPI_BIT_ORDER, AD5940_SPI_MODE)); // Adjust baud rate and settings as necessary
   for (unsigned long i = 0; i < length; i++) {
     pRecvBuff[i] = SPI.transfer(pSendBuffer[i]);
   }
+ SPI.endTransaction();
+
 }
 
 void AD5940_CsClr(void) {
@@ -56,9 +62,9 @@ uint32_t AD5940_MCUResourceInit(void *pCfg) {
   pinMode(AD5940_RST_PIN, OUTPUT);
   pinMode(AD5940_GP0INT_PIN, INPUT_PULLUP); // External interrupt pin
 
+
   SPI.begin(AD5940_SCK_PIN, AD5940_MISO_PIN, AD5940_MOSI_PIN, AD5940_CS_PIN);
-  SPI.beginTransaction(SPISettings(AD5940_SPI_SPEED, AD5940_SPI_BIT_ORDER, AD5940_SPI_MODE)); // Adjust baud rate and settings as necessary
-  SPI.endTransaction();
+
 
   // Reset and set initial values for CS and RST pins
   AD5940_CsSet();

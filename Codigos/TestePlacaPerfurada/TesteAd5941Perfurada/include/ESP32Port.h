@@ -13,7 +13,7 @@
 #define AD5940_GP0INT_PIN                  4   // GPIO4 (Interrupt Pin)
 
 // SPI settings for the AD5940 communication
-#define AD5940_SPI_SPEED                   100000  // Baudrate for SPI (can be adjusted)
+#define AD5940_SPI_SPEED                   1000000  // Baudrate for SPI (can be adjusted)
 #define AD5940_SPI_MODE                    SPI_MODE0
 #define AD5940_SPI_BIT_ORDER               MSBFIRST
 
@@ -26,6 +26,9 @@ void AD5940_RstSet(void);
 void AD5940_RstClr(void);
 void AD5940_Delay10us(uint32_t time);
 uint32_t AD5940_GetMCUIntFlag(void);
+/// @brief 
+/// @param  
+/// @return 
 uint32_t AD5940_ClrMCUIntFlag(void);
 uint32_t AD5940_MCUResourceInit(void *pCfg);
 void AD5940_InterruptHandler(void);

@@ -944,7 +944,7 @@ static void AD5940_SPIWriteReg(uint16_t RegAddr, uint32_t RegData)
   AD5940_ReadWrite16B(RegAddr);
   AD5940_CsSet();
   /* Add delay here to meet the SPI timing. */
-  //AD5940_Delay10us(10);    //debug
+  AD5940_Delay10us(1);
   AD5940_CsClr();
   AD5940_ReadWrite8B(SPICMD_WRITEREG);
   if(((RegAddr>=0x1000)&&(RegAddr<=0x3014)))
