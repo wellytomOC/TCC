@@ -1,0 +1,46 @@
+Change Component Designator: OldDesignator=C3 NewDesignator=C6
+Change Component Designator: OldDesignator=C4 NewDesignator=C7
+Change Component Designator: OldDesignator=C5 NewDesignator=C3
+Change Component Designator: OldDesignator=C6 NewDesignator=C4
+Change Component Designator: OldDesignator=C7 NewDesignator=C5
+Change Component Designator: OldDesignator=C18 NewDesignator=C24
+Change Component Designator: OldDesignator=C27 NewDesignator=C26
+Change Component Designator: OldDesignator=C? NewDesignator=C16
+Change Component Designator: OldDesignator=C? NewDesignator=C17
+Change Component Designator: OldDesignator=C? NewDesignator=C18
+Change Component Designator: OldDesignator=C? NewDesignator=C19
+Change Component Designator: OldDesignator=C? NewDesignator=C20
+Change Component Designator: OldDesignator=C? NewDesignator=C21
+Change Component Designator: OldDesignator=C? NewDesignator=C22
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=C? NewDesignator=C25
+Change Component Designator: OldDesignator=C? NewDesignator=C27
+Change Component Designator: OldDesignator=C? NewDesignator=C28
+Change Component Designator: OldDesignator=LD? NewDesignator=LD3
+Change Component Designator: OldDesignator=R9 NewDesignator=R8
+Change Component Designator: OldDesignator=R10 NewDesignator=R9
+Change Component Designator: OldDesignator=R14 NewDesignator=R13
+Change Component Designator: OldDesignator=R15 NewDesignator=R14
+Change Component Designator: OldDesignator=R16 NewDesignator=R15
+Change Component Designator: OldDesignator=R17 NewDesignator=R16
+Change Component Designator: OldDesignator=R18 NewDesignator=R17
+Change Component Designator: OldDesignator=R19 NewDesignator=R11
+Change Component Designator: OldDesignator=R20 NewDesignator=R18
+Change Component Designator: OldDesignator=R21 NewDesignator=R12
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=U3 NewDesignator=U4
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Add component: Footprint Not Found SOTFL50P160X60-6N
+Add Pin To Net: Unknown Pin: Pin D1-1
+Add Pin To Net: Unknown Pin: Pin D1-2
+Add Pin To Net: Unknown Pin: Pin D1-3
+Add Pin To Net: Unknown Pin: Pin D1-4
+Add Pin To Net: Unknown Pin: Pin D1-5
+Add Pin To Net: Unknown Pin: Pin D1-6
+Change Net Name : Old Net Name=NetC7_1 New Net Name=NetC5_1
+Change Net Name : Old Net Name=NetLD?_1 New Net Name=NetLD3_1
+Change Net Name : Old Net Name=NetR16_1 New Net Name=NetR15_1
+Change Net Name : Old Net Name=NetR17_1 New Net Name=NetR16_1
+Change Net Name : Old Net Name=NetR18_1 New Net Name=NetR17_1
+Change Net Name : Old Net Name=NetR20_1 New Net Name=NetR18_1
+Added Differential Pair: Name=USB
