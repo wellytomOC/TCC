@@ -38,6 +38,13 @@
     <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="DVDD" ConstraintNetId="d25c1be6-8627-4e8d-86fa-d3569b1edf86" />
     <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="USB_P" ConstraintNetId="8f54ad5b-bfbc-4718-8089-f2ac5b65ee96" />
     <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="USB_N" ConstraintNetId="7d2c18a4-a0c7-4c6b-a803-974f138bd289" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="TXD0" ConstraintNetId="b6ab437f-ec61-432b-956e-4370d5ffdfde" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="JMP1" ConstraintNetId="4c62c6bb-582c-4290-b215-b7530e7b6668" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="NetU4_33" ConstraintNetId="f754315b-dfe0-46f6-8559-9fa58e2797d2" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="JMP2" ConstraintNetId="e2050bc2-1518-4e48-90ef-f349141dc3e8" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="JMP3" ConstraintNetId="5ef704c3-cc44-4403-a16f-05528aafc9e8" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="LED1" ConstraintNetId="92cd1047-77ad-4d51-8794-657b2d0f2ae1" />
+    <FlattenedNetName2ConstraintNetIdEntry FlattenedNetName="LED2" ConstraintNetId="2ae2208c-d5f1-4b07-ad49-4d4699cbb7e3" />
   </FlattenedNetName2ConstraintNetId>
   <CNets>
     <CNet Id="e9d6da33-062b-4cf1-8a36-3a9a74776f6a">
@@ -257,6 +264,48 @@
       <ConstraintNodes />
     </CNet>
     <CNet Id="7d2c18a4-a0c7-4c6b-a803-974f138bd289">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="b6ab437f-ec61-432b-956e-4370d5ffdfde">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="4c62c6bb-582c-4290-b215-b7530e7b6668">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="f754315b-dfe0-46f6-8559-9fa58e2797d2">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="e2050bc2-1518-4e48-90ef-f349141dc3e8">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="5ef704c3-cc44-4403-a16f-05528aafc9e8">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="92cd1047-77ad-4d51-8794-657b2d0f2ae1">
+      <Constraints />
+      <ConstraintsEx />
+      <ConstraintSets />
+      <ConstraintNodes />
+    </CNet>
+    <CNet Id="2ae2208c-d5f1-4b07-ad49-4d4699cbb7e3">
       <Constraints />
       <ConstraintsEx />
       <ConstraintSets />

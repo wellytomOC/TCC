@@ -208,6 +208,10 @@ DocumentUniqueId=
 DocumentPath=Project Outputs for TCC01\Design Rule Check - PCB1.html
 DItemRevisionGUID=
 
+[GeneratedDocument2]
+DocumentPath=Project Outputs for TCC01\Design Rule Check - PCB2_0.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0

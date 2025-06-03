@@ -1,0 +1,467 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD25\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">02/06/2025</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">22:15:24</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc" class="file"><acronym title="C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc">C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">40</td></tr>
+</table>
+</td>
+</table><a name="ID0L215NE04RW3EVQCIIPSUE55LGWPE5VARR0WUOFH0EL1IKGXHR1P"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEWDX3W23KC22NFBBZXWJM3NAMYKCMXK1JBX4MD32NJWNJXUCJXO">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">33</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDOYXKO2CNAHEFFFCLVGNVDVJVN0L0KOASIEGBRPQFVUYQ5R1QHYI">Clearance Constraint (Gap=0.4mm) (InNamedPolygon('DVDD_L01_P000')),((InNamedPolygon('GNDbot') OR InNamedPolygon('GNDtop')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPB5TBGBV331PND1KUMFTYR1L4EF3D31X0VX1NZCK4TQJQOOOL24E">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVG21YLTEI4RKHGSNXFS5W2IDYLPAMZUVO4AVL34AD2K22TLMOD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWUV4CY2FV2D2L3MCCUAMJFTOFPXBDLGZPGJ4SVOPLGKQVJPF5DRO">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAQMWVQAPILBBF1VO0QXUE4WY1GHR5B3SLKX5DBNIFBHR2R5UB34F">Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5QYBYYFIUMFJNXCQ02XLQUKQZDOALKX153MA2KJB5Y4AMZUZCNCB">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3RFJ4QVF4BU3P0ZQHJPGNUQKXCHC1LBDAGQ5YEFOQ3XNDWUNEXFH">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHY4P3RXGMUSIFD2VYJIIPK3KQBZSVU1AACICZUII3BBEYZADNUBE">Hole Size Constraint (Min=0.025mm) (Max=4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRWFAKJLDZ1TEGYXMW0SO2JJ0DBZIQGXQA4Z24AO4JFGIKU1FASMK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMGIGK4J5BLNFHEBYRYKGDXKQOO3JHO5ZIRQGODPRVJ20C4OCW1B">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCNLBYDTU3H1IPB50NOIAZRA30DRGFNTYCNQQWUJMFVFORRAOJHLC">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUZ4H33LOFX4SB54FMX1ICEH0TJH1ZKFBYXHKJ5PV3VOQQ2M5LPVD">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">40</td>
+</tr>
+</table><br><a name="IDEWDX3W23KC22NFBBZXWJM3NAMYKCMXK1JBX4MD32NJWNJXUCJXO"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8373.106mil|Location2.X=8387.113mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8373.106mil|Location2.X=8387.113mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (21.203mm,20.56mm) (21.634mm,20.83mm) on Top Layer And Area Fill (21.384mm,19.488mm) (22.354mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8379.109mil|Location2.X=8393.116mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8379.109mil|Location2.X=8393.116mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (21.289mm,20.693mm) (21.738mm,21.142mm) on Top Layer And Area Fill (21.384mm,19.488mm) (22.354mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8402.609mil|Location2.X=8416.715mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8402.609mil|Location2.X=8416.715mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (21.384mm,19.488mm) (22.354mm,20.493mm) on Top Layer And Area Fill (22.025mm,20.693mm) (22.474mm,21.142mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8408.608mil|Location2.X=8422.714mil|Location1.Y=7513.89mil|Location2.Y=7527.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8408.608mil|Location2.X=8422.714mil|Location1.Y=7513.89mil|Location2.Y=7527.897mil|Absolute=True">Clearance Constraint: (0.197mm &lt; 0.254mm) Between Area Fill (21.384mm,19.488mm) (22.354mm,20.493mm) on Top Layer And Area Fill (22.13mm,20.56mm) (22.561mm,20.83mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8390.859mil|Location2.X=8402.109mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8390.859mil|Location2.X=8402.109mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True">Clearance Constraint: (0.222mm &lt; 0.254mm) Between Area Fill (21.384mm,19.488mm) (22.354mm,20.493mm) on Top Layer And Pad R21-1(21.882mm,21.511mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8461.689mil|Location2.X=8475.696mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8461.689mil|Location2.X=8475.696mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (23.453mm,20.56mm) (23.884mm,20.83mm) on Top Layer And Area Fill (23.634mm,19.488mm) (24.604mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8467.692mil|Location2.X=8481.699mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8467.692mil|Location2.X=8481.699mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (23.539mm,20.693mm) (23.988mm,21.142mm) on Top Layer And Area Fill (23.634mm,19.488mm) (24.604mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8491.192mil|Location2.X=8505.298mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8491.192mil|Location2.X=8505.298mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (23.634mm,19.488mm) (24.604mm,20.493mm) on Top Layer And Area Fill (24.276mm,20.693mm) (24.725mm,21.142mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8497.19mil|Location2.X=8511.296mil|Location1.Y=7513.891mil|Location2.Y=7527.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8497.19mil|Location2.X=8511.296mil|Location1.Y=7513.891mil|Location2.Y=7527.897mil|Absolute=True">Clearance Constraint: (0.197mm &lt; 0.254mm) Between Area Fill (23.634mm,19.488mm) (24.604mm,20.493mm) on Top Layer And Area Fill (24.38mm,20.56mm) (24.811mm,20.83mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8479.442mil|Location2.X=8490.692mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8479.442mil|Location2.X=8490.692mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True">Clearance Constraint: (0.222mm &lt; 0.254mm) Between Area Fill (23.634mm,19.488mm) (24.604mm,20.493mm) on Top Layer And Pad R22-1(24.132mm,21.511mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8550.272mil|Location2.X=8564.279mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8550.272mil|Location2.X=8564.279mil|Location1.Y=7516.646mil|Location2.Y=7530.752mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (25.703mm,20.56mm) (26.134mm,20.83mm) on Top Layer And Area Fill (25.884mm,19.488mm) (26.854mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8556.274mil|Location2.X=8570.281mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8556.274mil|Location2.X=8570.281mil|Location1.Y=7522.649mil|Location2.Y=7536.755mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (25.789mm,20.693mm) (26.238mm,21.142mm) on Top Layer And Area Fill (25.884mm,19.488mm) (26.854mm,20.493mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8579.774mil|Location2.X=8593.88mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8579.774mil|Location2.X=8593.88mil|Location1.Y=7519.892mil|Location2.Y=7533.899mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Area Fill (25.884mm,19.488mm) (26.854mm,20.493mm) on Top Layer And Area Fill (26.525mm,20.693mm) (26.975mm,21.142mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8585.773mil|Location2.X=8599.879mil|Location1.Y=7513.89mil|Location2.Y=7527.897mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8585.773mil|Location2.X=8599.879mil|Location1.Y=7513.89mil|Location2.Y=7527.897mil|Absolute=True">Clearance Constraint: (0.197mm &lt; 0.254mm) Between Area Fill (25.884mm,19.488mm) (26.854mm,20.493mm) on Top Layer And Area Fill (26.63mm,20.56mm) (27.061mm,20.83mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8568.024mil|Location2.X=8579.274mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8568.024mil|Location2.X=8579.274mil|Location1.Y=7533.272mil|Location2.Y=7544.522mil|Absolute=True">Clearance Constraint: (0.222mm &lt; 0.254mm) Between Area Fill (25.884mm,19.488mm) (26.854mm,20.493mm) on Top Layer And Pad R23-1(26.382mm,21.511mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9180.911mil|Location2.Y=9192.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9180.911mil|Location2.Y=9192.161mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad D1-1(40.638mm,62.4mm) on Top Layer And Pad D1-2(40.638mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.629mil|Location2.X=9130.879mil|Location1.Y=9181.899mil|Location2.Y=9193.149mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.629mil|Location2.X=9130.879mil|Location1.Y=9181.899mil|Location2.Y=9193.149mil|Absolute=True">Clearance Constraint: (0.251mm &lt; 0.254mm) Between Pad D1-1(40.638mm,62.4mm) on Top Layer And Track (40.204mm,63.074mm)(40.378mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.946mil|Location2.X=9131.196mil|Location1.Y=9181.895mil|Location2.Y=9193.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.946mil|Location2.X=9131.196mil|Location1.Y=9181.895mil|Location2.Y=9193.145mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-1(40.638mm,62.4mm) on Top Layer And Track (40.378mm,62.9mm)(40.638mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9200.596mil|Location2.Y=9211.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9200.596mil|Location2.Y=9211.846mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad D1-2(40.638mm,62.9mm) on Top Layer And Pad D1-3(40.638mm,63.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9179.926mil|Location2.Y=9191.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9179.926mil|Location2.Y=9191.176mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-2(40.638mm,62.9mm) on Top Layer And Track (40.638mm,62.4mm)(41.4mm,62.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9201.58mil|Location2.Y=9212.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9138.647mil|Location2.X=9149.897mil|Location1.Y=9201.58mil|Location2.Y=9212.83mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-2(40.638mm,62.9mm) on Top Layer And Track (40.638mm,63.4mm)(41.458mm,63.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.652mil|Location2.X=9128.902mil|Location1.Y=9204.533mil|Location2.Y=9215.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.652mil|Location2.X=9128.902mil|Location1.Y=9204.533mil|Location2.Y=9215.783mil|Absolute=True">Clearance Constraint: (0.116mm &lt; 0.254mm) Between Pad D1-3(40.638mm,63.4mm) on Top Layer And Track (40.184mm,63.212mm)(40.184mm,63.884mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.965mil|Location2.X=9129.215mil|Location1.Y=9197.261mil|Location2.Y=9215.198mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.965mil|Location2.X=9129.215mil|Location1.Y=9197.261mil|Location2.Y=9215.198mil|Absolute=True">Clearance Constraint: (0.105mm &lt; 0.254mm) Between Pad D1-3(40.638mm,63.4mm) on Top Layer And Track (40.184mm,63.212mm)(40.204mm,63.192mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.965mil|Location2.X=9129.215mil|Location1.Y=9197.261mil|Location2.Y=9215.198mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.965mil|Location2.X=9129.215mil|Location1.Y=9197.261mil|Location2.Y=9215.198mil|Absolute=True">Clearance Constraint: (0.105mm &lt; 0.254mm) Between Pad D1-3(40.638mm,63.4mm) on Top Layer And Track (40.204mm,63.074mm)(40.204mm,63.192mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.671mil|Location2.X=9131.777mil|Location1.Y=9199.501mil|Location2.Y=9213.508mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9117.671mil|Location2.X=9131.777mil|Location1.Y=9199.501mil|Location2.Y=9213.508mil|Absolute=True">Clearance Constraint: (0.163mm &lt; 0.254mm) Between Pad D1-3(40.638mm,63.4mm) on Top Layer And Track (40.204mm,63.074mm)(40.378mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.946mil|Location2.X=9131.196mil|Location1.Y=9199.611mil|Location2.Y=9210.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9119.946mil|Location2.X=9131.196mil|Location1.Y=9199.611mil|Location2.Y=9210.861mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-3(40.638mm,63.4mm) on Top Layer And Track (40.378mm,62.9mm)(40.638mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9200.596mil|Location2.Y=9211.846mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9200.596mil|Location2.Y=9211.846mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad D1-4(38.962mm,63.4mm) on Top Layer And Pad D1-5(38.962mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9199.611mil|Location2.Y=9210.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9199.611mil|Location2.Y=9210.861mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-4(38.962mm,63.4mm) on Top Layer And Track (38.962mm,62.9mm)(39.35mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9180.911mil|Location2.Y=9192.161mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9180.911mil|Location2.Y=9192.161mil|Absolute=True">Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad D1-5(38.962mm,62.9mm) on Top Layer And Pad D1-6(38.962mm,62.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9053.961mil|Location2.X=9065.211mil|Location1.Y=9201.58mil|Location2.Y=9212.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9053.961mil|Location2.X=9065.211mil|Location1.Y=9201.58mil|Location2.Y=9212.83mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-5(38.962mm,62.9mm) on Top Layer And Track (37.642mm,63.4mm)(38.962mm,63.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9053.961mil|Location2.X=9065.211mil|Location1.Y=9179.926mil|Location2.Y=9191.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9053.961mil|Location2.X=9065.211mil|Location1.Y=9179.926mil|Location2.Y=9191.176mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-5(38.962mm,62.9mm) on Top Layer And Track (38mm,62.4mm)(38.962mm,62.4mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9181.895mil|Location2.Y=9193.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9072.662mil|Location2.X=9083.912mil|Location1.Y=9181.895mil|Location2.Y=9193.145mil|Absolute=True">Clearance Constraint: (0.25mm &lt; 0.254mm) Between Pad D1-6(38.962mm,62.4mm) on Top Layer And Track (38.962mm,62.9mm)(39.35mm,62.9mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9783.207mil|Location2.X=9794.457mil|Location1.Y=7773.441mil|Location2.Y=7784.691mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9783.207mil|Location2.X=9794.457mil|Location1.Y=7773.441mil|Location2.Y=7784.691mil|Absolute=True">Clearance Constraint: (0.198mm &lt; 0.254mm) Between Pad D4-1(57.672mm,27.324mm) on Top Layer And Pad D4-2(57.672mm,26.476mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMGIGK4J5BLNFHEBYRYKGDXKQOO3JHO5ZIRQGODPRVJ20C4OCW1B"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.733mil|Location2.X=9700.4mil|Location1.Y=7007.552mil|Location2.Y=7015.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.733mil|Location2.X=9700.4mil|Location1.Y=7007.552mil|Location2.Y=7015.219mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "3V3
+GND
+RX
+TX
+IO
+EN" (69.504mm,2.5mm) on Top Overlay And Track (54.99mm,7.401mm)(54.99mm,12.405mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.733mil|Location2.X=9700.4mil|Location1.Y=7007.552mil|Location2.Y=7015.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9692.733mil|Location2.X=9700.4mil|Location1.Y=7007.552mil|Location2.Y=7015.219mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "3V3
+GND
+RX
+TX
+IO
+EN" (69.504mm,2.5mm) on Top Overlay And Track (54.99mm,7.401mm)(69.417mm,7.401mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10264.135mil|Location2.X=10271.802mil|Location1.Y=7007.553mil|Location2.Y=7015.219mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10264.135mil|Location2.X=10271.802mil|Location1.Y=7007.553mil|Location2.Y=7015.219mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "3V3
+GND
+RX
+TX
+IO
+EN" (69.504mm,2.5mm) on Top Overlay And Track (69.417mm,7.401mm)(69.417mm,12.405mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9739.032mil|Location2.X=9746.698mil|Location1.Y=8935.435mil|Location2.Y=8943.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9739.032mil|Location2.X=9746.698mil|Location1.Y=8935.435mil|Location2.Y=8943.102mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "C12" (53.196mm,55.608mm) on Top Overlay And Text "C24" (59.079mm,56.842mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11192.546mil|Location2.X=11203.796mil|Location1.Y=7024.273mil|Location2.Y=7035.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11192.546mil|Location2.X=11203.796mil|Location1.Y=7024.273mil|Location2.Y=7035.523mil|Absolute=True">Silk To Silk Clearance Constraint: (0.215mm &lt; 0.254mm) Between Text "C21" (92.446mm,6.458mm) on Top Overlay And Track (91.168mm,8.106mm)(97.772mm,8.106mm) on Top Overlay Silk Text to Silk Clearance [0.215mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9450.386mil|Location2.X=9461.636mil|Location1.Y=9106.609mil|Location2.Y=9117.926mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9450.386mil|Location2.X=9461.636mil|Location1.Y=9106.609mil|Location2.Y=9117.926mil|Absolute=True">Silk To Silk Clearance Constraint: (0.083mm &lt; 0.254mm) Between Text "C3" (48.687mm,60.609mm) on Top Overlay And Text "U+" (46.634mm,59.385mm) on Top Overlay Silk Text to Silk Clearance [0.083mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10910.094mil|Location2.X=10921.344mil|Location1.Y=6795.89mil|Location2.Y=6807.14mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Wellytom\Documents\GitHub\TCC\altium\TCC01\PCB2_0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10910.094mil|Location2.X=10921.344mil|Location1.Y=6795.89mil|Location2.Y=6807.14mil|Absolute=True">Silk To Silk Clearance Constraint: (0.252mm &lt; 0.254mm) Between Text "LD2" (83.122mm,0.656mm) on Top Overlay And Track (82.974mm,2.324mm)(86.251mm,2.324mm) on Top Overlay Silk Text to Silk Clearance [0.252mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
