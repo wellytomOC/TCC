@@ -129,7 +129,6 @@ void loop() {
 }
 
 
-
 /*!
  *****************************************************************************
  @file:    AD5940Main.c
@@ -144,8 +143,6 @@ By using this software you agree to the terms of the associated
 Analog Devices Software License Agreement.
  
 *****************************************************************************/
-
-
 /**
    User could configure following parameters
 **/
@@ -156,16 +153,18 @@ uint32_t AppBuff[APPBUFF_SIZE];
 int32_t ImpedanceShowResult(uint32_t *pData, uint32_t DataCount)
 {
   float freq;
-
+  Serial.println("Showing result...");
   fImpPol_Type *pImp = (fImpPol_Type*)pData;
   AppIMPCtrl(IMPCTRL_GETFREQ, &freq);
 
+  
   printf("Freq:%.2f ", freq);
   /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
     printf("RzMag: %f Ohm , RzPhase: %f \n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
   }
+  Serial.println("Result show completed.");
   return 0;
 }
 
@@ -226,7 +225,7 @@ void AD5940ImpedanceStructInit(void)
 
   pImpedanceCfg->RcalVal = 10000.0;
   pImpedanceCfg->SinFreq = 60000.0;
-  pImpedanceCfg->FifoThresh = 4;
+  pImpedanceCfg->FifoThresh = 2;
 	
 	/* Set switch matrix to onboard(EVAL-AD5940ELECZ) dummy sensor. */
 	/* Note the RCAL0 resistor is 10kOhm. */
@@ -239,15 +238,15 @@ void AD5940ImpedanceStructInit(void)
 	
 	/* Configure the sweep function. */
 	pImpedanceCfg->SweepCfg.SweepEn = bTRUE;
-	pImpedanceCfg->SweepCfg.SweepStart = 2.0f;	/* Start from 1kHz */
+	pImpedanceCfg->SweepCfg.SweepStart = 1000.0f;	/* Start from 1kHz */
 	pImpedanceCfg->SweepCfg.SweepStop = 200e3f;		/* Stop at 100kHz */
 	pImpedanceCfg->SweepCfg.SweepPoints = 101;		/* Points is 101 */
 	pImpedanceCfg->SweepCfg.SweepLog = bTRUE;
 	/* Configure Power Mode. Use HP mode if frequency is higher than 80kHz. */
-	pImpedanceCfg->PwrMod = AFEPWR_HP;
+	pImpedanceCfg->PwrMod = AFEPWR_LP;
 	/* Configure filters if necessary */
 	pImpedanceCfg->ADCSinc3Osr = ADCSINC3OSR_2;		/* Sample rate is 800kSPS/2 = 400kSPS */
-  pImpedanceCfg->DftNum = DFTNUM_16384;
+  pImpedanceCfg->DftNum = DFTNUM_1024;
   pImpedanceCfg->DftSrc = DFTSRC_SINC3;
 }
 
@@ -267,6 +266,8 @@ void AD5940_Main(void)
       AD5940_ClrMCUIntFlag();
       temp = APPBUFF_SIZE;
       AppIMPISR(AppBuff, &temp);
+      Serial.print("ISR returned DataCount = ");
+      Serial.println(temp);
       ImpedanceShowResult(AppBuff, temp);
     }
   }

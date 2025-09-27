@@ -12,7 +12,6 @@ By using this software you agree to the terms of the associated
 Analog Devices Software License Agreement.
  
 *******************************************************************************/
-#include <Arduino.h>
 #include "ad5940.h"
 #include <stdio.h>
 #include "string.h"

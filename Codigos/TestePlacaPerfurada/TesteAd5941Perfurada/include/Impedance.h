@@ -12,9 +12,6 @@ By using this software you agree to the terms of the associated
 Analog Devices Software License Agreement.
  
 *****************************************************************************/
-
-
-
 #ifndef _IMPEDANCESEQUENCES_H_
 #define _IMPEDANCESEQUENCES_H_
 #include "ad5940.h"
