@@ -8,9 +8,6 @@ volatile static uint8_t ucInterrupted = 0; // Flag to indicate interrupt occurre
 spi_device_handle_t spi_handle;
 
 
-//prototypes
-void AD5940_InterruptHandler();
-
 
 /**
  * @brief Using SPI to transmit N bytes and return the received bytes.
@@ -57,21 +54,20 @@ uint32_t AD5940_ClrMCUIntFlag(void) {
 
 uint32_t AD5940_MCUResourceInit(void *pCfg) {
   // Initialize the SPI pins
-  
+  Serial.println("Initializing MCU resources for AD5940...");
   pinMode(AD5940_CS_PIN, OUTPUT);
   pinMode(AD5940_RST_PIN, OUTPUT);
   pinMode(AD5940_GP0INT_PIN, INPUT_PULLUP); // External interrupt pin
 
-
+  Serial.println("Starting SPI...");
   SPI.begin(AD5940_SCK_PIN, AD5940_MISO_PIN, AD5940_MOSI_PIN, AD5940_CS_PIN);
-
 
   // Reset and set initial values for CS and RST pins
   AD5940_CsSet();
   AD5940_RstSet();
 
   // Attach interrupt for external GPIO pin (AD5940_GP0INT_PIN)
-  attachInterrupt(digitalPinToInterrupt(AD5940_GP0INT_PIN), AD5940_InterruptHandler, FALLING);
+  attachInterrupt(digitalPinToInterrupt(AD5940_GP1INT_PIN), AD5940_InterruptHandler, FALLING);
 
   return 0;
 }
@@ -79,6 +75,7 @@ uint32_t AD5940_MCUResourceInit(void *pCfg) {
 /**
  * @brief Interrupt handler for external interrupt
  */
-void AD5940_InterruptHandler() {
+void IRAM_ATTR AD5940_InterruptHandler() {
+  //Serial.println("Interrupt occurred!");
   ucInterrupted = 1;
 }
