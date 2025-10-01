@@ -223,18 +223,18 @@ void AD5940ImpedanceStructInit(void)
   pImpedanceCfg->SeqStartAddr = 0;
   pImpedanceCfg->MaxSeqLen = 512; /* @todo add checker in function */
 
-  pImpedanceCfg->RcalVal = 10000.0;
+  pImpedanceCfg->RcalVal = 1000.0;
   pImpedanceCfg->SinFreq = 60000.0;
   pImpedanceCfg->FifoThresh = 2;
 	
 	/* Set switch matrix to onboard(EVAL-AD5940ELECZ) dummy sensor. */
 	/* Note the RCAL0 resistor is 10kOhm. */
 	pImpedanceCfg->DswitchSel = SWD_CE0;
-	pImpedanceCfg->PswitchSel = SWP_RE0;
-	pImpedanceCfg->NswitchSel = SWN_SE0;
-	pImpedanceCfg->TswitchSel = SWT_SE0LOAD;
+	pImpedanceCfg->PswitchSel = SWP_CE0;
+	pImpedanceCfg->NswitchSel = SWN_AIN1;
+	pImpedanceCfg->TswitchSel = SWT_AIN1;
 	/* The dummy sensor is as low as 5kOhm. We need to make sure RTIA is small enough that HSTIA won't be saturated. */
-	pImpedanceCfg->HstiaRtiaSel = HSTIARTIA_5K;	
+	pImpedanceCfg->HstiaRtiaSel = HSTIARTIA_1K;	
 	
 	/* Configure the sweep function. */
 	pImpedanceCfg->SweepCfg.SweepEn = bTRUE;
