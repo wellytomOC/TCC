@@ -75,7 +75,7 @@ uint32_t AD5940_MCUResourceInit(void *pCfg) {
 /**
  * @brief Interrupt handler for external interrupt
  */
-void IRAM_ATTR AD5940_InterruptHandler() {
+void AD5940_InterruptHandler() {
   //Serial.println("Interrupt occurred!");
   ucInterrupted = 1;
 }
