@@ -30,19 +30,19 @@ AppBIACfg_Type AppBIACfg =
   .SysClkFreq = 16000000.0,
   .WuptClkFreq = 32000.0,
   .AdcClkFreq = 16000000.0,
-  .BiaODR = 20.0, /* 20.0 Hz*/
+  .BiaODR = 2.0, /* 2.0 Hz*/
   .NumOfData = -1,
   .RcalVal = 1000.0, /* 1kOhm */
 
   .PwrMod = AFEPWR_LP,
-  .HstiaRtiaSel = HSTIARTIA_1K,
+  .HstiaRtiaSel = HSTIADERTIA_1K,
   .CtiaSel = 16,
   .ExcitBufGain = EXCITBUFGAIN_2,
   .HsDacGain = HSDACGAIN_1,
   .HsDacUpdateRate = 7,
   .DacVoltPP = 800.0,
 
-  .SinFreq = 50000.0, /* 50kHz */
+  .SinFreq = 1000.0, /* 1kHz */
 
   .ADCPgaGain = ADCPGA_1,
   .ADCSinc3Osr = ADCSINC3OSR_2,
@@ -335,7 +335,7 @@ static AD5940Err AppBIASeqMeasureGen(void)
   AD5940_AFECtrlS(AFECTRL_ADCCNV|AFECTRL_DFT|AFECTRL_WG|AFECTRL_ADCPWR, bFALSE);  /* Stop ADC convert and DFT */
 
 
-  AD5940_ADCMuxCfgS(ADCMUXP_AIN0, ADCMUXN_AIN1);
+  AD5940_ADCMuxCfgS(ADCMUXP_AIN3, ADCMUXN_AIN2);
   AD5940_AFECtrlS(AFECTRL_WG|AFECTRL_ADCPWR, bTRUE);  /* Enable Waveform generator, ADC power */
   AD5940_SEQGenInsert(SEQ_WAIT(16*50));  //delay for signal settling DFT_WAIT
   AD5940_AFECtrlS(AFECTRL_ADCCNV|AFECTRL_DFT, bTRUE);  /* Start ADC convert and DFT */
@@ -345,7 +345,7 @@ static AD5940Err AppBIASeqMeasureGen(void)
   sw_cfg.Dswitch = SWD_OPEN;
   sw_cfg.Pswitch = SWP_PL|SWP_PL2;
   sw_cfg.Nswitch = SWN_NL|SWN_NL2;
-  sw_cfg.Tswitch = SWT_TRTIA;
+  sw_cfg.Tswitch = SWT_OPEN;
   AD5940_SWMatrixCfgS(&sw_cfg); /* Float switches */
 
   AD5940_SEQGpioCtrlS(0/*AGPIO_Pin6|AGPIO_Pin5|AGPIO_Pin1*/);        //GP6->endSeq, GP5 -> AD8233=OFF, GP1->RLD=OFF .
@@ -422,6 +422,7 @@ static AD5940Err AppBIARtiaCal(void)
   {
     hsrtia_cal.fFreq = AppBIACfg.SinFreq;
     AD5940_HSRtiaCal(&hsrtia_cal, AppBIACfg.RtiaCurrValue);
+    ADI_Print("Freq:%.2f, RTIA: Mag:%f Ohm, Phase:%.3f\n", hsrtia_cal.fFreq, AppBIACfg.RtiaCurrValue[0], AppBIACfg.RtiaCurrValue[1]);
   }
   return AD5940ERR_OK;
 }

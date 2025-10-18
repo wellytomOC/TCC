@@ -3517,7 +3517,7 @@ AD5940Err AD5940_HSRtiaCal(HSRTIACal_Type *pCalCfg, void *pResult)
   hs_loop.SWMatCfg.Dswitch = SWD_RCAL0;
   hs_loop.SWMatCfg.Pswitch = SWP_RCAL0;
   hs_loop.SWMatCfg.Nswitch = SWN_RCAL1;
-  hs_loop.SWMatCfg.Tswitch = SWT_RCAL1|SWT_TRTIA|SWT_AIN1;
+  hs_loop.SWMatCfg.Tswitch = SWT_RCAL1|SWT_TRTIA;
   hs_loop.WgCfg.WgType = WGTYPE_SIN;
   hs_loop.WgCfg.GainCalEn = bTRUE;
   hs_loop.WgCfg.OffsetCalEn = bTRUE;

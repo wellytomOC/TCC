@@ -21,3 +21,8 @@
 
 #define USB_DN_PIN 13
 #define USB_DP_PIN 14
+
+
+
+//prototypes
+//void HSDACCal(void);
