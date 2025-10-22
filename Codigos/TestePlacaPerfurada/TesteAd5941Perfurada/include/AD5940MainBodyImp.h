@@ -1,3 +1,3 @@
 #pragma once
 
-void AD5940_Main(void);
+void ImpedanceSweep_Main(void);

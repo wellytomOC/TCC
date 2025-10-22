@@ -17,6 +17,7 @@ extern "C"{
 void ConfigureLpTIA(void);
 void DEMO_Test_SPI(void);
 void DebugLed(void *parameters);
+void HwResetAndClockConfig(void);
 
 
 
@@ -66,7 +67,7 @@ void setup() {
   delay(5000);
   AD5940_MCUResourceInit(0);
   Serial.println("Starting AD5940 Tests...");
-
+  HwResetAndClockConfig();
   LPDac_Main();
   
 }
@@ -178,7 +179,28 @@ void DEMO_Test_SPI(void)
 }
 
 
-//Test LPDAC
+//CLock config
+void HwResetAndClockConfig(void)
+{
+  CLKCfg_Type clk_cfg;
+
+  /* Use hardware reset */
+  AD5940_HWReset();
+  /* Platform configuration */
+  AD5940_Initialize();
+
+
+  /* Configure clock to use external source */
+  clk_cfg.ADCClkDiv = ADCCLKDIV_1;
+  clk_cfg.ADCCLkSrc = ADCCLKSRC_XTAL;
+  clk_cfg.SysClkDiv = SYSCLKDIV_1;
+  clk_cfg.SysClkSrc = SYSCLKSRC_XTAL;
+  clk_cfg.HfOSC32MHzMode = bFALSE;
+  clk_cfg.HFOSCEn = bFALSE;
+  clk_cfg.HFXTALEn = bTRUE;
+  clk_cfg.LFOSCEn = bTRUE;
+  AD5940_CLKCfg(&clk_cfg);
+}
 
 
 

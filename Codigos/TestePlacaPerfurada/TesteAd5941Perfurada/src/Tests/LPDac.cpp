@@ -15,10 +15,6 @@ void ConfigureLpTIA(void){
   AFERefCfg_Type ref_cfg;
   LPLoopCfg_Type lp_cfg;
 
-  /* Use hardware reset */
-  AD5940_HWReset();
-  AD5940_Initialize();
-
   /* Initialize everything to zero(false/OFF/PowerDown), only turn on what we need */
   AD5940_StructInit(&ref_cfg, sizeof(ref_cfg));
   ref_cfg.LpBandgapEn = bTRUE;                        /* Enable low power bandgap */
@@ -45,8 +41,7 @@ void ConfigureLpTIA(void){
   lp_cfg.LpAmpCfg.LpTiaRf = LPTIARF_SHORT;
   lp_cfg.LpAmpCfg.LpTiaRtia = LPTIARTIA_OPEN;
   lp_cfg.LpAmpCfg.LpTiaRload = LPTIARLOAD_SHORT;
-
-  printf("Setting up LPTIA with 1.3V bias voltage...\n");
+  
   AD5940_LPLoopCfgS(&lp_cfg); 
 }
 
