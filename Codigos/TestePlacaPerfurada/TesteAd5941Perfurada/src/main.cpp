@@ -8,8 +8,22 @@ extern "C"{
   #include "AD5940MainBodyImp.h"
 }
 
-//funcoes
+#include "Tests/LPDac.h"
 
+
+//****************************************************************/
+//                PROTOTYPES
+//****************************************************************/
+void ConfigureLpTIA(void);
+void DEMO_Test_SPI(void);
+void DebugLed(void *parameters);
+
+
+
+//****************************************************************/
+//                BASIC FUNCTIONS
+//****************************************************************/
+TaskHandle_t TaskHandleDebugLed = NULL;
 
 void PinSetup(void){
   //LEDs
@@ -31,6 +45,73 @@ void PinSetup(void){
   pinMode(AD5940_GP2INT_PIN, INPUT_PULLUP);
 }
 
+void setup() {
+
+  //UART initialization
+  Serial.begin(115200);
+
+  //pin configurations
+  PinSetup();
+  
+  
+  // Imprime uma mensagem de boas-vindas
+  Serial.println("Hello AD5940 - Build Time:");
+  Serial.println(__TIME__);
+  
+  //Inicia a task para debugging
+  xTaskCreate(DebugLed,"DebugLed", 2048, NULL, 5, &TaskHandleDebugLed);
+  
+
+  //Inicia os testes do AD5940
+  delay(5000);
+  AD5940_MCUResourceInit(0);
+  Serial.println("Starting AD5940 Tests...");
+
+  LPDac_Main();
+  
+}
+
+
+
+
+void loop() {
+  Serial.println("Main Loop Running...");
+  delay(1000);
+}
+
+
+
+
+//****************************************************************/
+//               TASKS
+//****************************************************************/
+void DebugLed(void *parameters)
+{
+  while (1)
+  {
+    digitalWrite(LED1_PIN, HIGH);
+    digitalWrite(LED2_PIN, LOW);
+    delay(100);
+    digitalWrite(LED1_PIN, LOW);
+    digitalWrite(LED2_PIN, HIGH);
+    delay(100);
+  }
+  vTaskDelete(TaskHandleDebugLed);
+}
+
+
+
+
+
+
+
+
+
+//****************************************************************/
+//                Tests and Examples Code
+//****************************************************************/
+
+//Test SPI communication with AD5940
 void DEMO_Test_SPI(void)
 {
   const int TOTAL_TRIALS = 1000;
@@ -97,33 +178,7 @@ void DEMO_Test_SPI(void)
 }
 
 
-void setup() {
-
-  //UART initialization
-  Serial.begin(115200);
-
-  //pin configurations
-  PinSetup();
-  
-  // Imprime uma mensagem de boas-vindas
-  Serial.println("Hello AD5940 - Build Time:");
-  Serial.println(__TIME__);
-  
-
-  delay(3000);
+//Test LPDAC
 
 
-  AD5940_MCUResourceInit(0);
-  AD5940_Main();
-  
-}
-
-void loop() {
-  digitalWrite(LED1_PIN, HIGH);
-  digitalWrite(LED2_PIN, LOW);
-  delay(100);
-  digitalWrite(LED1_PIN, LOW);
-  digitalWrite(LED2_PIN, HIGH);
-  delay(100);
-}
 

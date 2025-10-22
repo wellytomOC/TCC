@@ -208,39 +208,6 @@ static void AD5940_PGA_Calibration(void){
   }
 }
 
-void ConfigureLpTIA(void){
-  LPLoopCfg_Type lp_loop;
-  memset(&lp_loop, 0, sizeof(LPLoopCfg_Type));
-  
-  AFERefCfg_Type aferef_cfg;
-  memset(&aferef_cfg, 0, sizeof(AFERefCfg_Type));
-  aferef_cfg.LpBandgapEn = bTRUE;
-  aferef_cfg.LpRefBufEn = bTRUE;
-  aferef_cfg.LpRefBoostEn = bFALSE;
-  AD5940_REFCfgS(&aferef_cfg);
-
-  lp_loop.LpDacCfg.LpdacSel = LPDAC0;
-  lp_loop.LpDacCfg.LpDacSrc = LPDACSRC_MMR;
-  lp_loop.LpDacCfg.LpDacSW = LPDACSW_VBIAS2LPPA|LPDACSW_VBIAS2PIN|LPDACSW_VZERO2LPTIA|LPDACSW_VZERO2PIN;
-  lp_loop.LpDacCfg.LpDacVzeroMux = LPDACVZERO_6BIT;
-  lp_loop.LpDacCfg.LpDacVbiasMux = LPDACVBIAS_12BIT;
-  lp_loop.LpDacCfg.LpDacRef = LPDACREF_2P5;
-  lp_loop.LpDacCfg.DataRst = bFALSE;
-  lp_loop.LpDacCfg.PowerEn = bTRUE;
-  lp_loop.LpDacCfg.DacData12Bit = (uint32_t)((1100-200)/2200.0*4095);
-  lp_loop.LpDacCfg.DacData6Bit = 31;
-
-  lp_loop.LpAmpCfg.LpAmpSel = LPAMP0;
-  lp_loop.LpAmpCfg.LpAmpPwrMod = LPAMPPWR_NORM;
-  lp_loop.LpAmpCfg.LpPaPwrEn = bTRUE;
-  lp_loop.LpAmpCfg.LpTiaPwrEn = bTRUE;
-  lp_loop.LpAmpCfg.LpTiaRf = LPTIARF_20K;
-  lp_loop.LpAmpCfg.LpTiaRload = LPTIARLOAD_SHORT;
-  lp_loop.LpAmpCfg.LpTiaRtia = LPTIARTIA_OPEN;
-  lp_loop.LpAmpCfg.LpTiaSW =  LPTIASW(2)/*|LPTIASW(5)*/|LPTIASW(6)|LPTIASW(7)|LPTIASW(8)|LPTIASW(9)|LPTIASW(12)|LPTIASW(13);
-  AD5940_LPLoopCfgS(&lp_loop);
-
-}
 
 void AD5940_Main2(void)
 {
@@ -257,7 +224,7 @@ void AD5940_Main2(void)
   /* Configure AFE power mode and bandwidth */
   AD5940_AFEPwrBW(AFEPWR_LP, AFEBW_250KHZ);
 
-  ConfigureLpTIA();
+  //ConfigureLpTIA();
   
   /* Initialize ADC basic function */
   AD5940_AFECtrlS(AFECTRL_DACREFPWR|AFECTRL_HSDACPWR, bTRUE); //We are going to measure DAC 1.82V reference.
@@ -314,8 +281,8 @@ void AD5940_Main2(void)
 
 
 
-
-void AD5940_Main(void)
+//Impedance Sweep Example
+void ImpedanceSweep_Main(void)
 {
   static uint32_t IntCount;
   static uint32_t count;
@@ -361,8 +328,9 @@ void AD5940_Main(void)
   }
 }
 
-/**
- * @}
- * @}
- * */
+
+
+
+
+
  
