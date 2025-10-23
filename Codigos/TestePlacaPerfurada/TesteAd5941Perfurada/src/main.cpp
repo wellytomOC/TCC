@@ -9,6 +9,7 @@ extern "C"{
 }
 
 #include "Tests/LPDac.h"
+#include "Tests/HSDAC.h"
 
 
 //****************************************************************/
@@ -68,8 +69,8 @@ void setup() {
   AD5940_MCUResourceInit(0);
   Serial.println("Starting AD5940 Tests...");
   HwResetAndClockConfig();
-  LPDac_Main();
-  
+  //LPDac_Main();
+  HSDAC_Main();
 }
 
 
