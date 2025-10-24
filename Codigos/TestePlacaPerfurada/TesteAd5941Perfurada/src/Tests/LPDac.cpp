@@ -67,10 +67,10 @@ void LPDac_Main(void)
     ConfigureLpTIA();
     AD5940_WriteReg(REG_AFE_SWMUX, 1<<3);
 
-    printf("Type a voltage between 0.2V and 2.4V and press ENTER: ");
+    //printf("Type a voltage between 0.2V and 2.4V and press ENTER: ");
 
     while(1){
-        RequestVoltage();
+        //RequestVoltage();
         delay(100);
     }
 }

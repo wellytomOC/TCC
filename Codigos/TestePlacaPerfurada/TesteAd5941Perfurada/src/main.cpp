@@ -10,6 +10,7 @@ extern "C"{
 
 #include "Tests/LPDac.h"
 #include "Tests/HSDAC.h"
+#include "Tests/ADC.h"
 
 
 //****************************************************************/
@@ -67,10 +68,13 @@ void setup() {
   //Inicia os testes do AD5940
   delay(5000);
   AD5940_MCUResourceInit(0);
-  Serial.println("Starting AD5940 Tests...");
+
   HwResetAndClockConfig();
-  //LPDac_Main();
-  HSDAC_Main();
+  Serial.println("Starting AD5940 Tests...");
+  xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, NULL);
+
+  LPDac_Main();
+  //HSDAC_Main();
 }
 
 
@@ -101,7 +105,12 @@ void DebugLed(void *parameters)
   vTaskDelete(TaskHandleDebugLed);
 }
 
-
+void TestTask(void *parameters)
+{
+  
+  ADC_Main();
+  vTaskDelete(NULL);
+}
 
 
 

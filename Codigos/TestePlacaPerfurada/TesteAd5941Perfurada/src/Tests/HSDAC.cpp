@@ -45,7 +45,7 @@ void HSDAC_Main(void){
     HpLoopCfg.HsTiaCfg.HstiaCtia = 16; /* 16pF */
     HpLoopCfg.HsTiaCfg.HstiaDeRload = HSTIADERLOAD_OPEN;
     HpLoopCfg.HsTiaCfg.HstiaDeRtia = HSTIADERTIA_OPEN;
-    HpLoopCfg.HsTiaCfg.HstiaRtiaSel = HSTIARTIA_1K;
+    HpLoopCfg.HsTiaCfg.HstiaRtiaSel = HSTIADERTIA_100;
 
     HpLoopCfg.SWMatCfg.Dswitch = SWD_CE0;
     HpLoopCfg.SWMatCfg.Pswitch = SWP_PL;
