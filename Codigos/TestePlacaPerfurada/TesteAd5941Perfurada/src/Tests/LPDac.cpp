@@ -3,13 +3,14 @@
 #include "Arduino.h"
 #include "ESP32Port.h"
 #include "LPDac.h"
+#include "main.h"
 
 extern "C"{
     #include "ad5940.h"
 }
 
 
-static uint16_t dacValue = 2048; // Default to mid-scale (1.3V)
+static uint16_t dacValue = 2048;
 
 void ConfigureLpTIA(void){
   AFERefCfg_Type ref_cfg;
@@ -66,6 +67,12 @@ void LPDac_Main(void)
 {
     ConfigureLpTIA();
     AD5940_WriteReg(REG_AFE_SWMUX, 1<<3);
+
+    
+
+    printf("LPDAC initialized. Current output voltage is approximately %.2f V\n", 0.2f + (2.4f - 0.2f) * dacValue / 4095);
+
+    GVariables.isLPDACConfigured = true;
 
     //printf("Type a voltage between 0.2V and 2.4V and press ENTER: ");
 

@@ -13,12 +13,22 @@ extern "C"{
 #include "Tests/ADC.h"
 
 
+
+
+//****************************************************************/
+//                VARIABLES
+//****************************************************************/
+
+Type_GlobalVariables GVariables;
+
+
 //****************************************************************/
 //                PROTOTYPES
 //****************************************************************/
 void ConfigureLpTIA(void);
 void DEMO_Test_SPI(void);
 void DebugLed(void *parameters);
+void TestTask(void *parameters);
 void HwResetAndClockConfig(void);
 
 
@@ -27,6 +37,7 @@ void HwResetAndClockConfig(void);
 //                BASIC FUNCTIONS
 //****************************************************************/
 TaskHandle_t TaskHandleDebugLed = NULL;
+TaskHandle_t TaskHandleTestTask = NULL;
 
 void PinSetup(void){
   //LEDs
@@ -71,8 +82,9 @@ void setup() {
 
   HwResetAndClockConfig();
   Serial.println("Starting AD5940 Tests...");
-  xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, NULL);
+  xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, &TaskHandleTestTask);
 
+  Serial.println("Starting LPDAC Test...");
   LPDac_Main();
   //HSDAC_Main();
 }
@@ -109,7 +121,7 @@ void TestTask(void *parameters)
 {
   
   ADC_Main();
-  vTaskDelete(NULL);
+  vTaskDelete(TaskHandleTestTask);
 }
 
 

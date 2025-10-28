@@ -1,4 +1,5 @@
 #pragma once
+#include "arduino.h"
 
 #define LCD_CS_PIN 1
 #define LCD_RST_PIN 2
@@ -24,5 +25,10 @@
 
 
 
-//prototypes
-//void HSDACCal(void);
+// GLobal struct
+
+typedef struct Type_GlobalVariables{
+    bool isLPDACConfigured;
+}Type_GlobalVariables;
+
+extern Type_GlobalVariables GVariables;

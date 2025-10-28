@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include "arduino.h"
+#include "main.h"
 #include "ESP32Port.h"
 extern "C"{
     #include "ad5940.h"
 }
 
 #define ADCPGA_GAIN_SEL   ADCPGA_1P5
-int Var_ADCMUXP = ADCMUXP_VREF1P8DAC;
-int Var_ADCMUXN = ADCMUXN_VSET1P1;
+int Var_ADCMUXP = ADCMUXP_VCE0;
+int Var_ADCMUXN = ADCMUXN_VREF1P1;
 
 static void AD5940_PGA_Calibration(void){
   AD5940Err err;
@@ -27,11 +28,13 @@ static void AD5940_PGA_Calibration(void){
   }
 }
 
-void AD5940_Main(void)
+void ADC_Main(void)
 {
   ADCBaseCfg_Type adc_base;
   ADCFilterCfg_Type adc_filter;
   
+  
+  while(GVariables.isLPDACConfigured == false) delay(100); // Wait until LPDAC is configured
   AD5940_PGA_Calibration();
   /* Configure AFE power mode and bandwidth */
   AD5940_AFEPwrBW(AFEPWR_LP, AFEBW_250KHZ);
@@ -80,6 +83,7 @@ void AD5940_Main(void)
         printf("ADC Code:%d, diff-volt: %.4f, volt:%.4f\n",rd, diff_volt, diff_volt+1.11);
       }
     }
+    delay(10);
   }
 }
 
