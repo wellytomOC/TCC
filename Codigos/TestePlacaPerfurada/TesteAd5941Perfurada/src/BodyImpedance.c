@@ -11,6 +11,7 @@ Analog Devices Software License Agreement.
  
 *****************************************************************************/
 #include "BodyImpedance.h"
+#include "tests/ADC.h"
 
 /* 
   Application configuration structure. Specified by user from template.
@@ -35,7 +36,7 @@ AppBIACfg_Type AppBIACfg =
   .RcalVal = 1000.0, /* 1kOhm */
 
   .PwrMod = AFEPWR_LP,
-  .HstiaRtiaSel = HSTIADERTIA_1K,
+  .HstiaRtiaSel = HSTIARTIA_1K,
   .CtiaSel = 16,
   .ExcitBufGain = EXCITBUFGAIN_2,
   .HsDacGain = HSDACGAIN_1,
@@ -44,7 +45,7 @@ AppBIACfg_Type AppBIACfg =
 
   .SinFreq = 1000.0, /* 1kHz */
 
-  .ADCPgaGain = ADCPGA_1,
+  .ADCPgaGain = ADCPGA_1P5,
   .ADCSinc3Osr = ADCSINC3OSR_2,
   .ADCSinc2Osr = ADCSINC2OSR_22,
 
@@ -335,7 +336,7 @@ static AD5940Err AppBIASeqMeasureGen(void)
   AD5940_AFECtrlS(AFECTRL_ADCCNV|AFECTRL_DFT|AFECTRL_WG|AFECTRL_ADCPWR, bFALSE);  /* Stop ADC convert and DFT */
 
 
-  AD5940_ADCMuxCfgS(ADCMUXP_AIN3, ADCMUXN_AIN2);
+  AD5940_ADCMuxCfgS(ADCMUXP_AIN2, ADCMUXN_AIN3);
   AD5940_AFECtrlS(AFECTRL_WG|AFECTRL_ADCPWR, bTRUE);  /* Enable Waveform generator, ADC power */
   AD5940_SEQGenInsert(SEQ_WAIT(16*50));  //delay for signal settling DFT_WAIT
   AD5940_AFECtrlS(AFECTRL_ADCCNV|AFECTRL_DFT, bTRUE);  /* Start ADC convert and DFT */
@@ -378,6 +379,24 @@ static AD5940Err AppBIASeqMeasureGen(void)
   else
     return error; /* Error */
   return AD5940ERR_OK;
+}
+
+void AD5940_PGA2_Calibration(void){
+  AD5940Err err;
+  ADCPGACal_Type pgacal;
+  pgacal.AdcClkFreq = 16e6;
+  pgacal.ADCSinc2Osr = AppBIACfg.ADCSinc2Osr;
+  pgacal.ADCSinc3Osr = AppBIACfg.ADCSinc3Osr;
+  pgacal.SysClkFreq = 16e6;
+  pgacal.TimeOut10us = 1000;
+  pgacal.VRef1p11 = 1.11f;
+  pgacal.VRef1p82 = 1.82f;
+  pgacal.PGACalType = PGACALTYPE_OFFSETGAIN;
+  pgacal.ADCPga = AppBIACfg.ADCPgaGain;
+  err = AD5940_ADCPGACal(&pgacal);
+  if(err != AD5940ERR_OK){
+    printf("AD5940 PGA calibration failed.");
+  }
 }
 
 static AD5940Err AppBIARtiaCal(void)
@@ -445,6 +464,9 @@ AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
   seq_cfg.SeqEnable = bFALSE;
   seq_cfg.SeqWrTimer = 0;
   AD5940_SEQCfg(&seq_cfg);
+
+  /* Do ADC Calibration */
+  AD5940_PGA2_Calibration();
 
   /* Do RTIA calibration */
   

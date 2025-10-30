@@ -7,10 +7,10 @@ extern "C"{
 }
 
 #define ADCPGA_GAIN_SEL   ADCPGA_1P5
-int Var_ADCMUXP = ADCMUXP_VCE0;
-int Var_ADCMUXN = ADCMUXN_VREF1P1;
+int Var_ADCMUXP = ADCMUXP_AIN2;
+int Var_ADCMUXN = ADCMUXN_AIN3;
 
-static void AD5940_PGA_Calibration(void){
+void AD5940_PGA_Calibration(void){
   AD5940Err err;
   ADCPGACal_Type pgacal;
   pgacal.AdcClkFreq = 16e6;
@@ -80,7 +80,7 @@ void ADC_Main(void)
       {
         count = 0;
         float diff_volt = AD5940_ADCCode2Volt(rd, ADCPGA_GAIN_SEL, 1.82);
-        printf("ADC Code:%d, diff-volt: %.4f, volt:%.4f\n",rd, diff_volt, diff_volt+1.11);
+        printf("ADC Code:%d, diff-volt: %.4f\n",rd, diff_volt);
       }
     }
     delay(10);

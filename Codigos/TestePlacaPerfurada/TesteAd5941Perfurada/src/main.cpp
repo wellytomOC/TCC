@@ -2,6 +2,8 @@
 #include "main.h"
 #include "stdio.h"
 #include "ESP32Port.h"
+#include "DisplayControl.h"
+//#include "DisplaySetup.h"
 extern "C"{
   #include "ad5940.h"
   #include "BodyImpedance.h"
@@ -76,16 +78,26 @@ void setup() {
   xTaskCreate(DebugLed,"DebugLed", 2048, NULL, 5, &TaskHandleDebugLed);
   
 
+  //Inicia o display
+  StartDisplayControl();
+
+
+
+
   //Inicia os testes do AD5940
   delay(5000);
   AD5940_MCUResourceInit(0);
 
-  HwResetAndClockConfig();
-  Serial.println("Starting AD5940 Tests...");
-  xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, &TaskHandleTestTask);
+  // HwResetAndClockConfig();
+  // Serial.println("Starting AD5940 Tests...");
+  // xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, &TaskHandleTestTask);
 
-  Serial.println("Starting LPDAC Test...");
-  LPDac_Main();
+  // Serial.println("Starting LPDAC Test...");
+  // LPDac_Main();
+
+  ImpedanceSweep_Main();
+
+
   //HSDAC_Main();
 }
 
