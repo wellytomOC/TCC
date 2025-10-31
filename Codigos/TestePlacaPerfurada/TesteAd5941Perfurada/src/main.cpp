@@ -95,7 +95,7 @@ void setup() {
   // Serial.println("Starting LPDAC Test...");
   // LPDac_Main();
 
-  ImpedanceSweep_Main();
+  //ImpedanceSweep_Main();
 
 
   //HSDAC_Main();
@@ -106,6 +106,7 @@ void setup() {
 
 void loop() {
   Serial.println("Main Loop Running...");
+  GVariables.TestCounter++;
   delay(1000);
 }
 

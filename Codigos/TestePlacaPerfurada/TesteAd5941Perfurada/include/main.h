@@ -29,6 +29,8 @@
 
 typedef struct Type_GlobalVariables{
     bool isLPDACConfigured;
+
+    uint8_t TestCounter;
 }Type_GlobalVariables;
 
 extern Type_GlobalVariables GVariables;
