@@ -4,3 +4,4 @@
 
 
 void StartDisplayControl(void);
+void calibrateTouch(void);

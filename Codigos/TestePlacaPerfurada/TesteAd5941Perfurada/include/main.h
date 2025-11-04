@@ -26,9 +26,16 @@
 
 
 // GLobal struct
+typedef struct Type_SweepParameters{
+    uint32_t startFreq;
+    uint32_t endFreq;
+    uint32_t steps;
+}Type_SweepParameters;
 
 typedef struct Type_GlobalVariables{
     bool isLPDACConfigured;
+
+    Type_SweepParameters SweepParams;
 
     uint8_t TestCounter;
 }Type_GlobalVariables;

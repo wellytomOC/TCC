@@ -48,7 +48,6 @@ static lv_color_t buf1[SCREEN_WIDTH * SCREEN_HEIGHT / 10] DMA_ATTR;
 
 void DisplayTask(void *pvParameters);
 
-void calibrateTouch(void);
 bool loadTouchCalibration(void);
 
 void my_flush_cb(lv_display_t * display, const lv_area_t * area, uint8_t * px_map);
@@ -105,7 +104,7 @@ void StartDisplayControl(void){
 
     ui_manager_set_screen(SCREEN_HOME);
 
-    xTaskCreate(DisplayTask,"DisplayTask", 8192, NULL, 5, &TaskHandleDisplayTask);
+    xTaskCreate(DisplayTask,"DisplayTask", 20000, NULL, 5, &TaskHandleDisplayTask);
 
 
     //tests
@@ -143,23 +142,20 @@ void calibrateTouch(void) {
   tft.fillScreen(TFT_BLACK);
   tft.setTextColor(TFT_WHITE, TFT_BLACK);
   tft.setTextFont(2);
+  tft.setCursor(20, 100);
   tft.println("Touch screen to calibrate");
   tft.println();
   tft.println("Follow the crosshair markers...");
 
   delay(1500);
-  tft.calibrateTouch(calData, TFT_MAGENTA, TFT_BLACK, 15);
+  tft.calibrateTouch(calData, TFT_RED, TFT_BLACK, 25);
 
-  // Print results to serial (optional)
-  Serial.println("\nTouch calibration complete!");
-  Serial.print("Use these values for tft.setTouch():\n{ ");
-  for (uint8_t i = 0; i < 5; i++) {
-    Serial.print(calData[i]);
-    if (i < 4) Serial.print(", ");
-  }
-  Serial.println(" };");
+  //feedback screen
+  tft.fillScreen(TFT_BLACK);
+  tft.setCursor(20, 100);
+  tft.println("Calibration complete!");
 
-  // Save calibration (optional — you could write to NVS or SD)
+  // Save calibration
   prefs.begin(PREF_NAMESPACE, false); // RW mode
   prefs.putBytes(PREF_KEY_CAL, calData, sizeof(calData));
   prefs.putBool(PREF_KEY_FLAG, true);
@@ -169,10 +165,7 @@ void calibrateTouch(void) {
   Serial.println("Calibration data saved & applied.");
   delay(1000);
 
-  // Simple feedback screen
-  tft.fillScreen(TFT_BLACK);
-  tft.setCursor(20, 100);
-  tft.println("Calibration complete!");
+  
   delay(1000);
 }
 
@@ -198,17 +191,17 @@ bool loadTouchCalibration(void) {
 //LVGL Callbacks
 void my_flush_cb(lv_display_t * display, const lv_area_t * area, uint8_t * px_map)
 {
-    /*   Copilot Version
-    int32_t x, y;
-    for(y = area->y1; y <= area->y2; y++) {
-        for(x = area->x1; x <= area->x2; x++) {
-            uint16_t color = *((uint16_t *)px_map);
-            tft.drawPixel(x, y, color);
-            px_map += 2;
-        }
-    }
-    lv_display_flush_ready(display);
-    */
+    /* Copilot Version */
+    // int32_t x, y;
+    // for(y = area->y1; y <= area->y2; y++) {
+    //     for(x = area->x1; x <= area->x2; x++) {
+    //         uint16_t color = *((uint16_t *)px_map);
+    //         tft.drawPixel(x, y, color);
+    //         px_map += 2;
+    //     }
+    // }
+    // lv_display_flush_ready(display);
+    
 
 
 

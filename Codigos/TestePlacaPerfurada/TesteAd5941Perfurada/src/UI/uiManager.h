@@ -12,7 +12,8 @@ typedef struct {
 typedef enum {
     SCREEN_HOME,
     SCREEN_LOADING,
-
+    SCREEN_RESULTS,
+    SCREEN_PARAMETERS,
 
     SCREEN_MAX
 } ScreenID_t;

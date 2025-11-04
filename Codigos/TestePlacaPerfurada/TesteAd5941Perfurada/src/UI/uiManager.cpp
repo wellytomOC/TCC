@@ -1,13 +1,14 @@
 #include "uiManager.h"
 #include "screen_home.h"
 #include "screen_loading.h"
-// #include other screens...
+#include "screen_results.h"
+#include "screen_parameters.h"
 
 static Screen_t * screens[SCREEN_MAX] = {
     &Screen_Home,
-    // &Screen_Calibration,
     &Screen_Loading,
-    // &Screen_Loading,
+    &Screen_Results,
+    &Screen_Parameters,
 };
 
 static Screen_t * current_screen = nullptr;
