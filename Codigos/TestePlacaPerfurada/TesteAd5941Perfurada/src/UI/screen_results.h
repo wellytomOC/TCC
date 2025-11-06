@@ -7,3 +7,6 @@ void screen_results_destroy(void);
 
 // Expose a screen descriptor
 extern Screen_t Screen_Results;
+
+// Public function to add new data points
+void screen_results_add_point(float freq, float mag, float phase);

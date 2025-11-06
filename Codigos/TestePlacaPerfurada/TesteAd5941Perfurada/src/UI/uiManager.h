@@ -20,3 +20,6 @@ typedef enum {
 
 void ui_manager_set_screen(ScreenID_t id);
 void ui_manager_update(void);
+
+bool ui_manager_is_screen(ScreenID_t id);
+ScreenID_t ui_manager_get_current_id(void);

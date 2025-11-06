@@ -31,3 +31,22 @@ void ui_manager_update(void)
         current_screen->update();
     }
 }
+
+
+// --------------------------------------------------
+// Helper functions
+// --------------------------------------------------
+bool ui_manager_is_screen(ScreenID_t id)
+{
+    return (current_screen == screens[id]);
+}
+
+ScreenID_t ui_manager_get_current_id(void)
+{
+    for (int i = 0; i < SCREEN_MAX; i++) {
+        if (current_screen == screens[i]) {
+            return (ScreenID_t)i;
+        }
+    }
+    return SCREEN_MAX;  // Return a “none” or invalid value
+}

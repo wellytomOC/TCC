@@ -3,6 +3,8 @@
 #include "stdio.h"
 #include "ESP32Port.h"
 #include "DisplayControl.h"
+#include "UI/uiManager.h"
+#include "UI/screen_results.h"
 //#include "DisplaySetup.h"
 extern "C"{
   #include "ad5940.h"
@@ -105,10 +107,51 @@ void setup() {
 
 
 void loop() {
-  Serial.println("Main Loop Running...");
   GVariables.TestCounter++;
-  delay(1000);
+
+  if (ui_manager_is_screen(SCREEN_RESULTS)) {
+    static int step = 0;
+    static bool sweep_done = false;
+
+    // Cache these locally for readability
+    float f_start = GVariables.SweepParams.startFreq;
+    float f_end   = GVariables.SweepParams.endFreq;
+    int   n_steps = GVariables.SweepParams.steps;
+
+    if (!sweep_done) {
+      // Compute logarithmic step ratio
+      float log_start = log10f(f_start);
+      float log_end   = log10f(f_end);
+      float log_step  = (log_end - log_start) / (float)(n_steps - 1);
+
+      // Current frequency (logarithmic)
+      float freq = powf(10.0f, log_start + step * log_step);
+
+      // --- Predictable data ---
+      // Magnitude rises linearly from 10 to 100
+      float measuredMagnitude = 10.0f + (90.0f * step / (float)(n_steps - 1));
+
+      // Phase falls linearly from +90° to −90°
+      float measuredPhase = 90.0f - (180.0f * step / (float)(n_steps - 1));
+
+      // Add point to chart
+      screen_results_add_point(freq, measuredMagnitude, measuredPhase);
+
+      // Increment step
+      step++;
+
+      // Stop when sweep is done
+      if (step >= n_steps) {
+        sweep_done = true;
+        Serial.println("Sweep complete!");
+      }
+    }
+  }
+
+  delay(250); // smooth updates
 }
+
+
 
 
 

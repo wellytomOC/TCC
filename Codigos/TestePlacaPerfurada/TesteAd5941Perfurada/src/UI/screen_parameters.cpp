@@ -190,8 +190,10 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_set_flex_align(cont_buttons, LV_FLEX_ALIGN_SPACE_AROUND, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_buttons, LV_OBJ_FLAG_SCROLLABLE);
 
+    //back button
     lv_obj_t * btn_back = lv_btn_create(cont_buttons);
     lv_obj_set_size(btn_back, 100, 40);
+    
     lv_obj_t * lbl_back = lv_label_create(btn_back);
     lv_label_set_text(lbl_back, "Back");
     lv_obj_center(lbl_back);
@@ -199,6 +201,7 @@ lv_obj_t * screen_parameters_create(void)
         ui_manager_set_screen(SCREEN_HOME);
     }, LV_EVENT_CLICKED, NULL);
 
+    //start button
     lv_obj_t * btn_start = lv_btn_create(cont_buttons);
     lv_obj_set_size(btn_start, 100, 40);
     lv_obj_t * lbl_start_btn = lv_label_create(btn_start);
@@ -213,7 +216,7 @@ lv_obj_t * screen_parameters_create(void)
         GVariables.SweepParams.endFreq   = endVal;
         GVariables.SweepParams.steps     = steps;
 
-        ui_manager_set_screen(SCREEN_LOADING);
+        ui_manager_set_screen(SCREEN_RESULTS);
     }, LV_EVENT_CLICKED, NULL);
 
     // === Event: open numeric input panel ===
