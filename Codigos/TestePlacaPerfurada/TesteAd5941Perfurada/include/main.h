@@ -38,6 +38,8 @@ typedef struct Type_GlobalVariables{
     Type_SweepParameters SweepParams;
 
     uint8_t TestCounter;
+    bool sweep_done;
+    bool sweep_ready;
 }Type_GlobalVariables;
 
 extern Type_GlobalVariables GVariables;

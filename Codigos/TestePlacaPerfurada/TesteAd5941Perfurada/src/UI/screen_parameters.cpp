@@ -237,6 +237,7 @@ lv_obj_t * screen_parameters_create(void)
 // --------------------------------------------------
 void screen_parameters_update(void)
 {
+    
 }
 
 // --------------------------------------------------

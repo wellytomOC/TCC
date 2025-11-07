@@ -9,4 +9,4 @@ void screen_results_destroy(void);
 extern Screen_t Screen_Results;
 
 // Public function to add new data points
-void screen_results_add_point(float freq, float mag, float phase);
+void screen_results_add_point(int freq, int mag, int phase);
