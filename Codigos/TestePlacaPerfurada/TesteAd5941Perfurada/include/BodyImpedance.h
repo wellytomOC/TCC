@@ -85,6 +85,7 @@ typedef struct
 #define BIACTRL_STOPSYNC       2
 #define BIACTRL_GETFREQ        3   /* Get Current frequency of returned data from ISR */
 #define BIACTRL_SHUTDOWN       4   /* Note: shutdown here means turn off everything and put AFE to hibernate mode. The word 'SHUT DOWN' is only used here. */
+#define BIACTRL_SETCFG         5   /* Set new configuration to application */
 
 AD5940Err AppBIAGetCfg(void *pCfg);
 AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize);

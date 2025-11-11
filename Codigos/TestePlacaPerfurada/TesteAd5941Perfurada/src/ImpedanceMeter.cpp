@@ -4,10 +4,6 @@
 #include "string.h"
 #include "math.h"
 #include "ImpedanceMeter.h"
-extern "C"{
-  #include "ad5940.h"
-  #include "BodyImpedance.h"
-}
 #include "main.h"
 
 
@@ -24,7 +20,7 @@ uint32_t AppBuff[APPBUFF_SIZE];
 TaskHandle_t TaskImpedanceMeterTask = NULL;
 
 // Parametros leitura
-
+AppBIACfg_Type ImpedanceMeterCfg;
 
 
 //****************************************************************/
@@ -33,7 +29,7 @@ TaskHandle_t TaskImpedanceMeterTask = NULL;
 static int32_t AD5940PlatformCfg(void);
 int32_t ShowResult(uint32_t *pData, uint32_t DataCount);
 void ImpedanceMeterTask(void *pvParameters);
-
+void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg);
 
 
 //****************************************************************/
@@ -42,6 +38,9 @@ void ImpedanceMeterTask(void *pvParameters);
 
 void InitImpedanceMeter(void)
 {
+  // Inicializa os parametros
+  InitImpedanceMeterCfg(&ImpedanceMeterCfg);
+
   AD5940PlatformCfg();
    xTaskCreate(ImpedanceMeterTask,"ImpedanceMeter", 16384, NULL, 5, &TaskImpedanceMeterTask);
 }
@@ -51,6 +50,7 @@ void ImpedanceMeterTask(void *pvParameters)
 {
 
   printf("Initialization start...\n");
+  AppBIACtrl(BIACTRL_SETCFG, &ImpedanceMeterCfg);
   AppBIAInit(AppBuff, APPBUFF_SIZE);    /* Initialize BIA application. Provide a buffer, which is used to store sequencer commands */
 
   printf("Initialization done. Start control...\n");
@@ -78,18 +78,20 @@ void ImpedanceMeterTask(void *pvParameters)
 
       
 
-      if(IntCount == 240)
+      if(IntCount == ImpedanceMeterCfg.SweepCfg.SweepPoints)
       {
         IntCount = 0;
-        //AppBIACtrl(BIACTRL_SHUTDOWN, 0);
+        printf("Sweep done. Shutdown AFE.\n");
+        AppBIACtrl(BIACTRL_SHUTDOWN, 0);
       }
     }
     count++;
-    if(count > 1000000)
+    if(count > 60000)
     {
       count = 0;
-      //AppBIAInit(0, 0);    /* Re-initialize BIA application. Because sequences are ready, no need to provide a buffer, which is used to store sequencer commands */
-      //AppBIACtrl(BIACTRL_START, 0);          /* Control BIA measurement to start. Second parameter has no meaning with this command. */
+      printf("Restarting sweep...\n");
+      AppBIAInit(0, 0);    /* Re-initialize BIA application. Because sequences are ready, no need to provide a buffer, which is used to store sequencer commands */
+      AppBIACtrl(BIACTRL_START, 0);          /* Control BIA measurement to start. Second parameter has no meaning with this command. */
     }
     delay(1);
   }
@@ -101,6 +103,58 @@ void ImpedanceMeterTask(void *pvParameters)
 //****************************************************************/
 //                FUNCTIONS
 //****************************************************************/
+
+
+void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg)
+{
+   memset(pCfg, 0, sizeof(AppBIACfg_Type));
+
+  pCfg->bParaChanged   = bFALSE;
+  pCfg->SeqStartAddr   = 0;
+  pCfg->MaxSeqLen      = 0;
+
+  pCfg->SeqStartAddrCal = 0;
+  pCfg->MaxSeqLenCal    = 0;
+
+  pCfg->ReDoRtiaCal    = bFALSE;
+  pCfg->SysClkFreq     = 16000000.0;
+  pCfg->WuptClkFreq    = 32000.0;
+  pCfg->AdcClkFreq     = 16000000.0;
+  pCfg->BiaODR         = 2.0;        // 2.0 Hz
+  pCfg->NumOfData      = -1;
+  pCfg->RcalVal        = 1000.0;     // 1kΩ
+
+  pCfg->PwrMod         = AFEPWR_LP;
+  pCfg->HstiaRtiaSel   = HSTIARTIA_1K;
+  pCfg->CtiaSel        = 16;
+  pCfg->ExcitBufGain   = EXCITBUFGAIN_2;
+  pCfg->HsDacGain      = HSDACGAIN_1;
+  pCfg->HsDacUpdateRate= 7;
+  pCfg->DacVoltPP      = 800.0;
+
+  pCfg->SinFreq        = 1000.0;     // 1 kHz
+
+  pCfg->ADCPgaGain     = ADCPGA_1P5;
+  pCfg->ADCSinc3Osr    = ADCSINC3OSR_2;
+  pCfg->ADCSinc2Osr    = ADCSINC2OSR_22;
+
+  pCfg->DftNum         = DFTNUM_8192;
+  pCfg->DftSrc         = DFTSRC_SINC3;
+  pCfg->HanWinEn       = bTRUE;
+
+  // Nested structure: SweepCfg
+  pCfg->SweepCfg.SweepEn      = bTRUE;
+  pCfg->SweepCfg.SweepStart   = 200.0;
+  pCfg->SweepCfg.SweepStop    = 20000.0;
+  pCfg->SweepCfg.SweepPoints  = 100;
+  pCfg->SweepCfg.SweepLog     = bFALSE;
+  pCfg->SweepCfg.SweepIndex   = 0;
+
+  pCfg->FifoThresh       = 4;
+  pCfg->BIAInited        = bFALSE;
+  pCfg->StopRequired     = bFALSE;
+  pCfg->MeasSeqCycleCount= 0;
+}
 
 int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
 {

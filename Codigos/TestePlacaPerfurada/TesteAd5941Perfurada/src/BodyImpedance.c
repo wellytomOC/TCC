@@ -18,53 +18,7 @@ Analog Devices Software License Agreement.
   The variables are usable in this whole application.
   It includes basic configuration for sequencer generator and application related parameters
 */
-AppBIACfg_Type AppBIACfg = 
-{
-  .bParaChanged = bFALSE,
-  .SeqStartAddr = 0,
-  .MaxSeqLen = 0,
-  
-  .SeqStartAddrCal = 0,
-  .MaxSeqLenCal = 0,
-
-  .ReDoRtiaCal = bFALSE,
-  .SysClkFreq = 16000000.0,
-  .WuptClkFreq = 32000.0,
-  .AdcClkFreq = 16000000.0,
-  .BiaODR = 2.0, /* 2.0 Hz*/
-  .NumOfData = -1,
-  .RcalVal = 1000.0, /* 1kOhm */
-
-  .PwrMod = AFEPWR_LP,
-  .HstiaRtiaSel = HSTIARTIA_1K,
-  .CtiaSel = 16,
-  .ExcitBufGain = EXCITBUFGAIN_2,
-  .HsDacGain = HSDACGAIN_1,
-  .HsDacUpdateRate = 7,
-  .DacVoltPP = 800.0,
-
-  .SinFreq = 1000.0, /* 1kHz */
-
-  .ADCPgaGain = ADCPGA_1P5,
-  .ADCSinc3Osr = ADCSINC3OSR_2,
-  .ADCSinc2Osr = ADCSINC2OSR_22,
-
-  .DftNum = DFTNUM_8192,
-  .DftSrc = DFTSRC_SINC3,
-  .HanWinEn = bTRUE,
-
-  .SweepCfg.SweepEn = bTRUE,
-  .SweepCfg.SweepStart = 200,
-  .SweepCfg.SweepStop = 20000.0,
-  .SweepCfg.SweepPoints = 100,
-  .SweepCfg.SweepLog = bFALSE,
-  .SweepCfg.SweepIndex = 0,
-
-  .FifoThresh = 4,
-  .BIAInited = bFALSE,
-  .StopRequired = bFALSE,
-  .MeasSeqCycleCount = 0,
-};
+AppBIACfg_Type AppBIACfg = {0};
 
 /**
    This function is provided for upper controllers that want to change 
@@ -139,6 +93,18 @@ AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara)
       AD5940_EnterSleepS();  /* Enter Hibernate */
     }
     break;
+
+    case BIACTRL_SETCFG:
+    {
+      if(pPara)
+      {
+        AppBIACfg_Type *pNewCfg = (AppBIACfg_Type *)pPara;
+        memcpy(&AppBIACfg, pNewCfg, sizeof(AppBIACfg_Type));
+        AppBIACfg.bParaChanged = bTRUE;
+      }
+    }
+    break;
+
     default:
     break;
   }
