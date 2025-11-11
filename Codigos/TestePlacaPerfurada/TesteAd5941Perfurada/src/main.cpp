@@ -3,13 +3,13 @@
 #include "stdio.h"
 #include "ESP32Port.h"
 #include "DisplayControl.h"
+#include "ImpedanceMeter.h"
 #include "UI/uiManager.h"
 #include "UI/screen_results.h"
 //#include "DisplaySetup.h"
 extern "C"{
   #include "ad5940.h"
   #include "BodyImpedance.h"
-  #include "AD5940MainBodyImp.h"
 }
 
 #include "Tests/LPDac.h"
@@ -84,23 +84,23 @@ void setup() {
   StartDisplayControl();
 
 
-
-
-  //Inicia os testes do AD5940
+  //Inicia Impedance meter
   delay(5000);
   AD5940_MCUResourceInit(0);
+  delay(1000);
+  InitImpedanceMeter();
+
+
+
+  //testes do AD5940
 
   // HwResetAndClockConfig();
   // Serial.println("Starting AD5940 Tests...");
   // xTaskCreate(TestTask,"TestTask", 8192, NULL, 5, &TaskHandleTestTask);
-
   // Serial.println("Starting LPDAC Test...");
   // LPDac_Main();
-
-  //ImpedanceSweep_Main();
-
-
   //HSDAC_Main();
+
 }
 
 
@@ -109,44 +109,44 @@ void setup() {
 void loop() {
     GVariables.TestCounter++;
 
-    if (GVariables.sweep_ready == true) {
+    // if (GVariables.sweep_ready == true) {
         
-        static int32_t step = 0;
+    //     static int32_t step = 0;
 
-        // Cache locally for readability
-        int32_t f_start = (int32_t)GVariables.SweepParams.startFreq;
-        int32_t f_end   = (int32_t)GVariables.SweepParams.endFreq;
-        int32_t n_steps = (int32_t)GVariables.SweepParams.steps;
+    //     // Cache locally for readability
+    //     int32_t f_start = (int32_t)GVariables.SweepParams.startFreq;
+    //     int32_t f_end   = (int32_t)GVariables.SweepParams.endFreq;
+    //     int32_t n_steps = (int32_t)GVariables.SweepParams.steps;
 
-        if (!GVariables.sweep_done) {
-            // --- Compute logarithmic frequency (still needs float math for log10/pow) ---
-            // We’ll compute in float and then convert back to int32_t for freq
-            float log_start = log10f((float)f_start);
-            float log_end   = log10f((float)f_end);
-            float log_step  = (log_end - log_start) / (float)(n_steps - 1);
+    //     if (!GVariables.sweep_done) {
+    //         // --- Compute logarithmic frequency (still needs float math for log10/pow) ---
+    //         // We’ll compute in float and then convert back to int32_t for freq
+    //         float log_start = log10f((float)f_start);
+    //         float log_end   = log10f((float)f_end);
+    //         float log_step  = (log_end - log_start) / (float)(n_steps - 1);
 
-            int32_t freq = (int32_t)powf(10.0f, log_start + step * log_step);
+    //         int32_t freq = (int32_t)powf(10.0f, log_start + step * log_step);
 
-            // --- Predictable data ---
-            // Magnitude rises linearly from 10 to 100
-            int32_t measuredMagnitude = 10 + (90 * step) / (n_steps - 1);
+    //         // --- Predictable data ---
+    //         // Magnitude rises linearly from 10 to 100
+    //         int32_t measuredMagnitude = 10 + (90 * step) / (n_steps - 1);
 
-            // Phase falls linearly from +90° to −90°
-            int32_t measuredPhase = 90 - (180 * step) / (n_steps - 1);
+    //         // Phase falls linearly from +90° to −90°
+    //         int32_t measuredPhase = 90 - (180 * step) / (n_steps - 1);
 
-            // Add point to chart (convert to float for chart function)
-            screen_results_add_point(freq, measuredMagnitude, measuredPhase);
+    //         // Add point to chart (convert to float for chart function)
+    //         screen_results_add_point(freq, measuredMagnitude, measuredPhase);
 
-            // Increment step
-            step++;
+    //         // Increment step
+    //         step++;
 
-            // Stop when sweep is done
-            if (step >= n_steps) {
-                GVariables.sweep_done = true;
-                Serial.println("Sweep complete!");
-            }
-        }
-    }
+    //         // Stop when sweep is done
+    //         if (step >= n_steps) {
+    //             GVariables.sweep_done = true;
+    //             Serial.println("Sweep complete!");
+    //         }
+    //     }
+    // }
 
     delay(250); // smooth updates
 }

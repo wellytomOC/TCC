@@ -465,17 +465,20 @@ AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
   seq_cfg.SeqWrTimer = 0;
   AD5940_SEQCfg(&seq_cfg);
 
+
   /* Do ADC Calibration */
   AD5940_PGA2_Calibration();
 
+
   /* Do RTIA calibration */
-  
   if((AppBIACfg.ReDoRtiaCal == bTRUE) || \
       AppBIACfg.BIAInited == bFALSE)  /* Do calibration on the first initializaion */
   {
     AppBIARtiaCal();
     AppBIACfg.ReDoRtiaCal = bFALSE;
   }
+
+
   /* Reconfigure FIFO */
   AD5940_FIFOCtrlS(FIFOSRC_DFT, bFALSE);									/* Disable FIFO firstly */
   fifo_cfg.FIFOEn = bTRUE;
@@ -487,10 +490,10 @@ AD5940Err AppBIAInit(uint32_t *pBuffer, uint32_t BufferSize)
 
   AD5940_INTCClrFlag(AFEINTSRC_ALLINT);
   
+
   /* Start sequence generator */
   /* Initialize sequencer generator */
-  if((AppBIACfg.BIAInited == bFALSE)||\
-       (AppBIACfg.bParaChanged == bTRUE))
+  if((AppBIACfg.BIAInited == bFALSE)||(AppBIACfg.bParaChanged == bTRUE))
   {
     if(pBuffer == 0)  return AD5940ERR_PARA;
     if(BufferSize == 0) return AD5940ERR_PARA;   
@@ -635,6 +638,9 @@ AD5940Err AppBIAISR(void *pBuff, uint32_t *pCount)
     AD5940_INTCClrFlag(AFEINTSRC_DATAFIFOTHRESH);
     AppBIARegModify(pBuff, &FifoCnt);   /* If there is need to do AFE re-configure, do it here when AFE is in active state */
     //AD5940_EnterSleepS();  /* Manually put AFE back to hibernate mode. */
+
+    
+
     AD5940_SleepKeyCtrlS(SLPKEY_UNLOCK);  /* Allow AFE to enter hibernate mode */
     /* Process data */ 
     AppBIADataProcess((int32_t*)pBuff,&FifoCnt); 

@@ -64,7 +64,7 @@ void lv_example_get_started_2(void);
 void StartDisplayControl(void){
     //init display
     tft.init();
-    tft.setRotation(3);
+    tft.setRotation(1);
     
     //calibrate
     if (!loadTouchCalibration()) {
