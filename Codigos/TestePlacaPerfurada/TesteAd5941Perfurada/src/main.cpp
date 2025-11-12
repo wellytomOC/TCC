@@ -6,6 +6,8 @@
 #include "ImpedanceMeter.h"
 #include "UI/uiManager.h"
 #include "UI/screen_results.h"
+#include "esp_system.h"
+#include "esp_heap_caps.h"
 //#include "DisplaySetup.h"
 extern "C"{
   #include "ad5940.h"
@@ -64,6 +66,78 @@ void PinSetup(void){
   pinMode(AD5940_GP2INT_PIN, INPUT_PULLUP);
 }
 
+void PrintMemoryReport()
+{
+  Serial.println();
+  Serial.println(F("============================================================="));
+  Serial.println(F("                   MEMORY USAGE REPORT                       "));
+  Serial.println(F("-------------------------------------------------------------"));
+  Serial.printf("%-25s | %-12s | %-12s | %-12s\n",
+                "Region", "Total (bytes)", "Free (bytes)", "Used (%)");
+  Serial.println(F("-------------------------------------------------------------"));
+
+  // --- Internal RAM ---
+  size_t total_internal = heap_caps_get_total_size(MALLOC_CAP_INTERNAL);
+  size_t free_internal  = heap_caps_get_free_size(MALLOC_CAP_INTERNAL);
+  size_t used_internal  = total_internal - free_internal;
+
+  // --- PSRAM ---
+  size_t total_psram = heap_caps_get_total_size(MALLOC_CAP_SPIRAM);
+  size_t free_psram  = heap_caps_get_free_size(MALLOC_CAP_SPIRAM);
+  size_t used_psram  = total_psram - free_psram;
+
+  // --- General-purpose 8-bit capable heap ---
+  size_t total_8bit = heap_caps_get_total_size(MALLOC_CAP_8BIT);
+  size_t free_8bit  = heap_caps_get_free_size(MALLOC_CAP_8BIT);
+  size_t used_8bit  = total_8bit - free_8bit;
+
+  // Print all
+  Serial.printf("%-25s | %-12u | %-12u | %6.1f%%\n",
+                "Internal RAM",
+                (unsigned)total_internal,
+                (unsigned)free_internal,
+                total_internal ? (100.0 * used_internal / total_internal) : 0.0);
+
+  Serial.printf("%-25s | %-12u | %-12u | %6.1f%%\n",
+                "PSRAM",
+                (unsigned)total_psram,
+                (unsigned)free_psram,
+                total_psram ? (100.0 * used_psram / total_psram) : 0.0);
+
+  Serial.printf("%-25s | %-12u | %-12u | %6.1f%%\n",
+                "8-bit capable heap",
+                (unsigned)total_8bit,
+                (unsigned)free_8bit,
+                total_8bit ? (100.0 * used_8bit / total_8bit) : 0.0);
+
+  Serial.println(F("-------------------------------------------------------------"));
+  Serial.printf("Largest free block (internal): %u bytes\n",
+                (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL));
+  Serial.printf("Largest free block (SPIRAM):   %u bytes\n",
+                (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_SPIRAM));
+  Serial.println(F("============================================================="));
+  Serial.println();
+}
+
+void PrintLVGLMemoryReport()
+{
+  lv_mem_monitor_t mon;
+  lv_mem_monitor(&mon); // Fill monitor structure with info
+
+  Serial.println();
+  Serial.println(F("============================================================="));
+  Serial.println(F("                   LVGL MEMORY REPORT                         "));
+  Serial.println(F("-------------------------------------------------------------"));
+  Serial.printf("Total size:           %u bytes\n",  (unsigned)mon.total_size);
+  Serial.printf("Free size:            %u bytes\n",  (unsigned)mon.free_size);
+  Serial.printf("Used size:            %u bytes\n",  (unsigned)(mon.total_size - mon.free_size));
+  Serial.printf("Used percentage:      %d %%\n",   mon.used_pct);
+  Serial.printf("Fragmentation:        %d %%\n",   mon.frag_pct);
+  Serial.printf("Largest free block:   %u bytes\n",  (unsigned)mon.free_biggest_size);
+  Serial.println(F("============================================================="));
+  Serial.println();
+}
+
 void setup() {
 
   //UART initialization
@@ -108,48 +182,12 @@ void setup() {
 
 
 void loop() {
-    GVariables.TestCounter++;
+  
+  //PrintMemoryReport();
+  //PrintLVGLMemoryReport();
+  
 
-    // if (GVariables.sweep_ready == true) {
-        
-    //     static int32_t step = 0;
-
-    //     // Cache locally for readability
-    //     int32_t f_start = (int32_t)GVariables.SweepParams.startFreq;
-    //     int32_t f_end   = (int32_t)GVariables.SweepParams.endFreq;
-    //     int32_t n_steps = (int32_t)GVariables.SweepParams.steps;
-
-    //     if (!GVariables.sweep_done) {
-    //         // --- Compute logarithmic frequency (still needs float math for log10/pow) ---
-    //         // We’ll compute in float and then convert back to int32_t for freq
-    //         float log_start = log10f((float)f_start);
-    //         float log_end   = log10f((float)f_end);
-    //         float log_step  = (log_end - log_start) / (float)(n_steps - 1);
-
-    //         int32_t freq = (int32_t)powf(10.0f, log_start + step * log_step);
-
-    //         // --- Predictable data ---
-    //         // Magnitude rises linearly from 10 to 100
-    //         int32_t measuredMagnitude = 10 + (90 * step) / (n_steps - 1);
-
-    //         // Phase falls linearly from +90° to −90°
-    //         int32_t measuredPhase = 90 - (180 * step) / (n_steps - 1);
-
-    //         // Add point to chart (convert to float for chart function)
-    //         screen_results_add_point(freq, measuredMagnitude, measuredPhase);
-
-    //         // Increment step
-    //         step++;
-
-    //         // Stop when sweep is done
-    //         if (step >= n_steps) {
-    //             GVariables.sweep_done = true;
-    //             Serial.println("Sweep complete!");
-    //         }
-    //     }
-    // }
-
-    delay(250); // smooth updates
+  delay(2000); // smooth updates
 }
 
 

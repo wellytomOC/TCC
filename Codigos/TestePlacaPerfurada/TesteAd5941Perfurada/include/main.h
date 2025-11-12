@@ -35,6 +35,11 @@ extern "C" {
 #define USB_DP_PIN 14
 
 
+typedef struct SingleMeasurementType{
+    bool DoneFlag;
+    float Magnitude;
+    float Phase;
+}SingleMeasurementType;
 
 typedef struct Type_GlobalVariables{
     bool isLPDACConfigured;
@@ -42,6 +47,10 @@ typedef struct Type_GlobalVariables{
     uint8_t TestCounter;
     bool sweep_done;
     bool sweep_ready;
+
+    // for single measurement
+    SingleMeasurementType SingleMeasurement;
+
 }Type_GlobalVariables;
 
 extern Type_GlobalVariables GVariables;

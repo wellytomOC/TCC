@@ -42,7 +42,6 @@ void InitImpedanceMeter(void)
   // Inicializa os parametros
   InitImpedanceMeterCfg(&AppBIACfg);
 
-  AD5940PlatformCfg();
    xTaskCreate(ImpedanceMeterTask,"ImpedanceMeter", 16384, NULL, 5, &TaskImpedanceMeterTask);
 }
 
@@ -66,17 +65,14 @@ void ImpedanceMeterTask(void *pvParameters)
       {
 
         // init sweep
+        AD5940PlatformCfg();
+        delay(10);
+
         AppBIAInit(AppBuff, APPBUFF_SIZE); 
         AppBIACtrl(BIACTRL_START, 0); 
 
         // go to measuring state
         ImpedanceMeterState = IMPEDANCE_METER_STATE_MEASURING;
-        break;
-      }
-
-      case IMPEDANCE_METER_STATE_INITSINGLE:
-      {
-        // inicia medida unica
         break;
       }
 
@@ -94,7 +90,8 @@ void ImpedanceMeterTask(void *pvParameters)
         {
           MeasurementCounter = 0;
           printf("Sweep done. Shutdown AFE.\n");
-          AppBIACtrl(BIACTRL_SHUTDOWN, 0);
+          //AppBIACtrl(BIACTRL_STOPSYNC, 0);
+          AppBIACtrl(BIACTRL_STOPNOW, 0);
           ImpedanceMeterState = IMPEDANCE_METER_STATE_IDLE;
         }
 
@@ -173,8 +170,8 @@ int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
   fImpPol_Type *pImp = (fImpPol_Type*)pData;
   
 
+  /* Print results */
   printf("Freq:%.2f ", AppBIACfg.FreqofData);
-  /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
     printf("RzMag: %f Ohm , RzPhase: %f \n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
@@ -255,8 +252,23 @@ void StartImpedanceSweep(void)
   }
 }
 
-void StartSingleImpedanceMeasurement(void)
+void StartSingleMeasurement(uint32_t freq)
 {
+  if(ImpedanceMeterState != IMPEDANCE_METER_STATE_IDLE)
+  {
+    return;
+  }
+
+  AppBIACfg.SweepCfg.SweepEn = bFALSE;
+  AppBIACfg.SinFreq = (float)freq;
+  AppBIACfg.SweepCfg.SweepStart = (float)freq;
+  AppBIACfg.FreqofData = (float)freq;
+
+  AppBIACfg.bParaChanged = bTRUE;
+  AppBIACfg.ReDoRtiaCal = bTRUE;
+  AppBIACfg.SweepCfg.SweepPoints = 3;
+
+  ImpedanceMeterState = IMPEDANCE_METER_STATE_INITSWEEP;
 }
 
 

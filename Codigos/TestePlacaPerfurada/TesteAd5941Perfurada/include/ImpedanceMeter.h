@@ -16,4 +16,4 @@ enum IMPEDANCE_METER_STATE{
 
 void InitImpedanceMeter(void);
 void StartImpedanceSweep(void);
-void StartSingleImpedanceMeasurement(void);
+void StartSingleMeasurement(uint32_t freq);

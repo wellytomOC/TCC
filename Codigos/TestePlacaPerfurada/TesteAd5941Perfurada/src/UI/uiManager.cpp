@@ -3,12 +3,14 @@
 #include "screen_loading.h"
 #include "screen_results.h"
 #include "screen_parameters.h"
+#include "screen_singleMeasurement.h"
 
 static Screen_t * screens[SCREEN_MAX] = {
     &Screen_Home,
     &Screen_Loading,
     &Screen_Results,
     &Screen_Parameters,
+    &Screen_singleMeasurement,
 };
 
 static Screen_t * current_screen = nullptr;
