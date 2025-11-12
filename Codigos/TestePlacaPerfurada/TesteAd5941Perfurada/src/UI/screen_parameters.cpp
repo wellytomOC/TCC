@@ -1,6 +1,7 @@
 #include "screen_parameters.h"
 #include "lvgl.h"
 #include "main.h"
+#include "ImpedanceMeter.h"
 
 extern Type_GlobalVariables GVariables;
 
@@ -18,6 +19,7 @@ static lv_obj_t * active_textarea = nullptr;
 static void input_panel_create(lv_obj_t * target);
 static void input_panel_close(void);
 static void keyboard_event_cb(lv_event_t * e);
+static void CheckParamChanged(float startVal, float endVal, int steps);
 
 // --------------------------------------------------
 // Create a floating numeric keyboard + mirror input
@@ -212,11 +214,18 @@ lv_obj_t * screen_parameters_create(void)
         float endVal   = atof(lv_textarea_get_text(ta_end_freq));
         int steps      = atoi(lv_textarea_get_text(ta_steps));
 
-        GVariables.SweepParams.startFreq = startVal;
-        GVariables.SweepParams.endFreq   = endVal;
-        GVariables.SweepParams.steps     = steps;
 
-        ui_manager_set_screen(SCREEN_RESULTS);
+        CheckParamChanged(startVal, endVal, steps);
+
+        AppBIACfg.SweepCfg.SweepStart = startVal;
+        AppBIACfg.SweepCfg.SweepStop  = endVal;
+        AppBIACfg.SweepCfg.SweepPoints= steps;
+        AppBIACfg.SweepCfg.SweepEn    = bTRUE;
+
+        StartImpedanceSweep();
+
+
+        ui_manager_set_screen(SCREEN_LOADING);
     }, LV_EVENT_CLICKED, NULL);
 
     // === Event: open numeric input panel ===
@@ -231,6 +240,20 @@ lv_obj_t * screen_parameters_create(void)
     lv_disp_load_scr(scr_param);
     return scr_param;
 }
+
+static void CheckParamChanged(float startVal, float endVal, int steps)
+{
+    if (startVal != AppBIACfg.SweepCfg.SweepStart ||
+        endVal   != AppBIACfg.SweepCfg.SweepStop  ||
+        steps    != AppBIACfg.SweepCfg.SweepPoints) 
+    {
+        AppBIACfg.bParaChanged = bTRUE;
+        AppBIACfg.ReDoRtiaCal = bTRUE; // need to redo calibration if parameters changed
+    }
+
+}
+
+
 
 // --------------------------------------------------
 // Update (none yet)

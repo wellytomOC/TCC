@@ -19,8 +19,8 @@ uint32_t AppBuff[APPBUFF_SIZE];
 // task
 TaskHandle_t TaskImpedanceMeterTask = NULL;
 
-// Parametros leitura
-AppBIACfg_Type ImpedanceMeterCfg;
+// Measurement configuration
+enum IMPEDANCE_METER_STATE ImpedanceMeterState = IMPEDANCE_METER_STATE_IDLE;
 
 
 //****************************************************************/
@@ -30,6 +30,7 @@ static int32_t AD5940PlatformCfg(void);
 int32_t ShowResult(uint32_t *pData, uint32_t DataCount);
 void ImpedanceMeterTask(void *pvParameters);
 void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg);
+static void ImpedanceInterruptHandler(void);
 
 
 //****************************************************************/
@@ -39,7 +40,7 @@ void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg);
 void InitImpedanceMeter(void)
 {
   // Inicializa os parametros
-  InitImpedanceMeterCfg(&ImpedanceMeterCfg);
+  InitImpedanceMeterCfg(&AppBIACfg);
 
   AD5940PlatformCfg();
    xTaskCreate(ImpedanceMeterTask,"ImpedanceMeter", 16384, NULL, 5, &TaskImpedanceMeterTask);
@@ -48,52 +49,63 @@ void InitImpedanceMeter(void)
 
 void ImpedanceMeterTask(void *pvParameters)
 {
+  static uint16_t MeasurementCounter = 0;
 
-  printf("Initialization start...\n");
-  AppBIACtrl(BIACTRL_SETCFG, &ImpedanceMeterCfg);
-  AppBIAInit(AppBuff, APPBUFF_SIZE);    /* Initialize BIA application. Provide a buffer, which is used to store sequencer commands */
-
-  printf("Initialization done. Start control...\n");
-  AppBIACtrl(BIACTRL_START, 0);         /* Control BIA measurement to start. Second parameter has no meaning with this command. */
-
-
-  static uint32_t IntCount;
-  static uint32_t count;
-  uint32_t temp;
   while(1)
   {
-    /* Check if interrupt flag which will be set when interrupt occurred. */
-    if(AD5940_GetMCUIntFlag())
+
+    switch(ImpedanceMeterState)
     {
-      IntCount++;
-      AD5940_ClrMCUIntFlag(); /* Clear this flag */
-      temp = APPBUFF_SIZE;
-
-      float freq = 0;
-      AppBIACtrl(BIACTRL_GETFREQ, &freq);
-      printf("current freq: %.2f.   Current IntCount: %d.   Current count: %d\n", freq, IntCount, count);
-
-      AppBIAISR(AppBuff, &temp); /* Deal with it and provide a buffer to store data we got */
-      ShowResult(AppBuff, temp); /* Show the results to UART */
-
-      
-
-      if(IntCount == ImpedanceMeterCfg.SweepCfg.SweepPoints)
+      case IMPEDANCE_METER_STATE_IDLE:
       {
-        IntCount = 0;
-        printf("Sweep done. Shutdown AFE.\n");
-        AppBIACtrl(BIACTRL_SHUTDOWN, 0);
+        // aguarda comando para iniciar varredura
+        break;
       }
+
+      case IMPEDANCE_METER_STATE_INITSWEEP:
+      {
+
+        // init sweep
+        AppBIAInit(AppBuff, APPBUFF_SIZE); 
+        AppBIACtrl(BIACTRL_START, 0); 
+
+        // go to measuring state
+        ImpedanceMeterState = IMPEDANCE_METER_STATE_MEASURING;
+        break;
+      }
+
+      case IMPEDANCE_METER_STATE_INITSINGLE:
+      {
+        // inicia medida unica
+        break;
+      }
+
+      case IMPEDANCE_METER_STATE_MEASURING:
+      {
+        // check for interrupts
+        if(AD5940_GetMCUIntFlag())
+        {
+          MeasurementCounter++;
+          ImpedanceInterruptHandler();
+        }
+
+        // check if sweep is done
+        if(MeasurementCounter == AppBIACfg.SweepCfg.SweepPoints)
+        {
+          MeasurementCounter = 0;
+          printf("Sweep done. Shutdown AFE.\n");
+          AppBIACtrl(BIACTRL_SHUTDOWN, 0);
+          ImpedanceMeterState = IMPEDANCE_METER_STATE_IDLE;
+        }
+
+        break;
+      }
+
+      default:
+        break;
     }
-    count++;
-    if(count > 60000)
-    {
-      count = 0;
-      printf("Restarting sweep...\n");
-      AppBIAInit(0, 0);    /* Re-initialize BIA application. Because sequences are ready, no need to provide a buffer, which is used to store sequencer commands */
-      AppBIACtrl(BIACTRL_START, 0);          /* Control BIA measurement to start. Second parameter has no meaning with this command. */
-    }
-    delay(1);
+
+    delay(10);
   }
   vTaskDelete(TaskImpedanceMeterTask);
 }
@@ -158,12 +170,10 @@ void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg)
 
 int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
 {
-  float freq;
-
   fImpPol_Type *pImp = (fImpPol_Type*)pData;
-  AppBIACtrl(BIACTRL_GETFREQ, &freq);
+  
 
-  printf("Freq:%.2f ", freq);
+  printf("Freq:%.2f ", AppBIACfg.FreqofData);
   /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
@@ -220,4 +230,37 @@ static int32_t AD5940PlatformCfg(void)
   return 0;
 }
 
+static void ImpedanceInterruptHandler(void)
+{
+  AD5940_ClrMCUIntFlag(); /* Clear this flag */
+  uint32_t temp = APPBUFF_SIZE;
 
+  AppBIAISR(AppBuff, &temp); /* Deal with it and provide a buffer to store data we got */
+  ShowResult(AppBuff, temp); /* Show the results to UART */
+
+}
+
+
+
+
+//****************************************************************/
+//                PUBLIC FUNCTIONS
+//****************************************************************/
+
+void StartImpedanceSweep(void)
+{
+  if(ImpedanceMeterState == IMPEDANCE_METER_STATE_IDLE)
+  {
+    ImpedanceMeterState = IMPEDANCE_METER_STATE_INITSWEEP;
+  }
+}
+
+void StartSingleImpedanceMeasurement(void)
+{
+}
+
+
+
+//****************************************************************/
+//                END OF FILE
+//****************************************************************/

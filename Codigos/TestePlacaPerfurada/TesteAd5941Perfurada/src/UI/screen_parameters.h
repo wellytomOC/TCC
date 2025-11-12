@@ -2,11 +2,6 @@
 #include "uiManager.h"
 
 
-// Frequency and step limits
-#define MIN_START_FREQ_HZ   10
-#define MAX_STOP_FREQ_HZ    200000
-#define MIN_STEPS           10
-#define MAX_STEPS           1000
 
 
 // Lifecycle functions

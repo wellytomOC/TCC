@@ -45,7 +45,7 @@ lv_obj_t * screen_results_create(void)
     lv_chart_set_type(chart, LV_CHART_TYPE_LINE);
 
     // Set number of points
-    lv_chart_set_point_count(chart, GVariables.SweepParams.steps);
+    lv_chart_set_point_count(chart, AppBIACfg.SweepCfg.SweepPoints);
 
     // Create two series: magnitude and phase
     ser_mag   = lv_chart_add_series(chart, lv_palette_main(LV_PALETTE_BLUE), LV_CHART_AXIS_PRIMARY_Y);

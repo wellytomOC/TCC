@@ -4,8 +4,16 @@ extern "C"{
   #include "BodyImpedance.h"
 }
 
-void ImpedanceSweep_Main(void);
+
+
+enum IMPEDANCE_METER_STATE{
+  IMPEDANCE_METER_STATE_IDLE = 0,
+  IMPEDANCE_METER_STATE_INITSWEEP,
+  IMPEDANCE_METER_STATE_INITSINGLE,
+  IMPEDANCE_METER_STATE_MEASURING,
+};
+
+
 void InitImpedanceMeter(void);
-
-
-extern AppBIACfg_Type ImpedanceMeterCfg;
+void StartImpedanceSweep(void);
+void StartSingleImpedanceMeasurement(void);

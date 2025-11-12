@@ -12,26 +12,15 @@ Analog Devices Software License Agreement.
 *****************************************************************************/
 #include "BodyImpedance.h"
 #include "tests/ADC.h"
+#include "main.h"
 
 /* 
   Application configuration structure. Specified by user from template.
   The variables are usable in this whole application.
   It includes basic configuration for sequencer generator and application related parameters
 */
-AppBIACfg_Type AppBIACfg = {0};
+extern AppBIACfg_Type AppBIACfg;
 
-/**
-   This function is provided for upper controllers that want to change 
-   application parameters specially for user defined parameters.
-*/
-AD5940Err AppBIAGetCfg(void *pCfg)
-{
-  if(pCfg){
-    *(AppBIACfg_Type**)pCfg = &AppBIACfg;
-    return AD5940ERR_OK;
-  }
-  return AD5940ERR_PARA;
-}
 
 AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara)
 {
@@ -71,15 +60,7 @@ AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara)
       AppBIACfg.StopRequired = bTRUE;
       break;
     }
-    case BIACTRL_GETFREQ:
-    if(pPara)
-    {
-      if(AppBIACfg.SweepCfg.SweepEn == bTRUE)
-        *(float*)pPara = AppBIACfg.FreqofData;
-      else
-        *(float*)pPara = AppBIACfg.SinFreq;
-    }
-    break;
+  
     case BIACTRL_SHUTDOWN:
     {
       AppBIACtrl(BIACTRL_STOPNOW, 0);  /* Stop the measurement if it's running. */
@@ -91,17 +72,6 @@ AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara)
       memset(&lp_loop, 0, sizeof(lp_loop));
       AD5940_LPLoopCfgS(&lp_loop);
       AD5940_EnterSleepS();  /* Enter Hibernate */
-    }
-    break;
-
-    case BIACTRL_SETCFG:
-    {
-      if(pPara)
-      {
-        AppBIACfg_Type *pNewCfg = (AppBIACfg_Type *)pPara;
-        memcpy(&AppBIACfg, pNewCfg, sizeof(AppBIACfg_Type));
-        AppBIACfg.bParaChanged = bTRUE;
-      }
     }
     break;
 
