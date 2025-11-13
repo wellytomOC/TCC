@@ -35,6 +35,17 @@ extern "C" {
 #define USB_DP_PIN 14
 
 
+
+// Frequency and step limits
+#define MIN_START_FREQ_HZ   100
+#define MAX_STOP_FREQ_HZ    200000
+#define MIN_STEPS           10
+#define MAX_STEPS           100
+
+
+
+
+
 typedef struct SingleMeasurementType{
     bool DoneFlag;
     float Magnitude;
@@ -46,10 +57,13 @@ typedef struct Type_GlobalVariables{
 
     uint8_t TestCounter;
     bool sweep_done;
-    bool sweep_ready;
+    
 
-    // for single measurement
-    SingleMeasurementType SingleMeasurement;
+    float MagnitudeBuffer[MAX_STEPS]; // for impedance sweep
+    float PhaseBuffer[MAX_STEPS];
+    float FreqBuffer[MAX_STEPS];
+    uint16_t MeasurementCounter;
+    
 
 }Type_GlobalVariables;
 
@@ -60,11 +74,7 @@ extern Type_GlobalVariables GVariables;
 
 
 
-// Frequency and step limits
-#define MIN_START_FREQ_HZ   10
-#define MAX_STOP_FREQ_HZ    200000
-#define MIN_STEPS           10
-#define MAX_STEPS           1000
+
 
 
 typedef struct

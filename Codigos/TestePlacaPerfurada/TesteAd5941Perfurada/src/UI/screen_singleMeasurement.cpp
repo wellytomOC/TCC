@@ -34,6 +34,7 @@ lv_obj_t * screen_singleMeasurement_create(void)
 
     lv_obj_add_event_cb(btn_back, [](lv_event_t *e) {
         ui_manager_set_screen(SCREEN_HOME);
+        GVariables.sweep_done = false;
     }, LV_EVENT_CLICKED, NULL);
 
     /* ---------------------- Frequency slider ---------------------- */
@@ -83,16 +84,20 @@ lv_obj_t * screen_singleMeasurement_create(void)
 
 void screen_singleMeasurement_update(void)
 {
-    if (!GVariables.SingleMeasurement.DoneFlag)
+    if (!GVariables.sweep_done)
     {
         lv_label_set_text(label_result, "");
+        return;
     }
-    else
-    {
-        lv_label_set_text_fmt(label_result, "Modulo: %.2f Ω\nFase: %.2f°",
-                              GVariables.SingleMeasurement.Magnitude,
-                              GVariables.SingleMeasurement.Phase);
-    }
+
+    char buf[64];
+    static float R, X, L, C;
+    calculate_impedance_components(GVariables.MagnitudeBuffer[1], GVariables.PhaseBuffer[1], AppBIACfg.FreqofData, &R, &X, &L, &C);
+
+    snprintf(buf, sizeof(buf), "R: %.2e Ohm\nX: %.2e Ohm\nL: %.2e H\nC: %.2e F", (double)R, (double)X, (double)L, (double)C);
+    printf("R: %.2e Ω , X: %.2e Ω , L: %.2e H , C: %.2e F\n", (double)R, (double)X, (double)L, (double)C);
+    //snprintf(buf, sizeof(buf), "Modulo: %.2f Ω\nFase: %.2f°", (double)GVariables.MagnitudeBuffer[1],(double)GVariables.PhaseBuffer[1]);
+    lv_label_set_text(label_result, buf);
 }
 
 void screen_singleMeasurement_destroy(void)

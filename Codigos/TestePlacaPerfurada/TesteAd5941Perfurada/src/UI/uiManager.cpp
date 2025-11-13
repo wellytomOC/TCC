@@ -1,14 +1,16 @@
 #include "uiManager.h"
 #include "screen_home.h"
 #include "screen_loading.h"
-#include "screen_results.h"
+#include "screen_resultsGraph.h"
 #include "screen_parameters.h"
 #include "screen_singleMeasurement.h"
+#include "screen_resultsText.h"
 
 static Screen_t * screens[SCREEN_MAX] = {
     &Screen_Home,
     &Screen_Loading,
-    &Screen_Results,
+    &Screen_resultsGraph,
+    &Screen_resultsText,
     &Screen_Parameters,
     &Screen_singleMeasurement,
 };

@@ -225,7 +225,7 @@ lv_obj_t * screen_parameters_create(void)
         StartImpedanceSweep();
 
 
-        ui_manager_set_screen(SCREEN_LOADING);
+        ui_manager_set_screen(SCREEN_RESULTS_TEXT);
     }, LV_EVENT_CLICKED, NULL);
 
     // === Event: open numeric input panel ===

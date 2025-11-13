@@ -34,7 +34,7 @@ void screen_loading_update(void)
 
     // go to results screen if done
     if (AppBIACfg.FreqofData >= AppBIACfg.SweepCfg.SweepStop) {
-        ui_manager_set_screen(SCREEN_RESULTS);
+        ui_manager_set_screen(SCREEN_HOME);
     }
 
 }

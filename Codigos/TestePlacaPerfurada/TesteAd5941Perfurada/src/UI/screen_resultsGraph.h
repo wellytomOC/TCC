@@ -6,7 +6,7 @@ void screen_results_update(void);
 void screen_results_destroy(void);
 
 // Expose a screen descriptor
-extern Screen_t Screen_Results;
+extern Screen_t Screen_resultsGraph;
 
 // Public function to add new data points
 void screen_results_add_point(int freq, int mag, int phase);
