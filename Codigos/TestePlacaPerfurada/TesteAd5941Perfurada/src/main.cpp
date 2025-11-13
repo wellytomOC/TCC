@@ -159,9 +159,7 @@ void setup() {
 
 
   //Inicia Impedance meter
-  delay(5000);
   AD5940_MCUResourceInit(0);
-  delay(1000);
   InitImpedanceMeter();
 
 

@@ -89,7 +89,7 @@ void ImpedanceMeterTask(void *pvParameters)
         // check if sweep is done
         if(GVariables.MeasurementCounter == AppBIACfg.SweepCfg.SweepPoints)
         {
-          GVariables.MeasurementCounter = 0;
+          //GVariables.MeasurementCounter = 0;
           printf("Sweep done. Shutdown AFE.\n");
           //AppBIACtrl(BIACTRL_STOPSYNC, 0);
           AppBIACtrl(BIACTRL_STOPNOW, 0);
@@ -256,6 +256,7 @@ void StartImpedanceSweep(void)
   if(ImpedanceMeterState == IMPEDANCE_METER_STATE_IDLE)
   {
     GVariables.sweep_done = false;
+    GVariables.MeasurementCounter = 0;
     ImpedanceMeterState = IMPEDANCE_METER_STATE_INITSWEEP;
   }
 }
@@ -277,6 +278,7 @@ void StartSingleMeasurement(uint32_t freq)
   AppBIACfg.SweepCfg.SweepPoints = 10;
 
   GVariables.sweep_done = false;
+  GVariables.MeasurementCounter = 0;
 
   ImpedanceMeterState = IMPEDANCE_METER_STATE_INITSWEEP;
 }

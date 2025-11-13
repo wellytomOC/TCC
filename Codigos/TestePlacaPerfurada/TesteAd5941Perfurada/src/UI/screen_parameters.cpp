@@ -182,7 +182,7 @@ lv_obj_t * screen_parameters_create(void)
 
     ta_steps = lv_textarea_create(cont_steps);
     lv_textarea_set_one_line(ta_steps, true);
-    lv_textarea_set_text(ta_steps, "20");
+    lv_textarea_set_text(ta_steps, "10");
     lv_obj_set_width(ta_steps, 100);
 
     // --- Buttons ---
