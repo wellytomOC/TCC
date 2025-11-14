@@ -18,7 +18,7 @@ static lv_obj_t * scale_y;     // Left vertical scale
 static lv_obj_t * scale_x;     // Bottom horizontal scale
 
 static const char *btn_labels[] = {
-    "Magnitude", "Phase", "Inductance", "Capacitance"
+    "Magnitude", "Phase", "Induc.(uH)", "Capacit.(nF)"
 };
 
 /* --------------------------------------------------------- */
@@ -229,9 +229,7 @@ static void plot_selected_data(uint8_t type)
     for (int i = 0; i < 11; i++) {
         float val = y_min + (y_max - y_min) * (i / 10.0f);
 
-        if (type == 2)      snprintf(y_labels[i], sizeof(y_labels[i]), "%.1f uH", val);
-        else if (type == 3) snprintf(y_labels[i], sizeof(y_labels[i]), "%.1f nF", val);
-        else                snprintf(y_labels[i], sizeof(y_labels[i]), "%.1f", val);
+        snprintf(y_labels[i], sizeof(y_labels[i]), "%.1f", val);
 
         y_texts[i] = y_labels[i];
     }
