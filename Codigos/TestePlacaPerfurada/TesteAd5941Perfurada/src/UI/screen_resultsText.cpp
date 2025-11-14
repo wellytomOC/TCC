@@ -43,7 +43,7 @@ lv_obj_t * screen_resultsText_create(void)
 
     /* ---------------- Text area ---------------- */
     ta_results = lv_textarea_create(scr);
-    lv_obj_set_size(ta_results, 350, 200);
+    lv_obj_set_size(ta_results, lv_pct(95), 200);
     lv_obj_align(ta_results, LV_ALIGN_CENTER, 0, 0);
     lv_textarea_set_text(ta_results, "");       // start empty
     lv_obj_set_scroll_dir(ta_results, LV_DIR_VER);
