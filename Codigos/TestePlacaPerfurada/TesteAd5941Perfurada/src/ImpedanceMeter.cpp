@@ -135,8 +135,8 @@ void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg)
   pCfg->NumOfData      = -1;
   pCfg->RcalVal        = 1000.0;     // 1kΩ
 
-  pCfg->PwrMod         = AFEPWR_LP;
-  pCfg->HstiaRtiaSel   = HSTIARTIA_1K;
+  pCfg->PwrMod         = AFEPWR_HP;
+  pCfg->HstiaRtiaSel   = HSTIARTIA_200;
   pCfg->CtiaSel        = 16;
   pCfg->ExcitBufGain   = EXCITBUFGAIN_2;
   pCfg->HsDacGain      = HSDACGAIN_1;

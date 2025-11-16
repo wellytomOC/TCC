@@ -528,8 +528,12 @@ static AD5940Err AppBIADataProcess(int32_t * const pData, uint32_t *pDataCount)
     CurrMag = sqrt((float)pDftCurr->Real*pDftCurr->Real+(float)pDftCurr->Image*pDftCurr->Image);
     CurrPhase = atan2(-pDftCurr->Image,pDftCurr->Real);
 
+    printf("Vmag: %.3f Vphase: %.3f Cmag: %.3f Cphase: %.3f\n", VoltMag, VoltPhase, CurrMag, CurrPhase);
+
     VoltMag = VoltMag/CurrMag*AppBIACfg.RtiaCurrValue[0];
     VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
+
+    printf("Impedance: Mag: %.3f Ohm, Phase: %.3f degree\n", VoltMag, VoltPhase*180/3.1415926);
 
     pOut[i].Magnitude = VoltMag;
     pOut[i].Phase = VoltPhase;

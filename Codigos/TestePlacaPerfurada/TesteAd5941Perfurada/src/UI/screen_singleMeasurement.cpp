@@ -64,6 +64,7 @@ lv_obj_t * screen_singleMeasurement_create(void)
 
     lv_obj_add_event_cb(btn_measure, [](lv_event_t * e) {
         uint32_t freq = lv_slider_get_value(slider_freq);
+        lv_label_set_text(label_result, "");
         StartSingleMeasurement(freq);
     }, LV_EVENT_CLICKED, NULL);
 
@@ -86,10 +87,10 @@ void screen_singleMeasurement_update(void)
 {
     if (!GVariables.sweep_done)
     {
-        lv_label_set_text(label_result, "");
         return;
     }
 
+    GVariables.sweep_done = false; // reset flag
     char buf[64];
     static float R, X, L, C;
     calculate_impedance_components(GVariables.MagnitudeBuffer[1], GVariables.PhaseBuffer[1], AppBIACfg.FreqofData, &R, &X, &L, &C);
@@ -98,6 +99,7 @@ void screen_singleMeasurement_update(void)
     printf("R: %.2e Ω , X: %.2e Ω , L: %.2e H , C: %.2e F\n", (double)R, (double)X, (double)L, (double)C);
     //snprintf(buf, sizeof(buf), "Modulo: %.2f Ω\nFase: %.2f°", (double)GVariables.MagnitudeBuffer[1],(double)GVariables.PhaseBuffer[1]);
     lv_label_set_text(label_result, buf);
+
 }
 
 void screen_singleMeasurement_destroy(void)

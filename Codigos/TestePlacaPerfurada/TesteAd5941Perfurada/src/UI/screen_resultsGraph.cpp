@@ -177,9 +177,13 @@ static void plot_selected_data(uint8_t type)
     float max_val = -FLT_MAX;
 
     /* ---- Fill series ---- */
+    uint32_t testNumber = 0;
     for (uint32_t i = 0; i < GVariables.MeasurementCounter; i++)
     {
         float v = 0;
+
+        printf("test number: %u\n", testNumber);
+        testNumber++;
 
         if (type == 0) {
             v = GVariables.MagnitudeBuffer[i];
