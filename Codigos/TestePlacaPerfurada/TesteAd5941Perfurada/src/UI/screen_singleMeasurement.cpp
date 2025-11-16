@@ -93,7 +93,7 @@ void screen_singleMeasurement_update(void)
     GVariables.sweep_done = false; // reset flag
     char buf[64];
     static float R, X, L, C;
-    calculate_impedance_components(GVariables.MagnitudeBuffer[1], GVariables.PhaseBuffer[1], AppBIACfg.FreqofData, &R, &X, &L, &C);
+    calculate_impedance_components(GVariables.MagnitudeBuffer[4], GVariables.PhaseBuffer[4], AppBIACfg.FreqofData, &R, &X, &L, &C);
 
     snprintf(buf, sizeof(buf), "R: %.2e Ohm\nX: %.2e Ohm\nL: %.2e H\nC: %.2e F", (double)R, (double)X, (double)L, (double)C);
     printf("R: %.2e Ω , X: %.2e Ω , L: %.2e H , C: %.2e F\n", (double)R, (double)X, (double)L, (double)C);

@@ -62,8 +62,9 @@ lv_obj_t * screen_resultsGraph_create(void)
     lv_obj_set_style_text_font(scale_y, &lv_font_montserrat_10, 0);
 
     /* safe padding */
+    lv_obj_set_style_margin_left(scale_y, 5, 0);
     lv_obj_set_style_pad_left(scale_y, 10, 0);
-    lv_obj_set_style_pad_right(scale_y, 6, 0);
+    lv_obj_set_style_pad_right(scale_y, 2, 0);
     lv_obj_set_style_pad_top(scale_y, 6, 0);
     lv_obj_set_style_pad_bottom(scale_y, 4, 0);
 
@@ -84,7 +85,8 @@ lv_obj_t * screen_resultsGraph_create(void)
     lv_scale_set_mode(scale_x, LV_SCALE_MODE_HORIZONTAL_BOTTOM);
     lv_obj_set_width(scale_x, lv_pct(98));
     lv_obj_set_height(scale_x, 28);
-    lv_obj_set_style_margin_left(scale_x, 52, 0);
+    lv_obj_set_style_margin_left(scale_x, 54
+        , 0);
     lv_obj_set_style_text_font(scale_x, &lv_font_montserrat_10, 0);
 
     /* padding for clear labels */
@@ -175,15 +177,13 @@ static void plot_selected_data(uint8_t type)
 
     float min_val = FLT_MAX;
     float max_val = -FLT_MAX;
+    float mean_val = 0.0f;
 
-    /* ---- Fill series ---- */
-    uint32_t testNumber = 0;
+    /* ---- check for max/min values ---- */
+    float temp_buffer[GVariables.MeasurementCounter+1];
     for (uint32_t i = 0; i < GVariables.MeasurementCounter; i++)
     {
         float v = 0;
-
-        printf("test number: %u\n", testNumber);
-        testNumber++;
 
         if (type == 0) {
             v = GVariables.MagnitudeBuffer[i];
@@ -200,27 +200,61 @@ static void plot_selected_data(uint8_t type)
                 &R, &X, &L, &C
             );
 
-            if (type == 2) v = L * 1e6f;   // µH
-            else           v = C * 1e9f;   // nF
+            v = (type == 2) ? L : C;
         }
+
+        temp_buffer[i] = v;
 
         if (v < min_val) min_val = v;
         if (v > max_val) max_val = v;
-
-        ser_y_points[i] = (lv_coord_t)roundf(v);
+        mean_val += v;
     }
 
-    if (max_val == min_val)
-        max_val = min_val + 1;
+    /* check if min and max are equal or zero*/
+    if (min_val == max_val) {
+        if (min_val == 0.0f) {
+            min_val = -1.0f;
+            max_val = 1.0f;
+        } else {
+            min_val *= 0.9f;
+            max_val *= 1.1f;
+        }
+    }
 
+    /* ---- Compute scaling factor ---- */
+    mean_val /= GVariables.MeasurementCounter;
+    uint32_t scale = 1;
+    
+    if(type != 1){
+        // while(min_val * scale < 10.0f && max_val * scale < 100000.0f) {
+        //     scale *= 10;
+        //     printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
+        // }
+
+        while((max_val - min_val) * scale < 100.0f) {
+            scale *= 10;
+            printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
+        }
+
+        printf("Scaling factor: %u\n", scale);
+
+    }
+
+    /* ---- Apply scaling ---- */
+        for (uint32_t i = 0; i < GVariables.MeasurementCounter; i++) {
+            ser_y_points[i] = (lv_coord_t)roundf(temp_buffer[i] * scale);
+        }
+
+        
     /* ---- Y range ---- */
     float y_min, y_max;
+
     if (type == 1) {
         y_min = -180;
         y_max = 180;
     } else {
-        y_min = 0;
-        y_max = max_val;
+        y_min = min_val * scale;
+        y_max = max_val * scale;
     }
 
     lv_chart_set_range(chart, LV_CHART_AXIS_PRIMARY_Y,
@@ -231,10 +265,10 @@ static void plot_selected_data(uint8_t type)
     static const char *y_texts[12];
 
     for (int i = 0; i < 11; i++) {
-        float val = y_min + (y_max - y_min) * (i / 10.0f);
+        float real_val = min_val +
+            (max_val - min_val) * (i / 10.0f);
 
-        snprintf(y_labels[i], sizeof(y_labels[i]), "%.1f", val);
-
+        snprintf(y_labels[i], sizeof(y_labels[i]), "%.1e", real_val);
         y_texts[i] = y_labels[i];
     }
     y_texts[11] = NULL;
@@ -243,10 +277,9 @@ static void plot_selected_data(uint8_t type)
     lv_scale_set_major_tick_every(scale_y, 1);
     lv_scale_set_text_src(scale_y, y_texts);
 
-    /* ---- X labels ---- */
+    /* ---- X labels remain the same ---- */
     static char x_labels[11][16];
     static const char *x_texts[12];
-
     float f0 = AppBIACfg.SweepCfg.SweepStart;
     float f1 = AppBIACfg.SweepCfg.SweepStop;
 
@@ -275,6 +308,14 @@ static void plot_selected_data(uint8_t type)
 
     lv_chart_refresh(chart);
 }
+
+
+
+
+
+
+
+
 
 /* --------------------------------------------------------- */
 void screen_resultsGraph_destroy(void)

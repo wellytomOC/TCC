@@ -149,7 +149,7 @@ void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg)
   pCfg->ADCSinc3Osr    = ADCSINC3OSR_2;
   pCfg->ADCSinc2Osr    = ADCSINC2OSR_22;
 
-  pCfg->DftNum         = DFTNUM_8192;
+  pCfg->DftNum         = DFTNUM_16384;
   pCfg->DftSrc         = DFTSRC_SINC3;
   pCfg->HanWinEn       = bTRUE;
 
@@ -275,7 +275,7 @@ void StartSingleMeasurement(uint32_t freq)
 
   AppBIACfg.bParaChanged = bTRUE;
   AppBIACfg.ReDoRtiaCal = bTRUE;
-  AppBIACfg.SweepCfg.SweepPoints = 10;
+  AppBIACfg.SweepCfg.SweepPoints = 5;
 
   GVariables.sweep_done = false;
   GVariables.MeasurementCounter = 0;
