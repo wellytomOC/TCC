@@ -8,13 +8,15 @@ extern Type_GlobalVariables GVariables;
 // ==== Screen-local widgets ====
 static lv_obj_t * ta_start_freq = nullptr;
 static lv_obj_t * ta_end_freq   = nullptr;
-static lv_obj_t * slider_steps  = nullptr;   // <<< replaced textarea
-static lv_obj_t * lbl_steps_val = nullptr;   // <<< shows numeric value
+static lv_obj_t * slider_steps  = nullptr;  
+static lv_obj_t * lbl_steps_val = nullptr; 
 static lv_obj_t * scr_param     = nullptr;
 
 static lv_obj_t * input_panel   = nullptr;
 static lv_obj_t * input_field   = nullptr;
 static lv_obj_t * active_textarea = nullptr;
+static lv_obj_t * sw_mode = nullptr; 
+
 
 // ==== Forward declarations ====
 static void input_panel_create(lv_obj_t * target);
@@ -163,7 +165,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_t * lbl_end_unit = lv_label_create(cont_end);
     lv_label_set_text(lbl_end_unit, "Hz");
 
-    // --- Steps (SLIDER instead of text input) ---
+    // --- Steps ---
     lv_obj_t * cont_steps = lv_obj_create(scr_param);
     lv_obj_set_size(cont_steps, 280, 60);
     lv_obj_set_flex_flow(cont_steps, LV_FLEX_FLOW_ROW);
@@ -181,6 +183,39 @@ lv_obj_t * screen_parameters_create(void)
 
     lbl_steps_val = lv_label_create(cont_steps);
     lv_label_set_text(lbl_steps_val, "10");
+
+    // --- Sweep Mode (Linear / Logarithmic) ---
+    lv_obj_t * cont_mode = lv_obj_create(scr_param);
+    lv_obj_set_size(cont_mode, 280, 60);
+    lv_obj_set_flex_flow(cont_mode, LV_FLEX_FLOW_ROW);
+    lv_obj_set_flex_align(cont_mode, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
+    lv_obj_clear_flag(cont_mode, LV_OBJ_FLAG_SCROLLABLE);
+
+    lv_obj_t * lbl_mode = lv_label_create(cont_mode);
+    lv_label_set_text(lbl_mode, "Mode:");
+
+    sw_mode = lv_switch_create(cont_mode);
+    // default = Linear (OFF)
+    lv_obj_add_state(sw_mode, LV_STATE_DEFAULT);
+
+    // Label showing current mode
+    lv_obj_t * lbl_mode_val = lv_label_create(cont_mode);
+    lv_label_set_text(lbl_mode_val, "Linear");
+
+    // Update mode label when user toggles
+    lv_obj_add_event_cb(sw_mode, [](lv_event_t * e){
+        lv_obj_t * sw = (lv_obj_t *)lv_event_get_target(e);
+        lv_obj_t * parent = lv_obj_get_parent(sw);
+        lv_obj_t * lbl = lv_obj_get_child(parent, 2); // label is 3rd element
+
+        if (lv_obj_has_state(sw, LV_STATE_CHECKED))
+            lv_label_set_text(lbl, "Log");
+        else
+            lv_label_set_text(lbl, "Linear");
+    }, LV_EVENT_VALUE_CHANGED, NULL);
+
+
+
 
     // --- Buttons ---
     lv_obj_t * cont_buttons = lv_obj_create(scr_param);
@@ -215,6 +250,7 @@ lv_obj_t * screen_parameters_create(void)
         AppBIACfg.SweepCfg.SweepStop   = endVal;
         AppBIACfg.SweepCfg.SweepPoints = steps;
         AppBIACfg.SweepCfg.SweepEn     = bTRUE;
+        AppBIACfg.SweepCfg.SweepLog = lv_obj_has_state(sw_mode, LV_STATE_CHECKED) ? bTRUE : bFALSE;
 
         StartImpedanceSweep();
         ui_manager_set_screen(SCREEN_RESULTS_TEXT);
@@ -252,6 +288,7 @@ void screen_parameters_destroy(void)
 {
     ta_start_freq = ta_end_freq = nullptr;
     slider_steps = lbl_steps_val = nullptr;
+    sw_mode = nullptr;
 
     scr_param = nullptr;
     input_panel_close();
