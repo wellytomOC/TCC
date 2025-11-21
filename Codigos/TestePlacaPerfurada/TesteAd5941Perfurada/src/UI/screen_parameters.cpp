@@ -123,7 +123,8 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_clear_flag(scr_param, LV_OBJ_FLAG_SCROLLABLE);
     lv_obj_set_flex_flow(scr_param, LV_FLEX_FLOW_COLUMN);
     lv_obj_set_flex_align(scr_param, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
-    lv_obj_set_style_pad_all(scr_param, 10, 0);
+    lv_obj_set_style_pad_all(scr_param, 2, 0);
+    lv_obj_set_style_pad_row(scr_param, 4, 0);
 
     lv_obj_t * label_title = lv_label_create(scr_param);
     lv_label_set_text(label_title, "Measurement Parameters");
@@ -131,7 +132,7 @@ lv_obj_t * screen_parameters_create(void)
 
     // --- Start frequency ---
     lv_obj_t * cont_start = lv_obj_create(scr_param);
-    lv_obj_set_size(cont_start, 280, 60);
+    lv_obj_set_size(cont_start, 280, 50);
     lv_obj_set_flex_flow(cont_start, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cont_start, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_start, LV_OBJ_FLAG_SCROLLABLE);
@@ -149,7 +150,7 @@ lv_obj_t * screen_parameters_create(void)
 
     // --- End frequency ---
     lv_obj_t * cont_end = lv_obj_create(scr_param);
-    lv_obj_set_size(cont_end, 280, 60);
+    lv_obj_set_size(cont_end, 280, 50);
     lv_obj_set_flex_flow(cont_end, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cont_end, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_end, LV_OBJ_FLAG_SCROLLABLE);
@@ -167,7 +168,7 @@ lv_obj_t * screen_parameters_create(void)
 
     // --- Steps ---
     lv_obj_t * cont_steps = lv_obj_create(scr_param);
-    lv_obj_set_size(cont_steps, 280, 60);
+    lv_obj_set_size(cont_steps, 280, 50);
     lv_obj_set_flex_flow(cont_steps, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cont_steps, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_steps, LV_OBJ_FLAG_SCROLLABLE);
@@ -186,7 +187,7 @@ lv_obj_t * screen_parameters_create(void)
 
     // --- Sweep Mode (Linear / Logarithmic) ---
     lv_obj_t * cont_mode = lv_obj_create(scr_param);
-    lv_obj_set_size(cont_mode, 280, 60);
+    lv_obj_set_size(cont_mode, 280, 50);
     lv_obj_set_flex_flow(cont_mode, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cont_mode, LV_FLEX_ALIGN_SPACE_BETWEEN, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_mode, LV_OBJ_FLAG_SCROLLABLE);
@@ -219,7 +220,7 @@ lv_obj_t * screen_parameters_create(void)
 
     // --- Buttons ---
     lv_obj_t * cont_buttons = lv_obj_create(scr_param);
-    lv_obj_set_size(cont_buttons, 280, 60);
+    lv_obj_set_size(cont_buttons, 280, 50);
     lv_obj_set_flex_flow(cont_buttons, LV_FLEX_FLOW_ROW);
     lv_obj_set_flex_align(cont_buttons, LV_FLEX_ALIGN_SPACE_AROUND, LV_FLEX_ALIGN_CENTER, LV_FLEX_ALIGN_CENTER);
     lv_obj_clear_flag(cont_buttons, LV_OBJ_FLAG_SCROLLABLE);
