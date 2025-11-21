@@ -157,7 +157,7 @@ void InitImpedanceMeterCfg(AppBIACfg_Type *pCfg)
   pCfg->SweepCfg.SweepEn      = bTRUE;
   pCfg->SweepCfg.SweepStart   = 200.0;
   pCfg->SweepCfg.SweepStop    = 20000.0;
-  pCfg->SweepCfg.SweepPoints  = 100;
+  pCfg->SweepCfg.SweepPoints  = 10;
   pCfg->SweepCfg.SweepLog     = bFALSE;
   pCfg->SweepCfg.SweepIndex   = 0;
 

@@ -51,6 +51,19 @@ lv_obj_t * screen_resultsText_create(void)
 
     /* ---------------- TABLE ---------------- */
     table_results = lv_table_create(scr);
+    
+    // increase scroling speed
+    lv_obj_set_scrollbar_mode(table_results, LV_SCROLLBAR_MODE_AUTO);
+    lv_obj_set_scroll_snap_y(table_results, LV_SCROLL_SNAP_NONE);
+    lv_obj_remove_flag(table_results, LV_OBJ_FLAG_SCROLL_ELASTIC);
+    lv_obj_remove_flag(table_results, LV_OBJ_FLAG_SCROLL_MOMENTUM); 
+    
+    // --- BIGGER SCROLLBAR ---
+    lv_obj_set_style_width(table_results, 16, LV_PART_SCROLLBAR);  // width of vertical scrollbar
+    lv_obj_set_style_radius(table_results, 8, LV_PART_SCROLLBAR);  // rounded ends
+    lv_obj_set_style_bg_color(table_results, lv_color_hex(0x888888), LV_PART_SCROLLBAR);
+    lv_obj_set_style_bg_opa(table_results, LV_OPA_COVER, LV_PART_SCROLLBAR);
+
 
     // smaller width for more data
     lv_obj_set_size(table_results, lv_pct(95), 250);

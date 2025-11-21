@@ -38,7 +38,7 @@ extern "C" {
 
 // Frequency and step limits
 #define MIN_START_FREQ_HZ   100
-#define MAX_STOP_FREQ_HZ    200000
+#define MAX_STOP_FREQ_HZ    190000
 #define MIN_STEPS           10
 #define MAX_STEPS           100
 

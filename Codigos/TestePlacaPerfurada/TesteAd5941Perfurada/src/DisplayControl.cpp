@@ -104,6 +104,7 @@ void StartDisplayControl(void){
 
     ui_manager_set_screen(SCREEN_HOME);
 
+
     xTaskCreate(DisplayTask,"DisplayTask", 20000, NULL, 5, &TaskHandleDisplayTask);
 
 
