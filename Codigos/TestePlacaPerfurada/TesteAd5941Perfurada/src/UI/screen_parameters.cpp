@@ -44,7 +44,7 @@ static void input_panel_create(lv_obj_t * target)
     lv_obj_set_width(input_field, LV_PCT(95));
     lv_obj_set_height(input_field, 50);
     lv_obj_align(input_field, LV_ALIGN_TOP_MID, 0, 5);
-    lv_textarea_set_text(input_field, lv_textarea_get_text(target));
+    lv_textarea_set_text(input_field, "");
     lv_obj_set_style_text_font(input_field, &lv_font_montserrat_20, 0);
     lv_obj_set_style_text_align(input_field, LV_TEXT_ALIGN_CENTER, 0);
     lv_obj_add_flag(input_field, LV_OBJ_FLAG_CLICK_FOCUSABLE);

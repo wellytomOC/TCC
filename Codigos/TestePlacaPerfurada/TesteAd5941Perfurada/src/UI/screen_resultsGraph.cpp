@@ -231,7 +231,12 @@ static void plot_selected_data(uint8_t type)
         //     printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
         // }
 
-        while((max_val - min_val) * scale < 100.0f) {
+        // while((max_val - min_val) * scale < 100.0f) {
+        //     scale *= 10;
+        //     printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
+        // }
+
+        while (fabsf(max_val) * scale < 100.0f && scale < 1000000000U){
             scale *= 10;
             printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
         }
@@ -247,7 +252,7 @@ static void plot_selected_data(uint8_t type)
 
         
     /* ---- Y range ---- */
-    float y_min, y_max;
+    lv_coord_t y_min, y_max;
 
     if (type == 1) {
         y_min = -180;
@@ -257,8 +262,12 @@ static void plot_selected_data(uint8_t type)
         y_max = max_val * scale;
     }
 
-    lv_chart_set_range(chart, LV_CHART_AXIS_PRIMARY_Y,
-                       (lv_coord_t)y_min, (lv_coord_t)y_max);
+    // Prevent zero-range AFTER integer rounding
+    if (y_min == y_max) {
+        y_min -= 1;
+        y_max += 1;
+    }
+    lv_chart_set_range(chart, LV_CHART_AXIS_PRIMARY_Y, y_min, y_max);
 
     /* ---- Y labels ---- */
     static char y_labels[11][20];
