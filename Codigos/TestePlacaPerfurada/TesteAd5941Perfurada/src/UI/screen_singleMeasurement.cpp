@@ -35,6 +35,7 @@ lv_obj_t * screen_singleMeasurement_create(void)
     lv_obj_add_event_cb(btn_back, [](lv_event_t *e) {
         ui_manager_set_screen(SCREEN_HOME);
         GVariables.sweep_done = false;
+        StopImpedanceMeasurement();
     }, LV_EVENT_CLICKED, NULL);
 
     /* ---------------------- Frequency slider ---------------------- */

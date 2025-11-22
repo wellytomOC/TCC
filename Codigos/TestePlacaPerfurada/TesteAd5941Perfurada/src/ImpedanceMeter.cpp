@@ -83,18 +83,14 @@ void ImpedanceMeterTask(void *pvParameters)
         if(AD5940_GetMCUIntFlag())
         {
           ImpedanceInterruptHandler();
-          GVariables.MeasurementCounter++;
         }
 
         // check if sweep is done
         if(GVariables.MeasurementCounter == AppBIACfg.SweepCfg.SweepPoints)
         {
-          //GVariables.MeasurementCounter = 0;
           printf("Sweep done. Shutdown AFE.\n");
-          //AppBIACtrl(BIACTRL_STOPSYNC, 0);
-          AppBIACtrl(BIACTRL_STOPNOW, 0);
           GVariables.sweep_done = true;
-          ImpedanceMeterState = IMPEDANCE_METER_STATE_IDLE;
+          StopImpedanceMeasurement();
         }
 
         break;
@@ -180,6 +176,7 @@ int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
     GVariables.MagnitudeBuffer[GVariables.MeasurementCounter] = pImp[i].Magnitude;
     GVariables.PhaseBuffer[GVariables.MeasurementCounter] = pImp[i].Phase;
     GVariables.FreqBuffer[GVariables.MeasurementCounter] = AppBIACfg.FreqofData;
+    GVariables.MeasurementCounter++;
 
     printf("RzMag: %f Ohm , RzPhase: %f , Counter: %d \n",GVariables.MagnitudeBuffer[GVariables.MeasurementCounter],GVariables.PhaseBuffer[GVariables.MeasurementCounter], GVariables.MeasurementCounter);
   }
@@ -283,7 +280,14 @@ void StartSingleMeasurement(uint32_t freq)
   ImpedanceMeterState = IMPEDANCE_METER_STATE_INITSWEEP;
 }
 
-
+void StopImpedanceMeasurement(void)
+{
+  if(ImpedanceMeterState == IMPEDANCE_METER_STATE_MEASURING)
+  {
+    AppBIACtrl(BIACTRL_STOPNOW, 0);
+    ImpedanceMeterState = IMPEDANCE_METER_STATE_IDLE;
+  }
+}
 
 void calculate_impedance_components(float mag, float phase_rad, float freq, float *R, float *X, float *L, float *C)
 {
