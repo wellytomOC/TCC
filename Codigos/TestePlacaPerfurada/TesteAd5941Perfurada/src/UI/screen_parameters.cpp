@@ -66,7 +66,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_t * lbl_start_minus = lv_label_create(btn_start_minus);
     lv_label_set_text(lbl_start_minus, "-");
     lv_obj_center(lbl_start_minus);
-    lv_obj_set_style_text_font(lbl_start_minus,   &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(lbl_start_minus,   &lv_font_montserrat_26, 0);
 
     // Spinbox
     ta_start_freq = lv_spinbox_create(cont_start);
@@ -81,7 +81,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_spinbox_set_step(ta_start_freq, 1);
     lv_spinbox_set_value(ta_start_freq, AppBIACfg.SweepCfg.SweepStart);
     lv_obj_set_size(ta_start_freq, 110, 35);
-    lv_obj_set_style_text_font(ta_start_freq, &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(ta_start_freq, &lv_font_montserrat_24, 0);
 
     // -- PLUS button (bigger)
     lv_obj_t * btn_start_plus = lv_btn_create(cont_start);
@@ -89,7 +89,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_t * lbl_start_plus = lv_label_create(btn_start_plus);
     lv_label_set_text(lbl_start_plus, "+");
     lv_obj_center(lbl_start_plus);
-    lv_obj_set_style_text_font(lbl_start_plus,   &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(lbl_start_plus,   &lv_font_montserrat_26, 0);
 
     lv_obj_t * lbl_start_unit = lv_label_create(cont_start);
     lv_label_set_text(lbl_start_unit, "Hz");
@@ -131,7 +131,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_t * lbl_end_minus = lv_label_create(btn_end_minus);
     lv_label_set_text(lbl_end_minus, "-");
     lv_obj_center(lbl_end_minus);
-    lv_obj_set_style_text_font(lbl_end_minus,   &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(lbl_end_minus,   &lv_font_montserrat_26, 0);
 
     // Spinbox
     ta_end_freq = lv_spinbox_create(cont_end);
@@ -146,7 +146,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_spinbox_set_step(ta_end_freq, 1);
     lv_spinbox_set_value(ta_end_freq, AppBIACfg.SweepCfg.SweepStop);
     lv_obj_set_size(ta_end_freq, 110, 35);
-    lv_obj_set_style_text_font(ta_end_freq,   &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(ta_end_freq,   &lv_font_montserrat_24, 0);
 
     // plus (big)
     lv_obj_t * btn_end_plus = lv_btn_create(cont_end);
@@ -155,7 +155,7 @@ lv_obj_t * screen_parameters_create(void)
     lv_obj_t * lbl_end_plus = lv_label_create(btn_end_plus);
     lv_label_set_text(lbl_end_plus, "+");
     lv_obj_center(lbl_end_plus);
-    lv_obj_set_style_text_font(lbl_end_plus,   &lv_font_montserrat_20, 0);
+    lv_obj_set_style_text_font(lbl_end_plus,   &lv_font_montserrat_26, 0);
 
     lv_obj_t * lbl_end_unit = lv_label_create(cont_end);
     lv_label_set_text(lbl_end_unit, "Hz");

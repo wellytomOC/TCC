@@ -72,21 +72,6 @@ void StartDisplayControl(void){
     }
 
 
-    /*
-    //touch test screen
-    tft.fillScreen(TFT_BLACK);
-    tft.setTextColor(TFT_WHITE);
-    tft.setTextSize(2);
-    tft.setCursor(20, 100);
-    tft.println("Touch test ready!");
-
-
-    xTaskCreate(DisplayTask,"DisplayTask", 8192, NULL, 5, &TaskHandleDisplayTask);
-
-    */
-
-
-
 
     //LVGL
     lv_init();

@@ -238,10 +238,10 @@ static void plot_selected_data(uint8_t type)
 
         while (fabsf(max_val) * scale < 100.0f && scale < 1000000000U){
             scale *= 10;
-            printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
+            //printf("Increasing scale to %u. min_val: %.1e max_val: %.1e\n", scale, min_val, max_val);
         }
 
-        printf("Scaling factor: %u\n", scale);
+        //printf("Scaling factor: %u\n", scale);
 
     }
 

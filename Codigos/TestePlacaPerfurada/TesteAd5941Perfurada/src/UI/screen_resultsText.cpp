@@ -6,6 +6,7 @@
 static lv_obj_t * table_results;
 static lv_obj_t * progress_bar;
 static lv_obj_t * btn_graph;
+static lv_obj_t * btn_save;
 static lv_obj_t * btn_next;
 static lv_obj_t * btn_prev;
 static lv_obj_t * lbl_page;
@@ -48,14 +49,43 @@ lv_obj_t * screen_resultsText_create(void)
     lv_obj_t * lbl_graph = lv_label_create(btn_graph);
     lv_label_set_text(lbl_graph, "Graph");
     lv_obj_center(lbl_graph);
+    lv_obj_add_flag(btn_graph, LV_OBJ_FLAG_HIDDEN);
+
     lv_obj_add_event_cb(btn_graph, [](lv_event_t * e) {
         ui_manager_set_screen(SCREEN_RESULTSGRAPH);
     }, LV_EVENT_CLICKED, NULL);
-    lv_obj_add_flag(btn_graph, LV_OBJ_FLAG_HIDDEN);
+
+    /* ---------------- Save Button ---------------- */
+    btn_save = lv_btn_create(scr);
+    lv_obj_set_size(btn_save, 80, 40);
+    lv_obj_align(btn_save, LV_ALIGN_BOTTOM_RIGHT, -100, -5);  // left of Graph
+    lv_obj_t * lbl_save = lv_label_create(btn_save);
+    lv_label_set_text(lbl_save, "Save");
+    lv_obj_center(lbl_save);
+    lv_obj_add_flag(btn_save, LV_OBJ_FLAG_HIDDEN); // hidden until sweep ends
+
+    lv_obj_add_event_cb(btn_save, [](lv_event_t * e) {
+
+        Serial.println("BEGIN_DATA");   // Start marker
+
+        for (uint32_t i = 0; i < GVariables.MeasurementCounter; i++)
+        {
+            float freq = GVariables.FreqBuffer[i];
+            float mag  = GVariables.MagnitudeBuffer[i];
+            float ph   = GVariables.PhaseBuffer[i];
+
+            // Send CSV: freq, magnitude, phase
+            Serial.printf("%f,%f,%f\n", freq, mag, ph);
+        }
+
+        Serial.println("END_DATA");     // End marker
+
+    }, LV_EVENT_CLICKED, NULL);
+    
 
     /* ---------------- TABLE ---------------- */
     table_results = lv_table_create(scr);
-    lv_obj_clear_flag(table_results, LV_OBJ_FLAG_SCROLLABLE); // disable scrolling
+    lv_obj_clear_flag(table_results, LV_OBJ_FLAG_SCROLLABLE);
 
     lv_obj_set_size(table_results, lv_pct(95), 230);
     lv_obj_align(table_results, LV_ALIGN_TOP_MID, 0, 10);
@@ -87,21 +117,21 @@ lv_obj_t * screen_resultsText_create(void)
 
     /* ---------------- Pagination Controls ---------------- */
     btn_prev = lv_btn_create(scr);
-    lv_obj_set_size(btn_prev, 80, 40);
-    lv_obj_align(btn_prev, LV_ALIGN_BOTTOM_MID, -60, -5);
+    lv_obj_set_size(btn_prev, 60, 40);
+    lv_obj_align(btn_prev, LV_ALIGN_BOTTOM_MID, -80, -5);
     lv_obj_t * lbl_prev = lv_label_create(btn_prev);
     lv_label_set_text(lbl_prev, "<");
     lv_obj_center(lbl_prev);
 
     btn_next = lv_btn_create(scr);
-    lv_obj_set_size(btn_next, 80, 40);
-    lv_obj_align(btn_next, LV_ALIGN_BOTTOM_MID, 60, -5);
+    lv_obj_set_size(btn_next, 60, 40);
+    lv_obj_align(btn_next, LV_ALIGN_BOTTOM_MID, 20, -5);
     lv_obj_t * lbl_next = lv_label_create(btn_next);
     lv_label_set_text(lbl_next, ">");
     lv_obj_center(lbl_next);
 
     lbl_page = lv_label_create(scr);
-    lv_obj_align(lbl_page, LV_ALIGN_BOTTOM_MID, 0, -5);
+    lv_obj_align(lbl_page, LV_ALIGN_BOTTOM_MID, -30, -5);
     lv_label_set_text(lbl_page, "0/0");
 
     lv_obj_add_event_cb(btn_prev, [](lv_event_t * e){
@@ -122,18 +152,19 @@ lv_obj_t * screen_resultsText_create(void)
     progress_bar = lv_bar_create(scr);
     lv_obj_set_size(progress_bar, 200, 15);
     lv_obj_align(progress_bar, LV_ALIGN_BOTTOM_MID, 0, -50);
+
     lv_bar_set_range(progress_bar,
                      (int32_t)AppBIACfg.SweepCfg.SweepStart,
                      (int32_t)AppBIACfg.SweepCfg.SweepStop);
+
     lv_bar_set_value(progress_bar,
                      (int32_t)AppBIACfg.SweepCfg.SweepStart,
                      LV_ANIM_OFF);
 
-    // Initialize counters
-    last_counter = GVariables.MeasurementCounter; // show all existing measurements
+    last_counter = GVariables.MeasurementCounter;
     current_page = 0;
 
-    refresh_table(); // only call once when entering screen
+    refresh_table();
 
     lv_disp_load_scr(scr);
     return scr;
@@ -153,15 +184,12 @@ static void refresh_table(void)
     uint32_t end_idx = start_idx + ROWS_PER_PAGE;
     if(end_idx > last_counter) end_idx = last_counter;
 
-    // Keep header, clear all rows
     lv_table_set_row_cnt(table_results, ROWS_PER_PAGE + 1);
-    for(uint32_t row = 1; row <= ROWS_PER_PAGE; row++) {
-        for(uint32_t col = 0; col < 4; col++) {
-            lv_table_set_cell_value(table_results, row, col, ""); // clear cell
-        }
-    }
 
-    // Fill rows for current page
+    for(uint32_t row = 1; row <= ROWS_PER_PAGE; row++)
+        for(uint32_t col = 0; col < 4; col++)
+            lv_table_set_cell_value(table_results, row, col, "");
+
     for(uint32_t row = 0; row < end_idx - start_idx; row++)
     {
         uint32_t idx = start_idx + row;
@@ -179,6 +207,7 @@ static void refresh_table(void)
         snprintf(bufFreq, sizeof(bufFreq), "%.1f", (double)freq);
         snprintf(bufR,   sizeof(bufR),   "%.3e", (double)R);
         snprintf(bufX,   sizeof(bufX),   "%.3e", (double)X);
+
         if(X >= 0)
             snprintf(bufLC, sizeof(bufLC), "%.3e H", (double)L);
         else
@@ -196,16 +225,17 @@ static void refresh_table(void)
 }
 
 /* ============================================================
- *  UPDATE SCREEN (called only when measurement count changes)
+ *  UPDATE SCREEN
  * ============================================================ */
 void screen_resultsText_update(void)
 {
     lv_bar_set_value(progress_bar, (int32_t)AppBIACfg.FreqofData, LV_ANIM_ON);
 
-    if(GVariables.sweep_done)
+    if(GVariables.sweep_done) {
         lv_obj_clear_flag(btn_graph, LV_OBJ_FLAG_HIDDEN);
+        lv_obj_clear_flag(btn_save, LV_OBJ_FLAG_HIDDEN);
+    }
 
-    // Only refresh if new measurements arrived
     if(last_counter < GVariables.MeasurementCounter)
     {
         last_counter = GVariables.MeasurementCounter;
@@ -221,9 +251,11 @@ void screen_resultsText_destroy(void)
     table_results = NULL;
     progress_bar = NULL;
     btn_graph = NULL;
+    btn_save = NULL;
     btn_next = NULL;
     btn_prev = NULL;
     lbl_page = NULL;
+
     last_counter = 0;
     current_page = 0;
     total_pages = 0;

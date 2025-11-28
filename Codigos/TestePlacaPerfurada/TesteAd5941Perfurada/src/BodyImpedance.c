@@ -377,7 +377,7 @@ static AD5940Err AppBIARtiaCal(void)
   {
     hsrtia_cal.fFreq = AppBIACfg.SinFreq;
     AD5940_HSRtiaCal(&hsrtia_cal, AppBIACfg.RtiaCurrValue);
-    ADI_Print("Freq:%.2f, RTIA: Mag:%f Ohm, Phase:%.3f\n", hsrtia_cal.fFreq, AppBIACfg.RtiaCurrValue[0], AppBIACfg.RtiaCurrValue[1]);
+    //ADI_Print("Freq:%.2f, RTIA: Mag:%f Ohm, Phase:%.3f\n", hsrtia_cal.fFreq, AppBIACfg.RtiaCurrValue[0], AppBIACfg.RtiaCurrValue[1]);
   }
   return AD5940ERR_OK;
 }
@@ -528,7 +528,7 @@ static AD5940Err AppBIADataProcess(int32_t * const pData, uint32_t *pDataCount)
     CurrMag = sqrt((float)pDftCurr->Real*pDftCurr->Real+(float)pDftCurr->Image*pDftCurr->Image);
     CurrPhase = atan2(-pDftCurr->Image,pDftCurr->Real);
 
-    printf("Vmag: %.3f Vphase: %.3f Cmag: %.3f Cphase: %.3f\n", VoltMag, VoltPhase, CurrMag, CurrPhase);
+    //printf("Vmag: %.3f Vphase: %.3f Cmag: %.3f Cphase: %.3f\n", VoltMag, VoltPhase, CurrMag, CurrPhase);
 
     VoltMag = VoltMag/CurrMag*AppBIACfg.RtiaCurrValue[0];
     VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
@@ -538,7 +538,7 @@ static AD5940Err AppBIADataProcess(int32_t * const pData, uint32_t *pDataCount)
     else if(VoltPhase < -3.1415926)
       VoltPhase += 2*3.1415926;
 
-    printf("Impedance: Mag: %.3f Ohm, Phase: %.3f degree\n", VoltMag, VoltPhase*180/3.1415926);
+    //printf("Impedance: Mag: %.3f Ohm, Phase: %.3f degree\n", VoltMag, VoltPhase*180/3.1415926);
 
     pOut[i].Magnitude = VoltMag;
     pOut[i].Phase = VoltPhase;

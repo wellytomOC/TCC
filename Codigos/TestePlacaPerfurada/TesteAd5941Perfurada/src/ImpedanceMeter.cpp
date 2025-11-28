@@ -88,7 +88,7 @@ void ImpedanceMeterTask(void *pvParameters)
         // check if sweep is done
         if(GVariables.MeasurementCounter == AppBIACfg.SweepCfg.SweepPoints)
         {
-          printf("Sweep done. Shutdown AFE.\n");
+          //printf("Sweep done. Shutdown AFE.\n");
           GVariables.sweep_done = true;
           StopImpedanceMeasurement();
         }
@@ -169,7 +169,7 @@ int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
   
 
   /* Print results */
-  printf("Freq:%.2f ", AppBIACfg.FreqofData);
+  //printf("Freq:%.2f ", AppBIACfg.FreqofData);
   for(int i=0;i<DataCount;i++)
   {
 
@@ -178,7 +178,7 @@ int32_t ShowResult(uint32_t *pData, uint32_t DataCount)
     GVariables.FreqBuffer[GVariables.MeasurementCounter] = AppBIACfg.FreqofData;
     GVariables.MeasurementCounter++;
 
-    printf("RzMag: %f Ohm , RzPhase: %f , Counter: %d \n",GVariables.MagnitudeBuffer[GVariables.MeasurementCounter],GVariables.PhaseBuffer[GVariables.MeasurementCounter], GVariables.MeasurementCounter);
+    //printf("RzMag: %f Ohm , RzPhase: %f , Counter: %d \n",GVariables.MagnitudeBuffer[GVariables.MeasurementCounter],GVariables.PhaseBuffer[GVariables.MeasurementCounter], GVariables.MeasurementCounter);
   }
   return 0;
 }
