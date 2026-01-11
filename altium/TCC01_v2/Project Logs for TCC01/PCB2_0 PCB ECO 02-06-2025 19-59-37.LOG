@@ -1,0 +1,115 @@
+Removed Pin From Net: NetName=+5 Pin=J1-1
+Removed Pin From Net: NetName=NetD2_2 Pin=J1-2
+Removed Pin From Net: NetName=NetD3_2 Pin=J1-3
+Removed Pin From Net: NetName=GND Pin=J1-5
+Removed Pin From Net: NetName=GND Pin=J1-MP1
+Removed Pin From Net: NetName=GND Pin=J1-MP2
+Removed Pin From Net: NetName=GND Pin=J1-MP3
+Removed Pin From Net: NetName=GND Pin=J1-MP4
+Removed Pin From Net: NetName=GND Pin=J1-MP5
+Removed Pin From Net: NetName=GND Pin=J1-MP6
+Change Component Footprint: Designator=J1 Old Footprint=microUSB New Footprint=USB-C-1016435900011LF
+Change Component Comment : Designator=J1 Old Comment=microUSB New Comment=USB-C-10164359-00011LF
+Change component parameters: Designator = "J1" ("J1"); Footprint = "microUSB"; UniqueID = "\UCDKGBMC" ("\UCDKGBMC")
+Change component parameters (AddParameter): Name = "Arrow Part Number"; Value = "10164359-00011LF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/10164359-00011lf/amphenol-fci?region=nac"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10164359.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "3.41mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Name"; Value = "Amphenol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer_Part_Number"; Value = "10164359-00011LF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Part Number"; Value = "649-10164359-00011LF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Amphenol-FCI/10164359-00011LF?qs=MyNHzdoqoQLpQ%2FmSqA1%252BtQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=LD?(PLCC-2)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00388"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED branco /67-21S/KK5C-H6565N32P02833Z6/2T(EMM)/Everlight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LD?(PLCC-2)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00388"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED branco /67-21S/KK5C-H6565N32P02833Z6/2T(EMM)/Everlight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(JMP0805)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(JMP0805)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(JMP0805)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(JMP0805)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD2_2 Pin=J1-A5
+Added Pin To Net: NetName=+5 Pin=J1-A9
+Added Pin To Net: NetName=GND Pin=J1-A12
+Added Pin To Net: NetName=NetD3_2 Pin=J1-B5
+Added Pin To Net: NetName=+5 Pin=J1-B9
+Added Pin To Net: NetName=GND Pin=J1-B12
+Added Pin To Net: NetName=GND Pin=J1-MH1
+Added Pin To Net: NetName=GND Pin=J1-MH2
+Added Pin To Net: NetName=GND Pin=J1-MH3
+Added Pin To Net: NetName=GND Pin=J1-MH4
+Added Pin To Net: NetName=GND Pin=LD?-2
+Added Pin To Net: NetName=GND Pin=LD?-2
+Added Pin To Net: NetName=DVDD Pin=R?-2
+Added Pin To Net: NetName=DVDD Pin=R?-2
+Added Pin To Net: NetName=DVDD Pin=R?-2
+Added Pin To Net: NetName=DVDD Pin=R?-2
+Added Pin To Net: NetName=JMP1 Pin=R?-1
+Added Pin To Net: NetName=JMP1 Pin=U4-30
+Added Net: Name=JMP1
+Added Pin To Net: NetName=JMP2 Pin=R?-1
+Added Pin To Net: NetName=JMP2 Pin=U4-31
+Added Net: Name=JMP2
+Added Pin To Net: NetName=JMP3 Pin=R?-1
+Added Pin To Net: NetName=JMP3 Pin=U4-32
+Added Net: Name=JMP3
+Added Pin To Net: NetName=JMP4 Pin=R?-1
+Added Pin To Net: NetName=JMP4 Pin=U4-33
+Added Net: Name=JMP4
+Added Pin To Net: NetName=NetLD?_1 Pin=LD?-1
+Added Pin To Net: NetName=NetLD?_1 Pin=R?-1
+Added Net: Name=NetLD?_1
+Add Net: Net with name "NetLD?_1" already exists

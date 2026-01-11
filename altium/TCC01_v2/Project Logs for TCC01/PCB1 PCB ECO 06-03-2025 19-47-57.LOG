@@ -1,0 +1,16 @@
+Added Component: Designator=D1(SOTFL50P160X60-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sp3004-04xtg/littelfuse?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sp3004_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "576-SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/SP3004-04XTG?qs=trbuaetfxXQ7JjseAkJ3Ww%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetC3_2 Pin=D1-3
+Added Pin To Net: NetName=NetC5_2 Pin=D1-4
+Added Pin To Net: NetName=AVDD_AD Pin=D1-5
+Added Pin To Net: NetName=NetC7_2 Pin=D1-6
+Added Member To Class: ClassName=ad5941 Member=Component D1 SP3004-04XTG

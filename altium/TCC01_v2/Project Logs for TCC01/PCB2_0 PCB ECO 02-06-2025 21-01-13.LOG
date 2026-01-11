@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=LED1 Pin=U4-28
+Removed Pin From Net: NetName=LED2 Pin=U4-29
+Added Component: Designator=D4(LTST-C197)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00010"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED - SMD WHITE CLEAR NON-DIFF - SUN LED XZCWD105S / EVERLIGHT 67-21UKC/S3282/TR8-D ( descontinuado) //67-21S/KK2C-H6565M41N42936Z6/2T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "BRANCO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=D4-3
+Added Pin To Net: NetName=GND Pin=D4-4
+Added Pin To Net: NetName=LED1 Pin=U4-9
+Added Pin To Net: NetName=LED2 Pin=U4-10
+Added Pin To Net: NetName=NetD4_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_1 Pin=R20-1
+Added Net: Name=NetD4_1
+Added Pin To Net: NetName=NetD4_2 Pin=D4-2
+Added Pin To Net: NetName=NetD4_2 Pin=R19-1
+Added Net: Name=NetD4_2

@@ -1,0 +1,5 @@
+Added Member To Class: ClassName=AD5941 Member=Wire AVDD_AD
+Added Member To Class: ClassName=AD5941 Member=Wire AVDD_REG
+Added Member To Class: ClassName=AD5941 Member=Wire DVDD_AD
+Added Member To Class: ClassName=AD5941 Member=Wire DVDD_REG1V8
+Added Member To Class: ClassName=AD5941 Member=Wire GND

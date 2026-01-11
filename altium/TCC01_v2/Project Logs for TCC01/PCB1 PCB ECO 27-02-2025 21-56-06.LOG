@@ -1,0 +1,46 @@
+Added Component: Designator=U1(FP-CP-48-4-IPC_A)
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC4_2 Pin=U1-4
+Added Pin To Net: NetName=NetC9_2 Pin=U1-5
+Added Pin To Net: NetName=DVDD_AD Pin=U1-6
+Added Pin To Net: NetName=NetC12_1 Pin=U1-8
+Added Pin To Net: NetName=NetC11_2 Pin=U1-9
+Added Pin To Net: NetName=NetC?_1 Pin=U1-11
+Added Pin To Net: NetName=NetC13_1 Pin=U1-12
+Added Pin To Net: NetName=GND Pin=U1-13
+Added Pin To Net: NetName=NetC2_2 Pin=U1-14
+Added Pin To Net: NetName=NetU1_15 Pin=U1-15
+Added Pin To Net: NetName=NetU1_16 Pin=U1-16
+Added Pin To Net: NetName=NetU1_17 Pin=U1-17
+Added Pin To Net: NetName=NetU1_18 Pin=U1-18
+Added Pin To Net: NetName=NetU1_19 Pin=U1-19
+Added Pin To Net: NetName=NetU1_20 Pin=U1-20
+Added Pin To Net: NetName=NetU1_21 Pin=U1-21
+Added Pin To Net: NetName=NetU1_22 Pin=U1-22
+Added Pin To Net: NetName=GND Pin=U1-23
+Added Pin To Net: NetName=GND Pin=U1-25
+Added Pin To Net: NetName=DVDD_AD Pin=U1-26
+Added Pin To Net: NetName=NetTP11_0 Pin=U1-27
+Added Pin To Net: NetName=NetTP12_0 Pin=U1-28
+Added Pin To Net: NetName=GND Pin=U1-29
+Added Pin To Net: NetName=AVDD_AD Pin=U1-30
+Added Pin To Net: NetName=NetC8_2 Pin=U1-31
+Added Pin To Net: NetName=NetR2_2 Pin=U1-32
+Added Pin To Net: NetName=NetR2_1 Pin=U1-33
+Added Pin To Net: NetName=NetTP9_0 Pin=U1-34
+Added Pin To Net: NetName=NetTP10_0 Pin=U1-35
+Added Pin To Net: NetName=NetC10_1 Pin=U1-36
+Added Pin To Net: NetName=NetTP7_0 Pin=U1-37
+Added Pin To Net: NetName=NetR3_1 Pin=U1-38
+Added Pin To Net: NetName=NetR1_1 Pin=U1-39
+Added Pin To Net: NetName=NetTP8_0 Pin=U1-40
+Added Pin To Net: NetName=AVDD_AD Pin=U1-41
+Added Pin To Net: NetName=GND Pin=U1-42
+Added Pin To Net: NetName=NetC6_2 Pin=U1-43
+Added Pin To Net: NetName=GND Pin=U1-44
+Added Pin To Net: NetName=NetTP6_0 Pin=U1-45
+Added Pin To Net: NetName=NetR5_1 Pin=U1-46
+Added Pin To Net: NetName=NetR4_1 Pin=U1-47
+Added Pin To Net: NetName=NetTP5_0 Pin=U1-48
+Added Pin To Net: NetName=GND Pin=U1-49
+Added Member To Class: ClassName=ad5941 Member=Component U1 AD5941BCPZ

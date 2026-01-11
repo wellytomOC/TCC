@@ -1,0 +1,49 @@
+Added Component: Designator=R15(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R16(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R17(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R18(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AVDD Pin=D1-5
+Added Pin To Net: NetName=AD_MISO Pin=R15-1
+Added Pin To Net: NetName=AD_CS Pin=R16-1
+Added Pin To Net: NetName=AD_MOSI Pin=R17-1
+Added Pin To Net: NetName=AD_SCLK Pin=R18-1
+Added Pin To Net: NetName=NetR15_2 Pin=R15-2
+Added Pin To Net: NetName=NetR15_2 Pin=U4-23
+Added Net: Name=NetR15_2
+Added Pin To Net: NetName=NetR16_2 Pin=R16-2
+Added Pin To Net: NetName=NetR16_2 Pin=U4-26
+Added Net: Name=NetR16_2
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=NetR17_2 Pin=U4-24
+Added Net: Name=NetR17_2
+Added Pin To Net: NetName=NetR18_2 Pin=R18-2
+Added Pin To Net: NetName=NetR18_2 Pin=U4-25
+Added Net: Name=NetR18_2

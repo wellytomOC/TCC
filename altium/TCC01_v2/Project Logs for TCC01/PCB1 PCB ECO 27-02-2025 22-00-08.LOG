@@ -1,0 +1,24 @@
+Change Component Footprint: Designator=C15 Old Footprint=CAP2312 New Footprint=CAPELETR11X6.3X2.5
+Change Component Footprint: Designator=C16 Old Footprint=CAP2312 New Footprint=CAPELETR11X6.3X2.5
+Change Component Comment : Designator=C15 Old Comment=CAP SMD TAN 10UF 25V 2312 New Comment=CAP PTH ELE 100UF 25V
+Change Component Comment : Designator=C16 Old Comment=CAP SMD TAN 10UF 25V 2312 New Comment=CAP PTH ELE 100UF 25V
+Change Component Designator: OldDesignator=C? NewDesignator=C14
+Change component parameters: Designator = "C15" ("C15"); Footprint = "CAP2312"; UniqueID = "\OLEEKBSE" ("\OLEEKBSE")
+Change component parameters (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00025"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "List"; Value = "CAP ALUM 100UF 25V 20% RADIAL - ECA-1EM101I"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "ALUMINIUM ELETROLITHIC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "C16" ("C16"); Footprint = "CAP2312"; UniqueID = "\PDDWDSTI" ("\PDDWDSTI")
+Change component parameters (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00025"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "List"; Value = "CAP ALUM 100UF 25V 20% RADIAL - ECA-1EM101I"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "ALUMINIUM ELETROLITHIC"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "100uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC14_1

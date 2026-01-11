@@ -1,0 +1,18 @@
+Removed Member From Class: ClassName=Microcontrolador Member=R1
+Add Component: Footprint Not Found R38
+Add Pin To Net: Unknown Pin: Pin C13-1
+Add Pin To Net: Unknown Pin: Pin C13-2
+Add Pin To Net: Unknown Pin: Pin C14-1
+Add Pin To Net: Unknown Pin: Pin C14-2
+Add Pin To Net: Unknown Pin: Pin FB1-1
+Add Pin To Net: Unknown Pin: Pin FB1-2
+Add Pin To Net: Unknown Pin: Pin Y1-1
+Add Pin To Net: Unknown Pin: Pin Y1-2
+Added Member To Class: ClassName=ad5941 Member=Component C1 CAP SMD CER 10UF 50V 1206
+Add Class Member: Failed to add class member : Component C13 CAP SMD CER 6.8PF 100V 0805
+Add Class Member: Failed to add class member : Component C14 CAP SMD CER 6.8PF 100V 0805
+Add Class Member: Failed to add class member : Component FB1 FERRITE BEAD SMD 600R 0805
+Added Member To Class: ClassName=alimentacao Member=Component LD1 PLCC-2
+Added Member To Class: ClassName=Microcontrolador Member=Component R15 RES SMD 100K 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component TP5 RE0
+Add Class Member: Failed to add class member : Component Y1 XTAL SMD 16MHZ

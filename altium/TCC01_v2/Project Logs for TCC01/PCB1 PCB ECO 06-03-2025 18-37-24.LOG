@@ -1,0 +1,130 @@
+Added Component: Designator=C1(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C7(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=D1(SOTFL50P160X60-6N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sp3004-04xtg/littelfuse?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://m.littelfuse.com/~/media/electronics/datasheets/tvs_diode_arrays/littelfuse_tvs_diode_array_sp3004_datasheet.pdf.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.6mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "LITTELFUSE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "576-SP3004-04XTG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Littelfuse/SP3004-04XTG?qs=trbuaetfxXQ7JjseAkJ3Ww%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=R1(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES 1.6K OHM 1/8W .1% 0805 SMD/ERA-6AEB162V/Panasonic Electronic Components/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R3(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES 1.6K OHM 1/8W .1% 0805 SMD/ERA-6AEB162V/Panasonic Electronic Components/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R4(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R5(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=TP1(TEST POINT)
+Added Component: Designator=TP2(TEST POINT)
+Added Component: Designator=TP3(TEST POINT)
+Added Component: Designator=TP4(TEST POINT)
+Added Component: Designator=Y?(XT9M20ANA16M)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/xt9m20ana16m/vishay?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/5/XT9M20ANA16M.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "73-XT49M1600-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/XT9M20ANA16M?qs=NVJATC80C4%252B3oEpMmPFr7g%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC3_1 Pin=C3-1
+Added Pin To Net: NetName=NetC3_2 Pin=C3-2
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC1_2 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetC3_2 Pin=D1-3
+Added Pin To Net: NetName=NetC5_2 Pin=D1-4
+Added Pin To Net: NetName=AVDD_AD Pin=D1-5
+Added Pin To Net: NetName=NetC7_2 Pin=D1-6
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetC1_1 Pin=R1-2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetC3_1 Pin=R3-2
+Added Pin To Net: NetName=NetR4_1 Pin=R4-1
+Added Pin To Net: NetName=NetC5_1 Pin=R4-2
+Added Pin To Net: NetName=NetR5_1 Pin=R5-1
+Added Pin To Net: NetName=NetC7_1 Pin=R5-2
+Added Pin To Net: NetName=NetC1_2 Pin=TP1-0
+Added Pin To Net: NetName=NetC3_2 Pin=TP2-0
+Added Pin To Net: NetName=NetC5_2 Pin=TP3-0
+Added Pin To Net: NetName=NetC7_2 Pin=TP4-0
+Added Member To Class: ClassName=ad5941 Member=Component C1 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C3 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C5 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component C7 CAP SMD CER 10UF 50V 1206
+Added Member To Class: ClassName=ad5941 Member=Component D1 SP3004-04XTG
+Added Member To Class: ClassName=ad5941 Member=Component R1 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R3 RES SMD 1K6 0.1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R4 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component R5 RES SMD 10R 1% 0805
+Added Member To Class: ClassName=ad5941 Member=Component TP1 U+
+Added Member To Class: ClassName=ad5941 Member=Component TP2 U-
+Added Member To Class: ClassName=ad5941 Member=Component TP3 I+
+Added Member To Class: ClassName=ad5941 Member=Component TP4 I-
+Added Member To Class: ClassName=ad5941 Member=Component Y? XT9M20ANA16M

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=AD_RESET_N Pin=U4-29
+Removed Pin From Net: NetName=AD_GP0 Pin=U4-30
+Removed Pin From Net: NetName=AD_GP1 Pin=U4-31
+Removed Pin From Net: NetName=AD_GP2 Pin=U4-32
+Added Pin To Net: NetName=AD_RESET_N Pin=U4-17
+Added Pin To Net: NetName=AD_GP2 Pin=U4-18
+Added Pin To Net: NetName=AD_GP1 Pin=U4-19
+Added Pin To Net: NetName=AD_GP0 Pin=U4-20

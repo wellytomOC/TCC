@@ -1,0 +1,12 @@
+Added Component: Designator=C26(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DVDD_AD Pin=C26-1
+Added Pin To Net: NetName=GND Pin=C26-2
+Added Member To Class: ClassName=alimentacao Member=Component C26 CAP SMD CER 100NF 25V 0805

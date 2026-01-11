@@ -1,0 +1,793 @@
+Added Component: Designator=C1(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00245"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.47UF 100V 10% X7R 0805/GRM21BR72A474KA73L/Murata Electronics North America"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Added Component: Designator=C3(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "6.8pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "6.8pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00245"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.47UF 100V 10% X7R 0805/GRM21BR72A474KA73L/Murata Electronics North America"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Added Component: Designator=C7(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C8(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00333"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 4.7UF 50V X5R 0805/CL21A475KBQNNNE/Samsung"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4.7uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C9(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00322"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 10UF 50V X5R 1206/UMK316BBJ106ML-T/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "50V"; VariantName = "[No Variations]"
+Added Component: Designator=C10(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00245"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.47UF 100V 10% X7R 0805/GRM21BR72A474KA73L/Murata Electronics North America"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Added Component: Designator=C11(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00245"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.47UF 100V 10% X7R 0805/GRM21BR72A474KA73L/Murata Electronics North America"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "100V"; VariantName = "[No Variations]"
+Added Component: Designator=C12(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C13(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00209"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP- SMD/SMT X7R 0805 10V 1uF 20%/LMK212BJ105MG-T/Taiyo Yuden"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "10V"; VariantName = "[No Variations]"
+Added Component: Designator=C14(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C15(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4.7nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C18(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C27(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP2312)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00040"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP TANT 10UF 25V 20% 2312 / 293D106X0025C2TE3 / Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "TANTALUM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP2312)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00040"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP TANT 10UF 25V 20% 2312 / 293D106X0025C2TE3 / Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "TANTALUM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP2312)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00040"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP TANT 10UF 25V 20% 2312 / 293D106X0025C2TE3 / Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "TANTALUM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP2312)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00040"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP TANT 10UF 25V 20% 2312 / 293D106X0025C2TE3 / Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "TANTALUM"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=C?(CAP0805OK)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00094"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "CAP CER 0.1UF 25V 10% X7R 0805/CGJ4J2X7R1E104K125AA/TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "10%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "CERAMIC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100nF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Added Component: Designator=CN1(PHMC4-06)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00436"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "Barra de pinos Macho 180° / BPSC-03 / metaltex"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "METALTEX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "PHMC4-06"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Add component: Footprint Not Found SOTFL50P160X60-6N
+Added Component: Designator=D2(SOD2513X120N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sd05c-7/diodes-incorporated?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/SD05C.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "621-SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SD05C-7?qs=lQAVKuKFhkJ%252Bbajm903DcQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=D3(SOD2513X120N)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/sd05c-7/diodes-incorporated?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://www.diodes.com//assets/Datasheets/SD05C.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Diodes Incorporated"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "621-SD05C-7"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SD05C-7?qs=lQAVKuKFhkJ%252Bbajm903DcQ%3D%3D"; VariantName = "[No Variations]"
+Added Component: Designator=I+1(TEST POINT)
+Added Component: Designator=I-1(TEST POINT)
+Added Component: Designator=J1(microUSB)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "10118192-0002LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/10118192-0002lf/amphenol-fci?utm_currency=USD&region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/10118192.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "3.08mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Amphenol Communications Solutions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "10118192-0002LF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LCD1(Display_3.5"_SPI_480X320)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00435"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet"; Value = "http://www.lcdwiki.com/res/MSP3520/3.5inch_SPI_Module_MSP3520_User_Manual_EN.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Documentações"; Value = "http://www.lcdwiki.com/3.5inch_SPI_Module_ILI9488_SKU:MSP3520"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "Display TFT 3.5" SPI 480X320 MSP3520"; VariantName = "[No Variations]"
+Added Component: Designator=LD1(PLCC-2)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00388"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED branco /67-21S/KK5C-H6565N32P02833Z6/2T(EMM)/Everlight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LD2(PLCC-2)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00388"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED branco /67-21S/KK5C-H6565N32P02833Z6/2T(EMM)/Everlight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LD?(PLCC-2)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00388"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "LED branco /67-21S/KK5C-H6565N32P02833Z6/2T(EMM)/Everlight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R1(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES 1.6K OHM 1/8W .1% 0805 SMD/ERA-6AEB162V/Panasonic Electronic Components/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R2(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R3(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.00204"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES 1.6K OHM 1/8W .1% 0805 SMD/ERA-6AEB162V/Panasonic Electronic Components/Generic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "0.1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R4(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R5(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R6(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R7(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50001"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10R 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R9(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R10(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R14(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R15(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R16(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R17(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R18(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R19(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R20(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R21(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50116"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 10K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100K"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R?(res0805ok)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50098"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "RES SMD 1K 1% 0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "470"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U1(FP-CP-48-4-IPC_A)
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Added Component: Designator=U2(TO252-3)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50030"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "IC SMD REG LM1117 TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "LM1117"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "1.8 A 5V"; VariantName = "[No Variations]"
+Added Component: Designator=U3(XCVR_ESP32-S3-WROOM-1-N4R2)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/ESP32-S3-WROOM-1-N4R2/Espressif+Systems/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50161"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "IC SMD ESP32-S3-WROOM-1-N4R2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Espressif Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ESP32-S3-WROOM-1-N4R2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/ESP32-S3-WROOM-1-N4R2/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ESP32-S3-WROOM-1-N4R2/Espressif+Systems/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U+1(TEST POINT)
+Added Component: Designator=U-1(TEST POINT)
+Added Component: Designator=U?(TO252-3)
+Add component (AddParameter): Name = "COD. CRISTOFOLI"; Value = "EMP.50030"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "List"; Value = "IC SMD REG LM1117 TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "LM1117"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "1.8 A 5V"; VariantName = "[No Variations]"
+Added Component: Designator=Y1(XTAL SMD 16MHZ)
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/xt9m20ana16m/vishay?region=nac"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/5/XT9M20ANA16M.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "4.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "XT9M20ANA16M"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "73-XT49M1600-20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/XT9M20ANA16M?qs=NVJATC80C4%252B3oEpMmPFr7g%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+5 Pin=C?-1
+Added Pin To Net: NetName=+5 Pin=C?-1
+Added Pin To Net: NetName=+5 Pin=J1-1
+Added Pin To Net: NetName=+5 Pin=R9-2
+Added Pin To Net: NetName=+5 Pin=U2-3
+Added Pin To Net: NetName=+5 Pin=U?-3
+Added Net: Name=+5
+Added Pin To Net: NetName=AD_CS Pin=R16-2
+Added Pin To Net: NetName=AD_CS Pin=U1-15
+Added Net: Name=AD_CS
+Added Pin To Net: NetName=AD_GP0 Pin=U1-19
+Added Pin To Net: NetName=AD_GP0 Pin=U3-30
+Added Net: Name=AD_GP0
+Added Pin To Net: NetName=AD_GP1 Pin=U1-20
+Added Pin To Net: NetName=AD_GP1 Pin=U3-31
+Added Net: Name=AD_GP1
+Added Pin To Net: NetName=AD_GP2 Pin=U1-21
+Added Pin To Net: NetName=AD_GP2 Pin=U3-32
+Added Net: Name=AD_GP2
+Added Pin To Net: NetName=AD_MISO Pin=R20-2
+Added Pin To Net: NetName=AD_MISO Pin=U1-18
+Added Net: Name=AD_MISO
+Added Pin To Net: NetName=AD_MOSI Pin=R17-2
+Added Pin To Net: NetName=AD_MOSI Pin=U1-17
+Added Net: Name=AD_MOSI
+Added Pin To Net: NetName=AD_RESET_N Pin=U1-22
+Added Pin To Net: NetName=AD_RESET_N Pin=U3-29
+Added Net: Name=AD_RESET_N
+Added Pin To Net: NetName=AD_SCLK Pin=R18-2
+Added Pin To Net: NetName=AD_SCLK Pin=U1-16
+Added Net: Name=AD_SCLK
+Added Pin To Net: NetName=AFE2 Pin=R6-1
+Added Pin To Net: NetName=AFE2 Pin=U1-35
+Added Net: Name=AFE2
+Added Pin To Net: NetName=AFE3 Pin=R7-1
+Added Pin To Net: NetName=AFE3 Pin=U1-27
+Added Net: Name=AFE3
+Added Pin To Net: NetName=AIN0 Pin=R1-1
+Added Pin To Net: NetName=AIN0 Pin=U1-39
+Added Net: Name=AIN0
+Added Pin To Net: NetName=AIN1 Pin=R3-1
+Added Pin To Net: NetName=AIN1 Pin=U1-38
+Added Net: Name=AIN1
+Added Pin To Net: NetName=AIN3 Pin=C12-1
+Added Pin To Net: NetName=AIN3 Pin=U1-36
+Added Net: Name=AIN3
+Added Pin To Net: NetName=AIN4 Pin=C15-1
+Added Pin To Net: NetName=AIN4 Pin=U1-40
+Added Net: Name=AIN4
+Added Pin To Net: NetName=AVDD_AD Pin=U1-30
+Added Pin To Net: NetName=AVDD_AD Pin=U1-41
+Added Net: Name=AVDD_AD
+Added Pin To Net: NetName=AVDD_REG Pin=C11-2
+Added Pin To Net: NetName=AVDD_REG Pin=U1-5
+Added Net: Name=AVDD_REG
+Added Pin To Net: NetName=AVDD Pin=C?-1
+Added Pin To Net: NetName=AVDD Pin=C?-1
+Added Pin To Net: NetName=AVDD Pin=C?-1
+Added Pin To Net: NetName=AVDD Pin=C?-1
+Added Pin To Net: NetName=AVDD Pin=R?-2
+Added Pin To Net: NetName=AVDD Pin=U?-2
+Added Net: Name=AVDD
+Added Pin To Net: NetName=BIAS_U+ Pin=C1-1
+Added Pin To Net: NetName=BIAS_U+ Pin=R1-2
+Added Pin To Net: NetName=BIAS_U+ Pin=R6-2
+Added Net: Name=BIAS_U+
+Added Pin To Net: NetName=BIAS_U- Pin=C5-1
+Added Pin To Net: NetName=BIAS_U- Pin=R3-2
+Added Pin To Net: NetName=BIAS_U- Pin=R7-2
+Added Net: Name=BIAS_U-
+Added Pin To Net: NetName=CE0 Pin=R4-1
+Added Pin To Net: NetName=CE0 Pin=U1-47
+Added Net: Name=CE0
+Added Pin To Net: NetName=DE0 Pin=R5-1
+Added Pin To Net: NetName=DE0 Pin=U1-46
+Added Net: Name=DE0
+Added Pin To Net: NetName=DVDD_AD Pin=U1-6
+Added Pin To Net: NetName=DVDD_AD Pin=U1-26
+Added Net: Name=DVDD_AD
+Added Pin To Net: NetName=DVDD_REG1V8 Pin=C2-2
+Added Pin To Net: NetName=DVDD_REG1V8 Pin=U1-14
+Added Net: Name=DVDD_REG1V8
+Added Pin To Net: NetName=DVDD Pin=C18-1
+Added Pin To Net: NetName=DVDD Pin=C27-2
+Added Pin To Net: NetName=DVDD Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=C?-1
+Added Pin To Net: NetName=DVDD Pin=CN1-1
+Added Pin To Net: NetName=DVDD Pin=LCD1-1
+Added Pin To Net: NetName=DVDD Pin=LCD1-8
+Added Pin To Net: NetName=DVDD Pin=R10-2
+Added Pin To Net: NetName=DVDD Pin=R14-2
+Added Pin To Net: NetName=DVDD Pin=R15-2
+Added Pin To Net: NetName=DVDD Pin=U2-2
+Added Pin To Net: NetName=DVDD Pin=U3-2
+Added Net: Name=DVDD
+Added Pin To Net: NetName=EN Pin=CN1-6
+Added Pin To Net: NetName=EN Pin=R14-1
+Added Pin To Net: NetName=EN Pin=U3-3
+Added Net: Name=EN
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-1
+Added Pin To Net: NetName=GND Pin=C14-2
+Added Pin To Net: NetName=GND Pin=C15-2
+Added Pin To Net: NetName=GND Pin=C18-2
+Added Pin To Net: NetName=GND Pin=C27-1
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=C?-2
+Added Pin To Net: NetName=GND Pin=CN1-2
+Added Pin To Net: NetName=GND Pin=D2-1
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=GND Pin=J1-5
+Added Pin To Net: NetName=GND Pin=J1-MP1
+Added Pin To Net: NetName=GND Pin=J1-MP2
+Added Pin To Net: NetName=GND Pin=J1-MP3
+Added Pin To Net: NetName=GND Pin=J1-MP4
+Added Pin To Net: NetName=GND Pin=J1-MP5
+Added Pin To Net: NetName=GND Pin=J1-MP6
+Added Pin To Net: NetName=GND Pin=LCD1-2
+Added Pin To Net: NetName=GND Pin=LD1-2
+Added Pin To Net: NetName=GND Pin=LD2-2
+Added Pin To Net: NetName=GND Pin=LD?-2
+Added Pin To Net: NetName=GND Pin=U1-13
+Added Pin To Net: NetName=GND Pin=U1-23
+Added Pin To Net: NetName=GND Pin=U1-25
+Added Pin To Net: NetName=GND Pin=U1-29
+Added Pin To Net: NetName=GND Pin=U1-42
+Added Pin To Net: NetName=GND Pin=U1-44
+Added Pin To Net: NetName=GND Pin=U1-49
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=GND Pin=U3-40
+Added Pin To Net: NetName=GND Pin=U3-41_1
+Added Pin To Net: NetName=GND Pin=U3-41_2
+Added Pin To Net: NetName=GND Pin=U3-41_3
+Added Pin To Net: NetName=GND Pin=U3-41_4
+Added Pin To Net: NetName=GND Pin=U3-41_5
+Added Pin To Net: NetName=GND Pin=U3-41_6
+Added Pin To Net: NetName=GND Pin=U3-41_7
+Added Pin To Net: NetName=GND Pin=U3-41_8
+Added Pin To Net: NetName=GND Pin=U3-41_9
+Added Pin To Net: NetName=GND Pin=U?-1
+Added Net: Name=GND
+Added Pin To Net: NetName=I+ Pin=C7-2
+Added Pin To Net: NetName=I+ Pin=I+1-0
+Added Net: Name=I+
+Added Pin To Net: NetName=I- Pin=C9-2
+Added Pin To Net: NetName=I- Pin=I-1-0
+Added Net: Name=I-
+Added Pin To Net: NetName=IO0 Pin=CN1-5
+Added Pin To Net: NetName=IO0 Pin=R15-1
+Added Pin To Net: NetName=IO0 Pin=U3-27
+Added Net: Name=IO0
+Added Pin To Net: NetName=LCD_CLK Pin=LCD1-7
+Added Pin To Net: NetName=LCD_CLK Pin=LCD1-10
+Added Pin To Net: NetName=LCD_CLK Pin=LCD1-15
+Added Pin To Net: NetName=LCD_CLK Pin=U3-5
+Added Net: Name=LCD_CLK
+Added Pin To Net: NetName=LCD_CS Pin=LCD1-3
+Added Pin To Net: NetName=LCD_CS Pin=U3-39
+Added Net: Name=LCD_CS
+Added Pin To Net: NetName=LCD_MISO Pin=LCD1-9
+Added Pin To Net: NetName=LCD_MISO Pin=LCD1-13
+Added Pin To Net: NetName=LCD_MISO Pin=LCD1-16
+Added Pin To Net: NetName=LCD_MISO Pin=U3-6
+Added Net: Name=LCD_MISO
+Added Pin To Net: NetName=LCD_MOSI Pin=LCD1-6
+Added Pin To Net: NetName=LCD_MOSI Pin=LCD1-12
+Added Pin To Net: NetName=LCD_MOSI Pin=LCD1-17
+Added Pin To Net: NetName=LCD_MOSI Pin=U3-4
+Added Net: Name=LCD_MOSI
+Added Pin To Net: NetName=LCD_RESET Pin=LCD1-4
+Added Pin To Net: NetName=LCD_RESET Pin=U3-38
+Added Net: Name=LCD_RESET
+Added Pin To Net: NetName=LCD_RS Pin=LCD1-5
+Added Pin To Net: NetName=LCD_RS Pin=U3-15
+Added Net: Name=LCD_RS
+Added Pin To Net: NetName=NetC7_1 Pin=C7-1
+Added Pin To Net: NetName=NetC7_1 Pin=R4-2
+Added Net: Name=NetC7_1
+Added Pin To Net: NetName=NetC9_1 Pin=C9-1
+Added Pin To Net: NetName=NetC9_1 Pin=R5-2
+Added Net: Name=NetC9_1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=NetD2_2 Pin=J1-2
+Added Pin To Net: NetName=NetD2_2 Pin=R19-1
+Added Net: Name=NetD2_2
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=J1-3
+Added Pin To Net: NetName=NetD3_2 Pin=R21-1
+Added Net: Name=NetD3_2
+Added Pin To Net: NetName=NetLD1_1 Pin=LD1-1
+Added Pin To Net: NetName=NetLD1_1 Pin=R9-1
+Added Net: Name=NetLD1_1
+Added Pin To Net: NetName=NetLD2_1 Pin=LD2-1
+Added Pin To Net: NetName=NetLD2_1 Pin=R10-1
+Added Net: Name=NetLD2_1
+Added Pin To Net: NetName=NetLD?_1 Pin=LD?-1
+Added Pin To Net: NetName=NetLD?_1 Pin=R?-1
+Added Net: Name=NetLD?_1
+Added Pin To Net: NetName=NetR16_1 Pin=R16-1
+Added Pin To Net: NetName=NetR16_1 Pin=U3-18
+Added Net: Name=NetR16_1
+Added Pin To Net: NetName=NetR17_1 Pin=R17-1
+Added Pin To Net: NetName=NetR17_1 Pin=U3-19
+Added Net: Name=NetR17_1
+Added Pin To Net: NetName=NetR18_1 Pin=R18-1
+Added Pin To Net: NetName=NetR18_1 Pin=U3-20
+Added Net: Name=NetR18_1
+Added Pin To Net: NetName=NetR20_1 Pin=R20-1
+Added Pin To Net: NetName=NetR20_1 Pin=U3-21
+Added Net: Name=NetR20_1
+Added Pin To Net: NetName=RCAL0 Pin=R2-2
+Added Pin To Net: NetName=RCAL0 Pin=U1-32
+Added Net: Name=RCAL0
+Added Pin To Net: NetName=RCAL1 Pin=R2-1
+Added Pin To Net: NetName=RCAL1 Pin=U1-33
+Added Net: Name=RCAL1
+Added Pin To Net: NetName=RXD0 Pin=CN1-3
+Added Pin To Net: NetName=RXD0 Pin=U3-37
+Added Net: Name=RXD0
+Added Pin To Net: NetName=SD_CS Pin=LCD1-18
+Added Pin To Net: NetName=SD_CS Pin=U3-17
+Added Net: Name=SD_CS
+Added Pin To Net: NetName=TCH_CS Pin=LCD1-11
+Added Pin To Net: NetName=TCH_CS Pin=U3-7
+Added Net: Name=TCH_CS
+Added Pin To Net: NetName=TCH_IRQ Pin=LCD1-14
+Added Pin To Net: NetName=TCH_IRQ Pin=U3-12
+Added Net: Name=TCH_IRQ
+Added Pin To Net: NetName=TXD0 Pin=CN1-4
+Added Pin To Net: NetName=TXD0 Pin=U3-36
+Added Net: Name=TXD0
+Added Pin To Net: NetName=U+ Pin=C1-2
+Added Pin To Net: NetName=U+ Pin=U+1-0
+Added Net: Name=U+
+Added Pin To Net: NetName=U- Pin=C5-2
+Added Pin To Net: NetName=U- Pin=U-1-0
+Added Net: Name=U-
+Added Pin To Net: NetName=USB_N Pin=R19-2
+Added Pin To Net: NetName=USB_N Pin=U3-13
+Added Net: Name=USB_N
+Added Pin To Net: NetName=USB_P Pin=R21-2
+Added Pin To Net: NetName=USB_P Pin=U3-14
+Added Net: Name=USB_P
+Added Pin To Net: NetName=VBIAS_CAP Pin=C10-2
+Added Pin To Net: NetName=VBIAS_CAP Pin=U1-31
+Added Net: Name=VBIAS_CAP
+Added Pin To Net: NetName=VBIAS Pin=C14-1
+Added Pin To Net: NetName=VBIAS Pin=U1-8
+Added Net: Name=VBIAS
+Added Pin To Net: NetName=VREF_1V8 Pin=C8-2
+Added Pin To Net: NetName=VREF_1V8 Pin=U1-43
+Added Net: Name=VREF_1V8
+Added Pin To Net: NetName=VREF_2V5 Pin=C6-2
+Added Pin To Net: NetName=VREF_2V5 Pin=U1-4
+Added Net: Name=VREF_2V5
+Added Pin To Net: NetName=VZERO Pin=C13-2
+Added Pin To Net: NetName=VZERO Pin=U1-9
+Added Net: Name=VZERO
+Added Pin To Net: NetName=XTAL0 Pin=C3-1
+Added Pin To Net: NetName=XTAL0 Pin=U1-12
+Added Pin To Net: NetName=XTAL0 Pin=Y1-2
+Added Net: Name=XTAL0
+Added Pin To Net: NetName=XTAL1 Pin=C4-1
+Added Pin To Net: NetName=XTAL1 Pin=U1-11
+Added Pin To Net: NetName=XTAL1 Pin=Y1-1
+Added Net: Name=XTAL1
+Added Class: Name=AD5941
+Added Class: Name=USB
+Added Rule: Name=Schematic Supply Nets
+Added Rule: Name=Schematic Supply Nets_1
+Added Rule: Name=Schematic Supply Nets_2
+Added Rule: Name=Schematic Supply Nets_3
+Added Rule: Name=Schematic Supply Nets_4
+Added Rule: Name=Schematic Supply Nets_5
