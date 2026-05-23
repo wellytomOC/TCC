@@ -530,8 +530,8 @@ static AD5940Err AppBIADataProcess(int32_t * const pData, uint32_t *pDataCount)
 
     //printf("Vmag: %.3f Vphase: %.3f Cmag: %.3f Cphase: %.3f\n", VoltMag, VoltPhase, CurrMag, CurrPhase);
 
-    VoltMag = VoltMag/CurrMag*AppBIACfg.RtiaCurrValue[0];
-    VoltPhase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
+    float Mag = VoltMag/CurrMag*AppBIACfg.RtiaCurrValue[0];
+    float Phase = VoltPhase - CurrPhase + AppBIACfg.RtiaCurrValue[1];
 
     if(VoltPhase > 3.1415926)
       VoltPhase -= 2*3.1415926;

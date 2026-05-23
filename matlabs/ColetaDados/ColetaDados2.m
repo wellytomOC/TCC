@@ -1,6 +1,6 @@
 %% Configuração da serial
 clear s
-porta = "COM3";
+porta = "COM4";
 baudrate = 115200;
 
 s = serialport(porta, baudrate);

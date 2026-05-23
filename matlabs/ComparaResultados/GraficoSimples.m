@@ -6,7 +6,7 @@ clc; clear; close all;
 
 %% -------- Dados do protótipo (TCC) --------
 arquivo = ...
-"C:\Users\Wellytom\Documents\GitHub\TCC\matlabs\ColetaDados\leitura_002_2026-03-20_17-50-21";
+"C:\Users\Wellytom\Documents\GitHub\TCC\matlabs\ComparaResultados\leitura_00X_2026-05-10_11-02-53.csv";
 
 dados = readmatrix(arquivo);
 
